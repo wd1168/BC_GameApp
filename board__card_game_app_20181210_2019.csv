@@ -1,0 +1,122 @@
+Id,Title,Labels,Iteration,Iteration Start,Iteration End,Type,Estimate,Current State,Created at,Accepted at,Deadline,Requested By,Description,URL,Owned By,Owned By,Comment
+162055787,Research: GitHub API vs. MySql Database,"",1,"Dec 10, 2018","Dec 16, 2018",feature,2,started,"Nov 19, 2018",,,Wyatt Derk,,https://www.pivotaltracker.com/story/show/162055787,em1404,
+162055773,Research: GitHub,"",1,"Dec 10, 2018","Dec 16, 2018",feature,2,started,"Nov 19, 2018",,,Wyatt Derk,"Description: As a page designer, I should have some template pages created before settling on a design.
+
+Acceptance Criteria: 
+1. Two mock-pages created for both a home page and rule page.
+2. Present the pages to the project lead.",https://www.pivotaltracker.com/story/show/162055773,em1404,
+162055959,Develop: GitHub Source Control,"",1,"Dec 10, 2018","Dec 16, 2018",feature,1,started,"Nov 19, 2018",,,Wyatt Derk,,https://www.pivotaltracker.com/story/show/162055959,em1404,
+162050523,Develop: Integrate Smarty,"",1,"Dec 10, 2018","Dec 16, 2018",feature,2,started,"Nov 19, 2018",,,Wyatt Derk,"Description: As a developer, I need the right technology for managing my site.
+
+Acceptance Criteria:
+1. Files are formatted and organized towards the criteria of the technology.
+2. Pages display properly upon integration.",https://www.pivotaltracker.com/story/show/162050523,em1404,
+162050064,Develop: Implement Git-Hub Database,functioning rule pages,1,"Dec 10, 2018","Dec 16, 2018",feature,2,started,"Nov 19, 2018",,,Wyatt Derk,"Description: As a developer I need to have my database working so that I can call items onto a page.
+
+Acceptance Criteria: 
+1. Rules are stored on Git-Hub.
+2. The application is linked up to Github.",https://www.pivotaltracker.com/story/show/162050064,em1404,
+162055847,Research: Naming Conventions Document,"",1,"Dec 10, 2018","Dec 16, 2018",feature,1,started,"Nov 19, 2018",,,Wyatt Derk,,https://www.pivotaltracker.com/story/show/162055847,Wyatt Derk,
+162055821,Team: Sprint Report/ Document,"",1,"Dec 10, 2018","Dec 16, 2018",feature,1,started,"Nov 19, 2018",,,Wyatt Derk,,https://www.pivotaltracker.com/story/show/162055821,Wyatt Derk,
+162040962,Design/ Develop: App Diagram,"",1,"Dec 10, 2018","Dec 16, 2018",feature,2,started,"Nov 19, 2018",,,Wyatt Derk,"Description: As a developer, I need a diagram made for mapping out the site as well as its functions.
+
+Acceptance Criteria: 
+1. A software created diagram that shows which pages connect to which and how they are related.",https://www.pivotaltracker.com/story/show/162040962,Wyatt Derk,
+162076410,Research: GitHub ,"",1,"Dec 10, 2018","Dec 16, 2018",feature,2,started,"Nov 20, 2018",,,Wyatt Derk,"Description: As a back-end developer, I need to be able to understand the technology we are using to store our data.
+
+Acceptance Criteria:
+1. A 2-3 page document describing the usage of GitHub as a content manager (controller) and database.",https://www.pivotaltracker.com/story/show/162076410,Wyatt Derk,
+162076456,Research: Hosting Service,"",1,"Dec 10, 2018","Dec 16, 2018",feature,2,started,"Nov 20, 2018",,,Wyatt Derk,"Description: As a project owner, I need to be able to know what is the best hosting service out there for the state of the product now and after completion.
+
+Acceptance Criteria: 
+1. A 2-3 page research document describing possible hosting services and how the benefit the project as a private app and a public one.",https://www.pivotaltracker.com/story/show/162076456,Wyatt Derk,
+162041048,Design: Home Page,"",1,"Dec 10, 2018","Dec 16, 2018",feature,1,started,"Nov 19, 2018",,,Wyatt Derk,"Description: As a site developer, I need a page for users to go to when they first enter the site.
+
+Acceptance Criteria: 
+1. A page created, using the bootstrap framework with a welcome/ about message, and a placeholder box/ boxes for recommended games.",https://www.pivotaltracker.com/story/show/162041048,Ben Underwood,
+162055383,Develop: Login,"",1,"Dec 10, 2018","Dec 16, 2018",feature,1,started,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user I need to be able to login to the application using my email and password.
+
+Acceptance Criteria: 
+1. Both the email and password are checked to see if they exist in the database, and the user is sent back home page, if they do. 
+2. If the login fails, the the page is reloaded. ",https://www.pivotaltracker.com/story/show/162055383,Wyatt Derk,
+162049443,Design: Sign-Up Page++,"",2,"Dec 17, 2018","Dec 23, 2018",feature,2,unstarted,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user of the site, I need to be able to sign up for my account.
+
+Acceptance Criteria:
+1. The page is made with the bootstrap framework and has a design that is thematically consistent with the rest of the site.
+2. The page has a box with a form.
+3. The form has an input for email, password, and a button to submit. 
+4. The page has text next to the ""submit"" button that leads to a login page.",https://www.pivotaltracker.com/story/show/162049443,ib2163,Wyatt Derk
+162076319,Design: Sign-Up and Login Page Page Templates,"",,,,feature,1,unscheduled,"Nov 20, 2018",,,Wyatt Derk,,https://www.pivotaltracker.com/story/show/162076319,,,"Description: As a page designer, I should have some template pages created before settling on a design.
+
+Acceptance Criteria: 
+1. Two mock-pages created for both a sign up and login page.
+2. Present the pages to the project lead. (Wyatt Derk - Nov 20, 2018)"
+162055675,Develop: Login and Sign-In Error Checking,"",,,,feature,1,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user, I need to have the page tell me if I am using an incorrect email and password for the login and an invalid email for the sign-up.
+
+Acceptance Criteria:
+1. Any error is highlighted in red and will have a message displaying the potential problem.
+2. The sign-up form checks to see if the email used is an email format. 
+3. The login page tells the user that an incorrect email or password is used when one of the two fails.",https://www.pivotaltracker.com/story/show/162055675,,
+162055218,Develop: Sign-up,"",,,,feature,2,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user, I need a functioning form to make an account with my email and password.
+
+Acceptance Criteria: 
+1. Upon clicking the ""submit"" button, both the email and password are sent to the database. 
+2. The user is sent to the home page.",https://www.pivotaltracker.com/story/show/162055218,,
+162050636,Develop: Add Sessions,"",,,,feature,1,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a developer, I need to have my site track the status of my user from each page.
+
+Acceptance Criteria: 
+1. Session checking added to each page.
+2. Sessions enable site to remember that a user is logged in on any page.",https://www.pivotaltracker.com/story/show/162050636,,
+162050136,Develop: Rule Page,functioning rule pages,,,,feature,2,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"As a developer, I need to be able to display rules on the page from the database.
+
+Acceptance Criteria:
+1. A rule set of any game of choice is displayed on the rule page.
+2. The page is generated with an extension number of the database id.
+3. The query is successfully made using the GitHub API.",https://www.pivotaltracker.com/story/show/162050136,,
+162049644,Design: Add-Ons Page,"",,,,feature,1,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user, I want to be able to look for rules relating to expansion packs. 
+
+Acceptance Criteria:
+1. The page is made with the bootstrap framework and has a design that is thematically consistent with the rest of the site.
+2. The page contains some boxes for expansion packs.
+3. Each box contains a title and image for the expansion pack.",https://www.pivotaltracker.com/story/show/162049644,,
+162049392,Design: Login Page,"",,,,feature,2,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user of the site, I need to be able to login to my account.
+
+Acceptance Criteria:
+1. The page is made with the bootstrap framework and has a design that is thematically consistent with the rest of the site.
+2. The page has a box with a form.
+3. The form has an input for email, password, and a button to login. 
+4. The page has text next to the ""login"" button that leads to a sign-up page.",https://www.pivotaltracker.com/story/show/162049392,,
+162049213,Design: Rules Page,"",,,,feature,2,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user, I want a page where I can read the rules for the game I am looking for as well as be able to search for them.
+
+Acceptance Criteria: 
+1. The page is made with bootstrap and is thematically consistent with the rest of the site. 
+2. The page contains an area where the rules will be loaded in.
+3. The page contains a search bar for looking up a rule by keyword.",https://www.pivotaltracker.com/story/show/162049213,,
+162049049,Design: Search Results Page,"",,,,feature,1,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user,  I need page that displays the search results for when I look up a game on the search bar.
+
+Acceptance Criteria: 
+1. The page is made with the bootstrap framework and is thematically similar to the rest of the site.
+2. The page has a placeholder box for no results found and for a result.",https://www.pivotaltracker.com/story/show/162049049,,
+162048958,Design/ Develop: Login Changing to Profile when Logged-in,"",,,,feature,1,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user, I want to have the login text change to my profile name on the nav-bar so that I can know that I am logged-in and go to my profile page.
+
+Acceptance Criteria:
+1. When a user is not logged in, the nav-bar should display the text ""Login"" and should go to the login page.
+2. When the user is logged in, the text should say the profile name, and direct the user to the profile page.",https://www.pivotaltracker.com/story/show/162048958,,
+162041135,Design: Game Page,"",,,,feature,1,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a developer, I need a page that acts as a hub for all game related pages.
+
+Acceptance Criteria: 
+1. A page that contains links to the rules, add-on content, and questions. 
+2. The page is thematically consistent with the rest of the site.
+3. The page is bootstrap compatible. ",https://www.pivotaltracker.com/story/show/162041135,,
+162041092,Design: Nav-Bar,"",,,,feature,2,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a user, I need a nav-bar so that I will be able to  navigate to different pages.
+
+Acceptance Criteria: 
+1. A separate file created for storing the nav-bar. 
+2. A bootstrap compatible nav-bar. 
+3. Title of the site that goes to the home page, Login, a popular games dropdown, and a search bar.
+4. Text that links to other pages, should highlight when hovered over.",https://www.pivotaltracker.com/story/show/162041092,,
+162040946,Design: Home and Rule Page Template ,"",,,,feature,2,unscheduled,"Nov 19, 2018",,,Wyatt Derk,"Description: As a page designer, I should have some template pages created before settling on a design.
+
+Acceptance Criteria: 
+1. Two mock-pages created for both a home page and rule page.
+2. Present the pages to the project lead.",https://www.pivotaltracker.com/story/show/162040946,,
