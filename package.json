@@ -1,7 +1,7 @@
 {
-  "name": "cis411_lab0",
+  "name": "game_app",
   "version": "0.0.1",
-  "description": "GitHub and CircleCI building a simple GraphQL service",
+  "description": "Game app",
   "engines": {
     "node": "11.x",
     "npm": "6.4.1"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tangollama/cis411_lab2.git"
+    "url": "git+https://github.com/wd1168/BC_GameApp"
   },
   "keywords": [
     "git",
@@ -21,12 +21,12 @@
     "circleci",
     "graphql"
   ],
-  "author": "Joel Worrall <joel@joelworrall.com>",
+  "author": "Wyatt Derk <wd1168@messiah.edu>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tangollama/cis411_lab2/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/tangollama/cis411_lab2#readme",
+  "homepage": "https://github.com/wd1168/BC_GameApp#readme",
   "dependencies": {
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
