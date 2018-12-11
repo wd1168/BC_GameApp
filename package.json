@@ -1,0 +1,37 @@
+{
+  "name": "bc_gameapp",
+  "version": "0.0.1",
+  "description": "testing game app.",
+  "main": "server.js",
+  "scripts": {
+    "run": "node server.js",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wd1168/BC_GameApp"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "circleci",
+    "graphql"
+  ],
+  "author": "Wyatt Derk <wd1168@messiah.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/wd1168/BC_GameApp#readme",
+  "dependencies": {
+    "apollo-server": "^2.2.2",
+    "graphql": "^14.0.2",
+    "lodash.startcase": "^4.4.0",
+    "lokijs": "^1.5.5",
+    "newrelic": "^4.12.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nyc": "^13.1.0"
+  }
+}
