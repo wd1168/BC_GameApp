@@ -34,10 +34,8 @@ jobs:
       - run: php artisan migrate --env=testing --database=sqlite_testing --force
       - run: ./vendor/bin/codecept build
       - run: ./vendor/bin/codecept run
-      # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples    
-
-Success! You just set up CircleCI 2.0 for a PHP app. Check out our project’s Job page to see how this looks when building on CircleCI.
-See Also
+      # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples   
+  
   deploy:
     docker:
       - image: buildpack-deps:trusty
