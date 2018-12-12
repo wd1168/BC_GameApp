@@ -2,9 +2,13 @@ version: 2
 jobs:
   build:  
     docker:
-      - image: circleci/node:11
-    steps:
-      - checkout
+      - image: circleci/php:7.1-node-browsers # ...with this image as the primary container; this is where all `steps` will run
+    working_directory: ~/web # directory where steps will run
+    steps: # a set of executable commands
+      - checkout # special step to check out source code to working directory
+      - run: sudo apt install -y libsqlite3-dev zlib1g-dev
+      - run: sudo docker-php-ext-install zip
+      - run: sudo composer self-update
 
       # Download and cache dependencies
       - restore_cache:
