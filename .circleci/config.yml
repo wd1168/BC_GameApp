@@ -10,22 +10,34 @@ jobs:
       - run: sudo docker-php-ext-install zip
       - run: sudo composer self-update
 
-      # Download and cache dependencies
-      - restore_cache:
+      - restore_cache: # special step to restore the dependency cache if `composer.lock` does not change
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
+            - composer-v1-{{ checksum "composer.lock" }}
+            # fallback to using the latest cache if no exact match is found (See https://circleci.com/docs/2.0/caching/)
+            - composer-v1-
+      - run: composer install -n --prefer-dist
+      - save_cache: # special step to save the dependency cache with the `composer.lock` cache key template
+          key: composer-v1-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+      - restore_cache: # special step to restore the dependency cache if `package.json` does not change
+          keys:
+            - node-v1-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found (See https://circleci.com/docs/2.0/caching/)
+            - node-v1-
       - run: yarn install
-
-      - save_cache:
+      - save_cache: # special step to save the dependency cache with the `package.json` cache key template
+          key: node-v1-{{ checksum "package.json" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      - run: yarn test
+      - run: touch storage/testing.sqlite 
+      - run: php artisan migrate --env=testing --database=sqlite_testing --force
+      - run: ./vendor/bin/codecept build
+      - run: ./vendor/bin/codecept run
+      # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples    
+
+Success! You just set up CircleCI 2.0 for a PHP app. Check out our project’s Job page to see how this looks when building on CircleCI.
+See Also
   deploy:
     docker:
       - image: buildpack-deps:trusty
