@@ -1,0 +1,41 @@
+{
+  "name": "game-app",
+  "version": "0.0.1",
+  "description": "PHP sample",
+  "engines": {
+    "node": "11.x",
+    "npm": "6.4.1"
+  },
+  "main": "",
+  "scripts": {
+    "run": "",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/em1404/BC_GameApp.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "circleci",
+    "graphql"
+  ],
+  "author": "Eli Mone <em1404@messiah.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/em1404/BC_GameApp/isses"
+  },
+  "homepage": "https://github.com/em1404/BC_GameApp#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^14.0.2",
+    "heroku": "^7.18.7",
+    "lokijs": "^1.5.5",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nyc": "^13.1.0"
+  }
+}
