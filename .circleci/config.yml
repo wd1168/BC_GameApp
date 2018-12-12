@@ -1,29 +1,13 @@
 version: 2 # use CircleCI 2.0
-
 jobs:
   build:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.1-jessie-node-browsers
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # Using the RAM variation mitigates I/O contention
-      # for database intensive operations.
-      # - image: circleci/mysql:5.7-ram
-      # 
-      # - image: redis:2.8.19
-
     steps:
       - checkout
 
-      - run: sudo apt update && sudo apt install zlib1g-dev libsqlite3-dev
-      - run: sudo docker-php-ext-install zip
-
       # Download and cache dependencies
-
-      # composer cache
       - restore_cache:
           keys:
           # "composer.lock" can be used if it is committed to the repo
@@ -62,4 +46,4 @@ jobs:
       - store_test_results:
           path: tests/_output
       - store_artifacts:
-path: tests/_output
+          path: tests/_output
