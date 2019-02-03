@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Home</title>
+    <title>Fact Checker</title>
     <link rel="stylesheet" href="./Styles/bootstrap.min.css" />
   </head>
   <body>
@@ -25,7 +25,7 @@
         </nav> 
     <div></br>  </div>
     <div class="container">
-        <div class="jumbotron col-md-12 col-lg-12"><center><h2>Card /Game App</h2></center></div>
+        <div class="jumbotron col-md-12 col-lg-12"><center><h2>Board / Card Game Fact Checker </h2></center></div>
         
         <div class='row'>
             <div class="col-md-4 col-lg-4">
