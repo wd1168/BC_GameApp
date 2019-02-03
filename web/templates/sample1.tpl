@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Home</title>
+    <title>Fact Checker</title>
     <link rel="stylesheet" href="./Styles/bootstrap.min.css" />
   </head>
   <body>
