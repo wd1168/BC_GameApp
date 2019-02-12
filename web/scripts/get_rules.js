@@ -4,7 +4,7 @@ let output = "";
 
 const fetchUsers = async () => {
   const api_call = await fetch(
-    "https://api.github.com/repos/em1404/BC_GameApp/contents/web/rules/sample.json?client_id=${client_id}&client_secret=${client_secret}"
+    "https://api.github.com/repos/em1404/BC_GameApp/contents/web/rules/game1_rules.json?client_id=${client_id}&client_secret=${client_secret}"
   );
 
   const data = await api_call.json();
