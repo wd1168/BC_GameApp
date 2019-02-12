@@ -15,6 +15,8 @@
              <li class="nav-item">
                 <a class="nav-link" href="#">Link 2</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./card_games.php">Card Games</a>
             <li>
             <form class="form-inline" action="/action_page.php">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -22,18 +24,18 @@
             </form>
             </li>
             </ul>
-        </nav> 
+        </nav>
     <div></br>  </div>
     <div class="container">
         <div class="jumbotron col-md-12 col-lg-12"><center><h2>Board / Card Game Fact Checker </h2></center></div>
-        
+
         <div class='row'>
             <div class="col-md-4 col-lg-4">
                     <picture>
                             <source srcset="images/jenny-marvin-1265717-unsplash.jpg" type="image/svg+xml">
                             <img src="images/jenny-marvin-1265717-unsplash.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre" width="300" height="300">
                     </picture>
-                    
+
             </div>
             <div class="col-md-4 col-lg-4">
                     <picture>
