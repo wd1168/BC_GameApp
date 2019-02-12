@@ -2,6 +2,7 @@
   <head>
     <title>Fact Checker</title>
     <link rel="stylesheet" href="./Styles/bootstrap.min.css" />
+    <link rel="mainstyle" href="./stylesheets/main.css" />
   </head>
   <body>
          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -14,6 +15,9 @@
             </li>
              <li class="nav-item">
                 <a class="nav-link" href="#">Link 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./card_games.php">Card Games</a>
             </li>
             <li>
             <form class="form-inline" action="/action_page.php">
@@ -30,9 +34,24 @@
         <div class="col-md-4 col-lg-4">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
-            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre" width="300" height="300">
-            <label class="plaintext">Solitaire</label>
+            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
+            <h3>Go Fish</h3>
           </picture>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <picture>
+            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
+            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
+            <h3>Solitaire</h3>
+          </picture>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <picture>
+            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
+            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
+            <h3>War</h3>
+          </picture>
+        </div>
     <script src="./script/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
   </body>
