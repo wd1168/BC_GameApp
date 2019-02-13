@@ -25,7 +25,7 @@
         </nav> 
     <div></br>  </div>
     <div class="container">
-        <div class="jumbotron col-md-12 col-lg-12"><center><h2> Board / Card Game Fact Checker </h2></center></div>
+        {* <div class="jumbotron col-md-12 col-lg-12"><center><h2> Board / Card Game Fact Checker </h2></center></div>
         
         <div class='row'>
             <div class="col-md-4 col-lg-4">
@@ -47,7 +47,7 @@
                             <img src="images/rawpixel-592443-unsplash.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre" width="550" height="500">
                     </picture>
             </div>
-        </div>
+        </div> *}
     </div>
                 
     <script src="./scripts/jquery-3.3.1.min.js"></script>
