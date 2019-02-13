@@ -16,6 +16,9 @@
                 <a class="nav-link" href="#">Link 2</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="./board_games.php">Board Games</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="./card_games.php">Card Games</a>
             </li>
             <li>
