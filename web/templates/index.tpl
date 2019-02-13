@@ -25,6 +25,13 @@
         </nav> 
     <div></br>  </div>
     <div class="container">
+
+        <div class="hero">
+        
+        <h1>Welcome!</h1>
+        
+        </div>
+
         {* <div class="jumbotron col-md-12 col-lg-12"><center><h2> Board / Card Game Fact Checker </h2></center></div>
         
         <div class='row'>
