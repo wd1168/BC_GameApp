@@ -1,7 +1,8 @@
 <html>
   <head>
-    <title>Fact Checker</title>
+    <title>Board Games</title>
     <link rel="stylesheet" href="./Styles/bootstrap.min.css" />
+    <link rel="mainstyle" href="./stylesheets/main.css" />
   </head>
   <body>
          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -30,14 +31,30 @@
             </ul>
         </nav>
     <div></br>  </div>
-                <div class="col-md-12 col-lg-12">
-                    <picture>
-                            <source srcset="images/courtney-hedger-336844-unsplash.jpg" type="image/svg+xml">
-                            <img src="images/courtney-hedger-336844-unsplash.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre" width="2000" height="100">
-                    </picture>
-
-            </div>
-
+    <div class="container">
+      <div class="jumbotron col-md-12 col-lg-12"><center><h2>Board Games</h2></center></div>
+      <div class="row">
+        <div class="col-md-4 col-lg-4">
+          <picture>
+            <source srcset="images\battleship-logo.jpg">
+            <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
+            <h3>Battleship</h3>
+          </picture>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <picture>
+            <source srcset="images\game-of-life.jpg">
+            <img src="images\game-of-life.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
+            <h3>Life</h3>
+          </picture>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <picture>
+            <source srcset="images\monopoly.jpg">
+            <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
+            <h3>Monopoly</h3>
+          </picture>
+        </div>
     <script src="./script/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
   </body>
