@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Fact Checker</title>
+    <title>Card Games</title>
     <link rel="stylesheet" href="./Styles/bootstrap.min.css" />
     <link rel="mainstyle" href="./stylesheets/main.css" />
   </head>
