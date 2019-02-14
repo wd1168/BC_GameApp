@@ -45,17 +45,16 @@
       </nav>
     </header>
    <div></br>  </div>
+          <div class="container">
              <div class="col-md-12 col-lg-12">
                    <script type="text/javascript" src="./scripts/get_rules.js"></script>      
                    <div>
                       <div id="rules"></div>
                     </div>               
                </div>
-
+            </div>
     <script src="./scripts/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
-
-
   </body>
 </html>
 
