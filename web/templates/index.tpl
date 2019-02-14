@@ -2,7 +2,7 @@
   <head>
     <title> GameRepo </title>
     <!-- <link rel="stylesheet" href="./Styles/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
     
     <style>
         body > .container {
