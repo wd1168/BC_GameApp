@@ -3,7 +3,6 @@
     <title> GameRepo </title>
     <!-- <link rel="stylesheet" href="./Styles/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
-    
     <style>
         body > .container {
   padding: 75px 15px 0;
@@ -24,10 +23,11 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Board Games</a>
+                <a class="nav-link" href="./board_games.php">Board Games</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Card Games</a>
+
+              <a class="nav-link" href="./card_games.php">Card Games</a>
             </li>
             <!--<li class="nav-item">-->
             <!--  <a class="nav-link disabled" href="#">Disabled</a>-->
@@ -40,20 +40,14 @@
         </div>
       </nav>
     </header>
-        
- 
-    <div></br>  </div>
-    
+   <div></br>  </div>
     <main role="main" class="container">
-
-
-
         <div class="hero">
         
         <h1>Welcome to the GameRepo!</h1>
 
         <p>Please enjoy this repository for board and card game rules.</p>
-        
+
         <h2>Popular Games</h2>
 
         <p>This sample text serves in place of suggested games as we currently have no rulesets to offer.</p>
@@ -81,38 +75,12 @@
                 <li>Joshua Simmons</li>
                 <li>Benjamin Underwood</li>
         </ul>
-
         </div>
-
-        <!-- <div class="jumbotron col-md-12 col-lg-12"><center><h2> Board / Card Game Fact Checker </h2></center></div>
-        
-    <!--    <div class='row'>-->
-    <!--        <div class="col-md-4 col-lg-4">-->
-    <!--                <picture>-->
-    <!--                        <source srcset="images/jenny-marvin-1265717-unsplash.jpg" type="image/svg+xml">-->
-    <!--                        <img src="images/jenny-marvin-1265717-unsplash.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre" width="550" height="500">-->
-    <!--                </picture>-->
-                    
-    <!--        </div>-->
-    <!--        <div class="col-md-4 col-lg-4">-->
-    <!--                <picture>-->
-    <!--                        <source srcset="images/jack-hamilton-320934-unsplash.jpg" type="image/svg+xml">-->
-    <!--                        <img src="images/jack-hamilton-320934-unsplash.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre" width="550" height="500">-->
-    <!--                </picture>-->
-    <!--        </div>-->
-    <!--        <div class="col-md-4 col-lg-4">-->
-    <!--                <picture>-->
-    <!--                        <source srcset="images/rawpixel-592443-unsplash.jpg" type="image/svg+xml">-->
-    <!--                        <img src="images/rawpixel-592443-unsplash.jpg" class="img-fluid img-thumbnail" alt="Cinque Terre" width="550" height="500">-->
-    <!--                </picture>-->
-    <!--        </div>-->
-    <!--    </div> -->
-
-    
     </main>
-                
+
     <script src="./scripts/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
-    
+
+
   </body>
 </html>
