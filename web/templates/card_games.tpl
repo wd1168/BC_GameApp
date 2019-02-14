@@ -47,7 +47,7 @@
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
-            <h3>Go Fish</h3>
+            <h3><a href="./rules.php">Go Fish</a></h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">

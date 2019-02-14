@@ -49,13 +49,13 @@
         <p>Please enjoy this repository for board and card game rules.</p>
 
         <h2>Game Title (Placeholder)</h2>
-
+      </br>
         <h3>Subheading (Placeholder)</h3>
         <p>This sample text serves in place of rules to be loaded in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nulla et metus congue finibus. Nam mauris nisl, sodales a purus quis, ornare commodo lacus.</p>
 
         <h3>Subheading 2 (Placeholder)</h3>
         <p>This sample text serves in place of more rules to be loaded in. According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible. </p>
-        
+
         </div>
     </main>
 
