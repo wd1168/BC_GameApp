@@ -1,0 +1,44 @@
+{
+  "title": "Go Fish",
+  "type": "card",
+  "deck": "std",
+  "players": [
+    2, 3, 4, 5
+  ],
+  "age": "4+",
+  "rules": [
+    {
+      "category": "Dealing",
+      "text":"Any player deals one card face up to each player. The player with the lowest card is the dealer."
+    },
+    {
+      "category": "Dealing",
+      "text": "The dealer deals the cards clockwise one at a time, face down, beginning with the player to their left. If two or three people are playing, each player receives seven cards. If four or five people are playing, each receives five cards. The remainder of the deck is placed face down on the table to form the pond."
+    },
+    {
+      "category": "Definition",
+      "text": "A 'book' is any four of a kind, such as four kings, four aces, and so on."
+    },
+    {
+      "category": "Play",
+      "text": "The player to the left of the dealer looks directly at any opponent and says, for example, 'Give me your kings,' usually addressing the opponent by name and specifying the rank he wants, from ace down to two. The player who is 'fishing' must have at least one card of the rank they asked for in their hand. The player who is addressed must hand over all the cards requested. If they has none, they say, 'Go fish!' and the player who made the request draws a card from the pond and places it in their hand."
+    },
+    {
+      "category": "Play",
+      "text": "If a player gets one or more cards of the named rank they asked for, they are entitled to ask the same or another player for a card. They can ask for the same card or a different one. So long as they succeed in getting cards (makes a catch), their turn continues. When a player makes a catch, they must reveal the card so that the catch is verified. If a player gets the fourth card of a book, they show all four cards, places them on the table face up in front of them, and plays again."
+    },
+    {
+      "category": "Play",
+      "text":"If the player goes fishing without 'making a catch' (does not receive a card they asked for), the turn passes to their left."
+    },
+    {
+      "category": "Play",
+      "text": "During the game, if a player is left without cards, they may (when it's their turn to play), draw from the stock and then ask for cards of that rank. If there are no cards left in the stock, they are out of the game."
+    },
+    {
+      "category": "Winning",
+      "text": "The game ends when all thirteen books have been won. The winner is the player with the most books."
+    }
+  ]
+
+}
