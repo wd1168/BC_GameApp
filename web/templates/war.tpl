@@ -47,19 +47,10 @@
    <div></br>  </div>
           <div class="container">
              <div class="col-md-12 col-lg-12">
-
-                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./gofish.php">gofish</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./solitaire.php">solitaire</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./war.php">war</a>
-                    </li>
-                </ul>
-
+                   <script type="text/javascript" src="./scripts/war.js"></script>      
+                   <div>
+                      <div id="rules"></div>
+                    </div>               
                </div>
             </div>
     <script src="./scripts/jquery-3.3.1.min.js"></script>

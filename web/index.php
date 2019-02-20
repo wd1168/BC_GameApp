@@ -5,4 +5,4 @@
  * @package Example-application
  */
 require_once "../configuration/config.php";
-$smarty->display('index.tpl');
+$smarty->display('sample1.tpl');
