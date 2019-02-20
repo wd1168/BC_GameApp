@@ -1,3 +1,3 @@
 <?php
-require_once "../private_html/config.php";
+require_once "../configuration/config.php";
 $smarty->display('sample1.tpl');
