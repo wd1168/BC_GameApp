@@ -46,7 +46,7 @@
       "text": "If a vacancy in the tableau is created by the removal of cards elsewhere it is called a “space”, and it is of major importance in manipulating the tableau. If a space is created, it can only be filled in with a king. Filling a space with a king could potentially unblock one of the face down cards in another pile in the tableau."
     },
     {
-      "cagtegory": "Winning",
+      "category": "Winning",
       "text": "Continue to transfer cards in the tableau and bring cards into play from the stock pile until all the cards are built in suit sequences in the foundation piles to win!"
     }
   ]
