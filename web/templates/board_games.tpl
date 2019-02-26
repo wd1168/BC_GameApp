@@ -50,21 +50,21 @@
         <div class="col-md-4 col-lg-4">
           <picture>
             <source srcset="images\battleship-logo.jpg">
-            <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
+            <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship" width="100" height="100">
             <h3>Battleship</h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">
           <picture>
-            <source srcset="images\game-of-life.jpg">
-            <img src="images\game-of-life.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
-            <h3>Life</h3>
+            <source srcset="images\othello.jpg">
+            <img src="images\othello.jpg" class="img-fluid img-thumbnail mx-auto" alt="Othello" width="100" height="100">
+            <h3>Othello</h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">
           <picture>
             <source srcset="images\monopoly.jpg">
-            <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
+            <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100" height="100">
             <h3>Monopoly</h3>
           </picture>
         </div>
