@@ -1,0 +1,54 @@
+{
+  "title": "Othello",
+  "manufacturer": "Mattel, Inc.",
+  "type": "board",
+  "players": 2,
+  "age": "Kids",
+  "link": "https://www.fgbradleys.com/rules/Othello.pdf",
+  "rules": [
+    {
+      "category": "Definitions",
+      "text": "A row is defined as one or more discs in a continous straight line, regardless of direction."
+    },
+    {
+      "category": "Set Up",
+      "text": "The Othello gameboard is placed between the players. Each player receives 32 discs, which are black on one side and white on the other. Each player chooses one color disc to use throughout the game. In the center of the board, place 2 black discs and 2 white discs. Discs of the same color are not adjacent, but are diagonal from each other."
+    },
+    {
+      "category": "How to Play",
+      "text": "The player using black discs goes first. On your move, take one disc and place it on the game board. A move consists of 'out-flanking' your opponent's disc(s), then flipping the out-flanked disc(s) to your color."
+    },
+    {
+      "category": "How to Play",
+      "text": "To out-flank means to place a disc on the board so that your opponent's row (or rows) of discs is bordered at each end by a disc of your color. (A row may be made up of one or more discs.)"
+    },
+    {
+      "category": "How to Play",
+      "text": "If on your turn you cannot out-flank and flip at least one opposing disc, your turn is forfeit and your opponent moves again. However, if a move is available to you, you may not forfeit your turn. You may not skip over your own color disc to out-flank an opposing disc."
+    },
+    {
+      "category": "How to Play",
+      "text": "Disc(s) may only be out-flanked as a direct result of a move and must fall in the direct line of the disc placed down."
+    },
+    {
+      "category": "How to Play",
+      "text": "All discs out-flanked in any one move must be flipped, even if it is to the player's advantage NOT to flip them all."
+    },
+    {
+      "category": "How to Play",
+      "text": "A player who flips a disc which should not have been flipped may correct the mistake as long as the opponent has not made a subsequent move. If the opponent has already moved, it is too late to change and the disc(s) remain as is."
+    },
+    {
+      "category": "How to Play",
+      "text": "Once a disc is placed on a square, it can never be moved to another square later in the game."
+    },
+    {
+      "category": "How to Play",
+      "text": "If a player runs out of discs, but still has an opportuinty to out-flank an opposing disc on his or her turn, the opponent must give the player a disc to use. (This can happen as many times as the player needs and can use a disc.)"
+    },
+    {
+      "category": "Winning",
+      "text": "When it is no longer possible for either player to move, the game is over. Discs are counted and the player with the majority of his or her color discs on the board is a winner. It is possible for a game to end before all 64 squares on the board are filled. It is also possible to have a tie game."
+    },
+  ]
+}
