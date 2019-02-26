@@ -1,9 +1,11 @@
 {
   "title": "Solitaire",
+  "manufacturer": "N/A",
   "type": "card",
   "deck": "std",
   "players": 1,
   "age": "Adult",
+  "link": "https://www.bicyclecards.com/how-to-play/solitaire/",
   "rules": [
     {
       "category": "Definition",

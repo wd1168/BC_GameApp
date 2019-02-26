@@ -1,9 +1,11 @@
 {
   "title": "War",
+  "manufacturer": "N/A",
   "type": "card",
   "deck": "std",
   "players": 2,
   "age": "Kids",
+  "link": "https://www.bicyclecards.com/how-to-play/war/",
   "rules": [
     {
       "category": "Dealing",
