@@ -91,8 +91,40 @@
       "text": "When you own all the properties in a color-group you may buy houses from the Bank and erect them on those properties. If you buy one house, you may put it on any one of those properties. The next house you buy must be erected on one of the unimproved properties of this or any other complete color-group you may own."
     },
     {
-      "category": "TO DO",
-      "text": "TO DO"
+      "category": "Building Houses/Hotels",
+      "text": "When the Bank has no houses to sell, players wishing to build must wait for some player to return or sell his/her houses to the Bank before building. If there are a limited number of houses and hotels available and two or more players wish to buy more than the Bank has, the houses or hotels must be sold at auction to the highest bidder."
     },
+    {
+      "category": "Selling Property",
+      "text": "Unimproved properties, railroads and utilities (but not buildings) may be sold to any player as a private transaction for any amount the owner can get; however, no property can be sold to another player if buildings are standing on any properties of that color-group. Any buildings so located must be sold back to the Bank before the owner can sell any property of that color-group. Houses and hotels may be sold back to the Bank at any time for one-half the price paid for them."
+    },
+    {
+      "category": "Selling Property",
+      "text": "All houses on one color-group must be sold one by one, evenly, in reverse of the manner in which they were erected. All hotels on one color-group may be sold at once, or they may be sold one house at a time (one hotel equals five houses), evenly, in reverse of the manner in which they were erected."
+    },
+    {
+      "category": "Mortgages",
+      "text": "Unimproved properties can be mortgaged through the Bank at any time. Before an improved property can be mortgaged, all the buildings on all the properties of its color-group must be sold back to the Bank at half price. The mortgage value is printed on each Title Deed card."
+    },
+    {
+      "category": "Mortgages",
+      "text": "No rent can be collected on mortgaged properties or utilities, but rent can be collected on unmortgaged properties in the same group. In order to lift the mortgage, the owner must pay the Bank the amount of the mortgage plus 10% interest. When all the properties of a color-group are no longer mortgaged, the owner may begin to buy back houses at full price."
+    },
+    {
+      "category": "Loaning Money",
+      "text": "Money can be loaned to a player only by the Bank and then only by mortgaging property. No player may borrow from or lend money to another player."
+    },
+    {
+      "category": "Mortgages",
+      "text": "The player who mortgages property retains possession of it and no other player may secure it by lifting the mortgage from the Bank. However, the owner may sell this mortgaged property to another player at any agreed price. If you are the new owner, you may lift the mortgage at once if you wish by paying off the mortgage plus 10% interest to the Bank. If the mortgage is not lifted at once, you must pay the Bank 10% interest when you buy the property and if you lift the mortgage later you must pay the Bank an additional 10% interest as well as the amount of the mortgage."
+    },
+    {
+      "category": "Bankruptcy",
+      "text": "You are declared bankrupt if you owe more than you can pay either to another player or to the Bank. If your debt is to another player, you must turn over to that player all that you have of value and retire from the game. In making this settlement, if you own houses or hotels, you must return these to the Bank in exchange for money to the extent of one-half the amount paid for them; this cash is given to the creditor. If you have mortgaged property you also turn this property over to your creditor but the new owner must at once pay the Bank the amount of interest on the loan, which is 10% of the value of the property. The new owner who does this may then, at his/her option, pay the principal or hold the property until some later turn, then lift the mortgage. If he/she holds property in this way until a later turn, he/she must pay the interest again upon lifting the mortgage."
+    },
+    {
+      "category": "Bankruptcy",
+      "text": "Should you owe the Bank, instead of another player, more than you can pay (because of taxes or penalties) even by selling off buildings and mortgaging property, you must turn over all assets to the Bank. In this case, the Bank immediately sells by auction all property so taken, except buildings. A bankrupt player must immediately retire from the game. The last player left in the game wins."
+    }
   ]
 }
