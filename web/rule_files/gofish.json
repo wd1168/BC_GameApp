@@ -1,11 +1,13 @@
 {
   "title": "Go Fish",
+  "manufacturer": "N/A",
   "type": "card",
   "deck": "std",
   "players": [
     2, 3, 4, 5
   ],
   "age": "4+",
+  "link": "https://www.bicyclecards.com/how-to-play/go-fish/",
   "rules": [
     {
       "category": "Dealing",
