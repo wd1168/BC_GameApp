@@ -7,26 +7,26 @@
         body {
             background-color: rgb(91, 136, 216);
         }
-    
+
         body > .container {
             padding: 20px 15px 0;
         }
         .content {
-            
+
             border-radius: 25px;
             border: 2px solid white;
             background-color: white;
-            padding: 30px; 
+            padding: 30px;
             margin-bottom: 20px;
             /*box-shadow: 0px 10px 20px grey;*/
             z-index: 1;
         }
-        
+
         .nav {
             margin-left: 12px;
-            
+
         }
-        
+
         .nav > * {
             border-bottom-left-radius: 9px;
             border-bottom-right-radius: 9px;
@@ -45,19 +45,19 @@
             margin-right: 3px;
             /*z-index: -1;*/
         }
-        
+
         a i {
             color: white;
         }
-        
+
         a strong {
             color: white;
         }
-        
+
         a:hover {
             text-decoration: none;
         }
-        
+
         ul, li {
             margin: 0;
             padding-left: .25em;
@@ -70,7 +70,7 @@
     <header>
 
     </header>
-   
+
     <div class="nav">
             <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
@@ -81,7 +81,7 @@
     <main role="main" class="container">
 
         <div class="content">
-        
+
         <h1><strong>GameRepo</strong></h1>
 
         <p><i>Welcome! Please enjoy this repo for all of your favorite board and card game rules.</i></p>
@@ -97,22 +97,22 @@
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
-            <source srcset="images\game-of-life.jpg">
-            <img src="images\game-of-life.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
-            <h5>Life</h5>
+            <source srcset="images\othello.jpg">
+            <img src="images\othello.jpg" class="img-fluid img-thumbnail mx-auto" alt="Othello" width="100" height="100">
+            <h5>Othello</h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\monopoly.jpg">
-            <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
+            <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100" height="100">
             <h5>Monopoly</h5>
           </picture>
         </div>
         </div>
         <br>
         <h4><strong>Popular Card Games</strong></h4>
-        <div class="row"> 
+        <div class="row">
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
@@ -151,7 +151,7 @@
                 <li><strong>Benjamin Underwood</strong>, Design</li>
                 <li><strong>Ibinabo Braide</strong>, Design</li>
                 <li><strong>Joshua Simmons</strong>, Design</li>
-                
+
         </ul>
         </div>
     </main>
