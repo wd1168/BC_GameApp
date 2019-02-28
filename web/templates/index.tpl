@@ -117,21 +117,21 @@
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
-            <h5><a href="./rules.php">Go Fish</a></h5>
+            <h5><a href="./gofish.php">Go Fish</a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
-            <h5>Solitaire</h5>
+            <h5><a href="./solitaire.php">Solitaire</a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
-            <h5>War</h5>
+            <h5><a href="./war.php">War</a></h5>
           </picture>
         </div>
         </div>
