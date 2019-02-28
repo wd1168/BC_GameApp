@@ -51,21 +51,21 @@
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
-            <h3><a href="./rules.php">Go Fish</a></h3>
+            <h3><a href="./gofish.php">Go Fish</a></h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
-            <h3>Solitaire</h3>
+            <h3><a href="./solitaire.php">Solitaire</a></h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
-            <h3>War</h3>
+            <h3><a href="./war.php">war</a></h3>
           </picture>
         </div>
     <script src="./script/jquery-3.3.1.min.js"></script>
