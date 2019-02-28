@@ -28,10 +28,6 @@
 
               <a class="nav-link" href="./card_games.php">Card Games</a>
             </li>
-            <li class="nav-item">
-
-              <a class="nav-link" href="./sample_rules.php">Sample Rules</a>
-            </li>
             <!--<li class="nav-item">-->
             <!--  <a class="nav-link disabled" href="#">Disabled</a>-->
             <!--</li>-->
