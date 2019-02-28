@@ -1,50 +1,85 @@
 <html>
   <head>
-    <title>Board Games</title>
-    <link rel="stylesheet" href="./Styles/bootstrap.min.css" />
-    <link rel="mainstyle" href="./stylesheets/main.css" />
+    <title> GameRepo </title>
+    <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width">
     <style>
+        body {
+            background-color: rgb(91, 136, 216);
+        }
+    
         body > .container {
-  padding: 75px 15px 0;
-}
+            padding: 20px 15px 0;
+        }
+        .content {
+            
+            border-radius: 25px;
+            border: 2px solid white;
+            background-color: white;
+            padding: 30px; 
+            margin-bottom: 20px;
+            /*box-shadow: 0px 10px 20px grey;*/
+            z-index: 1;
+        }
+        
+        .nav {
+            margin-left: 12px;
+            
+        }
+        
+        .nav > * {
+            border-bottom-left-radius: 9px;
+            border-bottom-right-radius: 9px;
+            border-left: 2px solid rgb(108, 160, 255);
+            border-bottom: 2px solid rgb(108, 160, 255);
+            border-right: 2px solid rgb(108, 160, 255);
+            border-top: 2px solid rgb(108, 160, 255);
+            /*box-shadow: 0px 0px 6px grey;*/
+            background-color: rgb(108, 160, 255);
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            padding-top: 2px;
+            margin-left: 3px;
+            margin-right: 3px;
+            /*z-index: -1;*/
+        }
+        
+        a i {
+            color: white;
+        }
+        
+        a strong {
+            color: white;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        ul, li {
+            margin: 0;
+            padding-left: .25em;
+        }
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
+
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="./index.php">GameRepo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./board_games.php">Board Games</a>
-            </li>
-            <li class="nav-item">
 
-              <a class="nav-link" href="./card_games.php">Card Games</a>
-            </li>
-            <li class="nav-item">
-
-              <a class="nav-link" href="./sample_rules.php">Sample Rules</a>
-            </li>
-            <!--<li class="nav-item">-->
-            <!--  <a class="nav-link disabled" href="#">Disabled</a>-->
-            <!--</li>-->
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
     </header>
-    <div></br>  </div>
+   
+    <div class="nav">
+            <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+            <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+            <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+            <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+        </div>
     <div class="container">
+    <div class="content">
       <div class="jumbotron col-md-12 col-lg-12"><center><h2>Board Games</h2></center></div>
       <div class="row">
         <div class="col-md-4 col-lg-4">
@@ -67,6 +102,23 @@
             <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100" height="100">
             <h3>Monopoly</h3>
           </picture>
+        </div>
+        {*<table>*}
+          {*<tr>*}
+            {*<th colspan = 3>Database Test</th>*}
+          {*</tr>*}
+          {*<tr>*}
+            {*<th>First Name</th>*}
+            {*<th>Last Name</th>*}
+            {*<th>Email</th>*}
+          {*</tr>*}
+          {*<tr>*}
+            {*<th>{$name}</th>*}
+            {*<th>{$name2}</th>*}
+            {*<th>{$email}</th>*}
+          {*</tr>*}
+        {*</table>*}
+        </div>
         </div>
     <script src="./script/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
