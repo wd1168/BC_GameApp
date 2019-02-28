@@ -72,11 +72,11 @@
     </header>
    
     <div class="nav">
-            <div><a href="/"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
-            <div><a href="/boards"><strong>Boards</strong></a></div>
-            <div><a href="/cards"><strong>Cards</strong></a></div>
-            <div><a href="/about"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-            <div><a href="/search"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+            <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+            <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+            <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
         </div>
     <main role="main" class="container">
 
