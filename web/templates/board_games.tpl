@@ -79,6 +79,7 @@
             <div><a href="/search"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
         </div>
     <div class="container">
+    <div class="content">
       <div class="jumbotron col-md-12 col-lg-12"><center><h2>Board Games</h2></center></div>
       <div class="row">
         <div class="col-md-4 col-lg-4">
@@ -117,6 +118,8 @@
             {*<th>{$email}</th>*}
           {*</tr>*}
         {*</table>*}
+        </div>
+        </div>
     <script src="./script/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
   </body>
