@@ -1,80 +1,157 @@
 <html>
   <head>
     <title> GameRepo </title>
-    <!-- <link rel="stylesheet" href="./Styles/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width">
     <style>
+        body {
+            background-color: rgb(91, 136, 216);
+        }
+    
         body > .container {
-  padding: 75px 15px 0;
-}
+            padding: 20px 15px 0;
+        }
+        .content {
+            
+            border-radius: 25px;
+            border: 2px solid white;
+            background-color: white;
+            padding: 30px; 
+            margin-bottom: 20px;
+            /*box-shadow: 0px 10px 20px grey;*/
+            z-index: 1;
+        }
+        
+        .nav {
+            margin-left: 12px;
+            
+        }
+        
+        .nav > * {
+            border-bottom-left-radius: 9px;
+            border-bottom-right-radius: 9px;
+            border-left: 2px solid rgb(108, 160, 255);
+            border-bottom: 2px solid rgb(108, 160, 255);
+            border-right: 2px solid rgb(108, 160, 255);
+            border-top: 2px solid rgb(108, 160, 255);
+            /*box-shadow: 0px 0px 6px grey;*/
+            background-color: rgb(108, 160, 255);
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            padding-top: 2px;
+            margin-left: 3px;
+            margin-right: 3px;
+            /*z-index: -1;*/
+        }
+        
+        a i {
+            color: white;
+        }
+        
+        a strong {
+            color: white;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        ul, li {
+            margin: 0;
+            padding-left: .25em;
+        }
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="./index.php">GameRepo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./board_games.php">Board Games</a>
-            </li>
-            <li class="nav-item">
 
-              <a class="nav-link" href="./card_games.php">Card Games</a>
-            </li>
-            
-            <!--<li class="nav-item">-->
-            <!--  <a class="nav-link disabled" href="#">Disabled</a>-->
-            <!--</li>-->
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
     </header>
-   <div></br>  </div>
+   
+    <div class="nav">
+            <div><a href="./"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./boards"><strong>Boards</strong></a></div>
+            <div><a href="./cards"><strong>Cards</strong></a></div>
+            <div><a href="./about"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+            <div><a href="./search"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+        </div>
     <main role="main" class="container">
-        <div class="hero">
+
+        <div class="content">
         
-        <h1>Welcome to the GameRepo!</h1>
+        <h1><strong>GameRepo</strong></h1>
 
-        <p>Please enjoy this repository for board and card game rules.</p>
+        <p><i>Welcome! Please enjoy this repo for all of your favorite board and card game rules.</i></p>
 
-        <h2>Popular Games</h2>
+        <h4><strong>Popular Board Games</strong></h4>
+        <div class="row">
+        <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <picture>
+            <source srcset="images\battleship-logo.jpg">
+            <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship" width="100" height="100">
+            <h5>Battleship</h5>
+          </picture>
+        </div>
+        <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <picture>
+            <source srcset="images\game-of-life.jpg">
+            <img src="images\game-of-life.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
+            <h5>Life</h5>
+          </picture>
+        </div>
+        <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <picture>
+            <source srcset="images\monopoly.jpg">
+            <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
+            <h5>Monopoly</h5>
+          </picture>
+        </div>
+        </div>
+        <br>
+        <h4><strong>Popular Card Games</strong></h4>
+        <div class="row"> 
+        <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <picture>
+            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
+            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
+            <h5><a href="./rules.php">Go Fish</a></h5>
+          </picture>
+        </div>
+        <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <picture>
+            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
+            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
+            <h5>Solitaire</h5>
+          </picture>
+        </div>
+        <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <picture>
+            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
+            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
+            <h5>War</h5>
+          </picture>
+        </div>
+        </div>
+        <!--<h2>Random Games</h2>-->
 
-        <p>This sample text serves in place of suggested games as we currently have no rulesets to offer.</p>
+        <!--<p>This sample text serves in place of suggested games as we currently have no rulesets to offer.</p>-->
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nulla et metus congue finibus. Nam mauris nisl, sodales a purus quis, ornare commodo lacus.</p>
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nulla et metus congue finibus. Nam mauris nisl, sodales a purus quis, ornare commodo lacus.</p>-->
 
-        <h2>Trending Games</h2>
+        <br>
 
-        <p>This sample text serves in place of suggested games as we currently have no rulesets to offer.</p>
+        <h4><strong>Developers</strong></h4>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nulla et metus congue finibus. Nam mauris nisl, sodales a purus quis, ornare commodo lacus.</p>
-
-        <h2>Random Games</h2>
-
-        <p>This sample text serves in place of suggested games as we currently have no rulesets to offer.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nulla et metus congue finibus. Nam mauris nisl, sodales a purus quis, ornare commodo lacus.</p>
-
-        <h2>Developers</h2>
-
-        <ul>
-                <li>Wyatt Derk</li>
-                <li>Eliezer Mwankenja</li>
-                <li>Ibi Braide</li>
-                <li>Joshua Simmons</li>
-                <li>Benjamin Underwood</li>
+        <ul style="list-style: none; ">
+                <li><strong>Wyatt Derk</strong>, Project Lead</li>
+                <li><strong>Eliezer Mwankenja</strong>, Database</li>
+                <li><strong>Benjamin Underwood</strong>, Design</li>
+                <li><strong>Ibinabo Braide</strong>, Design</li>
+                <li><strong>Joshua Simmons</strong>, Design</li>
+                
         </ul>
         </div>
     </main>
