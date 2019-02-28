@@ -68,6 +68,21 @@
             <h3>Monopoly</h3>
           </picture>
         </div>
+        {*<table>*}
+          {*<tr>*}
+            {*<th colspan = 3>Database Test</th>*}
+          {*</tr>*}
+          {*<tr>*}
+            {*<th>First Name</th>*}
+            {*<th>Last Name</th>*}
+            {*<th>Email</th>*}
+          {*</tr>*}
+          {*<tr>*}
+            {*<th>{$name}</th>*}
+            {*<th>{$name2}</th>*}
+            {*<th>{$email}</th>*}
+          {*</tr>*}
+        {*</table>*}
     <script src="./script/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
   </body>

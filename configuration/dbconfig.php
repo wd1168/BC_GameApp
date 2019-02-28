@@ -7,7 +7,7 @@
 # Set database constants
 define('DB_USER', 'b9e396f4e116c9');
 define('DB_PASSWORD', '9af85de8');
-define('DB_NAME', 'us-cdbr-iron-east-03.cleardb.net');
+define('DB_NAME', 'heroku_ac0327af4f39c7b');
 #
 #  Begin the session
 session_start();
@@ -23,7 +23,7 @@ try {
      *     "mysql:dbname=name;host=localhost"
      *     where "name" is the name of the database
      */
-    $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=localhost";
+    $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=us-cdbr-iron-east-03.cleardb.net";
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 } catch (PDOException $e) {
