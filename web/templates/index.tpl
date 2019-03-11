@@ -72,7 +72,8 @@
     </header>
 
     <div class="nav">
-            <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a class="navbar-brand" href="./index.php">
+              <img src="./images/GrLogo.svg" width="30" height="30" alt=""></a></div>
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
             <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
