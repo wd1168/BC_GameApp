@@ -80,26 +80,23 @@
         </div>
     <main role="main" class="container">
       <div class="content">
-        <h1><strong>Sample Game Page; Game Title Goes Here</strong></h1>
+        <h1><strong>Sample Expansion Page; Expansion Title</strong></h1>
         <img class="image-fluid" src='./images/GrLogo_Black.svg' height="auto" style="max-width: 20%">
         <br>
-        <h5>Players</h5> <p><i>Player count goes here</i></p>
-        <h5>Ages</h5> <p><i>player age goes here</i></p>
+        <h5>Base Game</h5> <p><i>Base Game goes here</i></p>
         <h5>Manufacturer</h5>
           <p><i>Manufacturer goes here</i></p>
-        <h5>Description</h5>
-        <p>This sample text is where the description of the game will go. The description will
-          contain a small blurb about the game and what its objectives are. For now, here's a smily face :) </p>
-    <div class="text-center">
+        <h5>Expansion List</h5>
+        <p>This sample text is where the description of the expansion rules will go. The description will
+          contain a small blurb about new added features, rules, etc. For now, here's a smily face :) </p>
+          <div class="text-center">
+        <div class="row">
+        <button class="col-md-2">Rules</button>
+        <button class="col-md-2"><a href="./game.php">Base Game</a></button>
+        <button class="col-md-2">Suggest a rule</button>
+      </div></div>
+    </div>
 
-      <button class="col-md-2">Rules</button>
-      <button class="col-md-2">Suggest a rule</button>
-    </div>
-    </div>
-    <div class="content">
-      <h5>Expansions</h5> <p>Expansions will go here in a list format, pulled from the database</p>
-      <a href="./expansion.php">Sample Expansion</a>
-    </div>
     </main>
 
     <script src="./scripts/jquery-3.3.1.min.js"></script>
