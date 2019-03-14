@@ -76,13 +76,19 @@
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
             <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-            <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+	    <div><a href="./Login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
         </div>
     <main role="main" class="container">
 
         <div class="content">
         
-     
+     		 {if isset($errMsg)}
+	 	<p style="color:#FF0000;text-align:center;font-size:17px;">{$errMsg}</p>
+     		{/if}
+     		{if isset($msg)}
+     		<p style="color:#008000;text-align:center;font-size:17px;"> {$msg}</p>
+		 {/if} 
             
   <!--  Log in Form
 When back end is fully developed, form action can be implemented to submit to where information needs to go
@@ -90,28 +96,14 @@ When back end is fully developed, form action can be implemented to submit to wh
             <form >
 		<h2> Login or Sign-Up!</h2>
 		
-  e-mail:<br>
-  <input type="text" name="email" value="">
-  <br>
-  password:<br>
-  <input type="password" name="password" value="">
-  <br><br>
-  <input type="submit" value="Login!">
-  <a href="https://messiah.edu">Sign-Up</a>
+  		e-mail:
+  			<input type="text" name="username" value="" autocomplete="off" class="box"/><br /><br />
+  		password:
+			<input type="password" name="password" value="" autocomplete="off" class="box" /><br/><br />
+  		<a href="#">Sign-Up</a>
   
-</form> 
-        <br>
-
-        <h4><strong>Developers</strong></h4>
-
-        <ul style="list-style: none; ">
-                <li><strong>Wyatt Derk</strong>, Project Lead</li>
-                <li><strong>Eliezer Mwankenja</strong>, Database</li>
-                <li><strong>Benjamin Underwood</strong>, Design</li>
-                <li><strong>Ibinabo Braide</strong>, Design</li>
-                <li><strong>Joshua Simmons</strong>, Design</li>
-                
-        </ul>
+	</form> 
+      
         </div>
     </main>
 
