@@ -66,18 +66,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
-
-    <header>
-
-    </header>
-
     <div class="nav">
-            <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
-            <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-            <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-            <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-            <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-        </div>
+      <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+      <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+      <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+      <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+      <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+    </div>
     <main role="main" class="container">
       <div class="content">
         <h1><strong>Sample Game Page; Game Title Goes Here</strong></h1>
@@ -86,25 +81,23 @@
         <h5>Players</h5> <p><i>Player count goes here</i></p>
         <h5>Ages</h5> <p><i>player age goes here</i></p>
         <h5>Manufacturer</h5>
-          <p><i>Manufacturer goes here</i></p>
+        <p><i>Manufacturer goes here</i></p>
         <h5>Description</h5>
         <p>This sample text is where the description of the game will go. The description will
           contain a small blurb about the game and what its objectives are. For now, here's a smily face :) </p>
-    <div class="text-center">
-
-      <button class="btn btn-outline-primary btn-lg">Rules</button>
-      <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
-    </div>
-    </div>
-    <div class="content">
-      <h5>Expansions</h5> <p>Expansions will go here in a list format, pulled from the database</p>
-      <a href="./expansion.php">Sample Expansion</a>
-    </div>
+        <div class="text-center">
+          <button class="btn btn-outline-primary btn-lg">Rules</button>
+          <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
+        </div>
+      </div>
+      <div class="content">
+        <h5>Expansions</h5> <p>Expansions will go here in a list format, pulled from the database</p>
+        <a href="./expansion.php">Sample Expansion</a>
+      </div>
     </main>
 
     <script src="./scripts/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
-
 
   </body>
 </html>
