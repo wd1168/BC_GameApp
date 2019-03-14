@@ -30,7 +30,7 @@
                 try 
                     {
                         $row = $statement->fetch(PDO::FETCH_ASSOC);
-                       if (($row['First_Name'] == $username) && ($password == $row['Password']))
+                       if (($row['Email'] == $username) && ($password == $row['Password']))
                         {
                             
                             $msg = "Log in successful!";
