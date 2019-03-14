@@ -135,6 +135,10 @@
           </picture>
         </div>
         </div>
+        <br>
+        <div>
+          <a href="./game.php">Game Page Template</a>
+        </div>
         <!--<h2>Random Games</h2>-->
 
         <!--<p>This sample text serves in place of suggested games as we currently have no rulesets to offer.</p>-->
