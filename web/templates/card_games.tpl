@@ -76,7 +76,8 @@
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
             <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-            <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./Login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
         </div>
     <div class="container">
     <div class="content">
@@ -86,21 +87,21 @@
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
-            <h3><a href="./gofish.php">Go Fish</a></h3>
+            <h3><a href="./game_rules.php?link=gofish">Go Fish</a></h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
-            <h3><a href="./solitaire.php">Solitaire</a></h3>
+            <h3><a href="./game_rules.php?link=solitaire">Solitaire</a></h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
-            <h3><a href="./war.php">war</a></h3>
+            <h3><a href="./game_rules.php?link=war">war</a></h3>
           </picture>
         </div>
         </div>
