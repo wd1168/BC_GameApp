@@ -12,13 +12,13 @@
         $errMsg = '';
         $msg = '';
 		// Get data from FORM
-		$username = $_GET['username'];
+	$username = $_GET['username'];
         $password = $_GET['password'];
 
         if($username == '')
-			$errMsg = 'Enter username <br/>';
+			$errMsg = 'Please enter username <br/>';
 		if($password == '')
-			$errMsg .= ' Enter password';
+			$errMsg .= 'Please enter password';
 		if($errMsg == '') {
 
             $query = "SELECT User_ID, First_Name, Last_Name, `Password` FROM user WHERE First_Name = '$username';";
