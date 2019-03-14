@@ -83,26 +83,25 @@
 
         <div class="content">
         
-     		 {if isset($errMsg)}
-	 	<p style="color:#FF0000;text-align:center;font-size:17px;">{$errMsg}</p>
-     		{/if}
-     		{if isset($msg)}
-     		<p style="color:#008000;text-align:center;font-size:17px;"> {$msg}</p>
-		 {/if} 
-            
+     	 {if isset($errMsg)}
+	 <p style="color:#FF0000;text-align:center;font-size:17px;">{$errMsg}</p>
+     	{/if}
+     	{if isset($msg)}
+    	 <p style="color:#008000;text-align:center;font-size:17px;"> {$msg}</p>
+	 {/if}            
   <!--  Log in Form
 When back end is fully developed, form action can be implemented to submit to where information needs to go
 -->        
-            <form >
+       <form >
 		<h2> Login or Sign-Up!</h2>
-		
-  		e-mail:
-  			<input type="text" name="username" value="" autocomplete="off" class="box"/><br /><br />
-  		password:
-			<input type="password" name="password" value="" autocomplete="off" class="box" /><br/><br />
-  		<a href="#">Sign-Up</a>
+        <p>Email:</p>		
+        <input type="text" name="username" value="" autocomplete="off" class="box"/><br /><br />
+        <p>Password:</p>
+        <input type="password" name="password" value="" autocomplete="off" class="box" /><br/><br />
+        <input type="submit" name='login' value="Login" onclick="./Login.php"/>
+         <a href="">Sign-Up</a>
   
-	</form> 
+        </form> 
       
         </div>
     </main>
