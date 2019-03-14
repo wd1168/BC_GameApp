@@ -76,20 +76,39 @@
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
             <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-            <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+	    <div><a href="./Login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
         </div>
     <main role="main" class="container">
 
-          <div class="content">
-             <div class="col-md-12 col-lg-12">
-                   <script type="text/javascript" src="./scripts/war.js"></script>      
-                   <div>
-                      <div id="rules"></div>
-                    </div>               
-               </div>
-            </div>
+        <div class="content">
+        
+     	 {if isset($errMsg)}
+	 <p style="color:#FF0000;text-align:center;font-size:17px;">{$errMsg}</p>
+     	{/if}
+     	{if isset($msg)}
+    	 <p style="color:#008000;text-align:center;font-size:17px;"> {$msg}</p>
+	 {/if}            
+  <!--  Log in Form
+When back end is fully developed, form action can be implemented to submit to where information needs to go
+-->        
+       <form >
+		<h2> Login or Sign-Up!</h2>
+        <p>Email:</p>		
+        <input type="text" name="username" value="" autocomplete="off" class="box"/><br /><br />
+        <p>Password:</p>
+        <input type="password" name="password" value="" autocomplete="off" class="box" /><br/><br />
+        <input type="submit" name='login' value="Login" onclick="./Login.php"/>
+         <a href="">Sign-Up</a>
+  
+        </form> 
+      
+        </div>
+    </main>
+
     <script src="./scripts/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
+
+
   </body>
 </html>
-

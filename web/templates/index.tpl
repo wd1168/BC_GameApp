@@ -76,7 +76,8 @@
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
             <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-            <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./Login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
         </div>
     <main role="main" class="container">
 
@@ -92,7 +93,7 @@
           <picture>
             <source srcset="images\battleship-logo.jpg">
             <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship" width="100" height="100">
-            <h5>Battleship</h5>
+            <h5><a href="./game_rules.php?link=battleship">Battleship</a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -117,21 +118,21 @@
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
-            <h5><a href="./gofish.php">Go Fish</a></h5>
+            <h5><a href="./game_rules.php?link=gofish">Go Fish</a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
-            <h5><a href="./solitaire.php">Solitaire</a></h5>
+            <h5><a href="./game_rules.php?link=solitaire">Solitaire</a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
             <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
-            <h5><a href="./war.php">War</a></h5>
+            <h5><a href="./game_rules.php?link=war">War</a></h5>
           </picture>
         </div>
         </div>
