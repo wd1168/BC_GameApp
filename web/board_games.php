@@ -13,7 +13,6 @@ $statement = $pdo->prepare($query);
 //$statement->bindParam('Email', $email);
 $statement ->execute();
 
-echo "hello out there";
 //echo ($first_name);
 //echo($last_name);
 //echo($first_name);
