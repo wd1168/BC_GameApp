@@ -66,18 +66,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
-
-    <header>
-
-    </header>
-
     <div class="nav">
             <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
             <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
             <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-        </div>
+    </div>
     <main role="main" class="container">
       <div class="content">
         <h1><strong>Sample Expansion Page; Expansion Title</strong></h1>
@@ -85,17 +80,16 @@
         <br>
         <h5>Base Game</h5> <p><i>Base Game goes here</i></p>
         <h5>Manufacturer</h5>
-          <p><i>Manufacturer goes here</i></p>
+        <p><i>Manufacturer goes here</i></p>
         <h5>Expansion List</h5>
         <p>This sample text is where the description of the expansion rules will go. The description will
           contain a small blurb about new added features, rules, etc. For now, here's a smily face :) </p>
-          <div class="text-center">
-        <div class="row">
-        <button class="col-md-2">Rules</button>
-        <button class="col-md-2"><a href="./game.php">Base Game</a></button>
-        <button class="col-md-2">Suggest a rule</button>
-      </div></div>
-    </div>
+        <div class="text-center">
+          <button class="btn btn-outline-primary btn-lg">Rules</button>
+          <button class="btn btn-outline-primary btn-lg"><a href="./game.php">Base Game</a></button>
+          <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
+        </div>
+      </div>
 
     </main>
 

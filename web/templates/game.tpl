@@ -92,8 +92,8 @@
           contain a small blurb about the game and what its objectives are. For now, here's a smily face :) </p>
     <div class="text-center">
 
-      <button class="col-md-2">Rules</button>
-      <button class="col-md-2">Suggest a rule</button>
+      <button class="btn btn-outline-primary btn-lg">Rules</button>
+      <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
     </div>
     </div>
     <div class="content">
