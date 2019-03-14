@@ -87,7 +87,7 @@
           <picture>
             <source srcset="images\battleship-logo.jpg">
             <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship" width="100" height="100">
-            <h3><a href="./game_rules.php?link=battleship>Battleship</a></h3>
+            <h3><a href="./game_rules.php?link=battleship">Battleship</a></h3>
           </picture>
         </div>
         <div class="col-md-4 col-lg-4">
