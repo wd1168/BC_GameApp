@@ -21,7 +21,7 @@
 			$errMsg .= 'Please enter password';
 		if($errMsg == '') {
 
-            $query = "SELECT User_ID, First_Name, Last_Name, `Password` FROM user WHERE Email = '$username';";
+            $query = "SELECT User_ID, First_Name, Email, Last_Name, `Password` FROM user WHERE Email = '$username';";
 
             $statement = $pdo->prepare($query);
 
