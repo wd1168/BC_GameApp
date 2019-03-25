@@ -55,4 +55,4 @@
     $smarty -> assign('errMsg', $errMsg);
     $smarty -> assign('msg', $msg);
  
-$smarty->display('Login.tpl');
+$smarty->display('login.tpl');
