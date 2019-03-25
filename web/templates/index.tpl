@@ -100,21 +100,21 @@
           <picture>
             <source srcset="images\battleship-logo.jpg">
             <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship" width="100" height="100">
-            <h5><a href="./game_rules.php?link=battleship">Battleship</a></h5>
+            <h5><a href="./game_rules.php?link=battleship"> Battleship </a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\othello.jpg">
             <img src="images\othello.jpg" class="img-fluid img-thumbnail mx-auto" alt="Othello" width="100" height="100">
-            <h5><a href="./game_rules.php?link=gofish"> Othello </a></h5>
+            <h5><a href="./game_rules.php?link=othello"> Othello </a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
             <source srcset="images\monopoly.jpg">
             <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100" height="100">
-            <h5><a href="./game_rules.php?link=gofish"> Monopoly </a></h5>
+            <h5><a href="./game_rules.php?link=monopoly"> Monopoly </a></h5>
           </picture>
         </div>
         </div>
