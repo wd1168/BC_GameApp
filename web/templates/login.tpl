@@ -71,7 +71,7 @@
 
     </header>
    
-     <div class="nav">
+      <div class="nav">
 
             <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
 
@@ -83,7 +83,7 @@
 
             <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
 
-            <div><a href="./Login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+            <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
 
         </div>
     <main role="main" class="container">
