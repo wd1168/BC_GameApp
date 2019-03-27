@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> GameRepo </title>
-    <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width">
     <style>
         body {
@@ -106,7 +106,7 @@ When back end is fully developed, form action can be implemented to submit to wh
         <p>Password:</p>
         <input type="password" name="password" value="" autocomplete="off" class="box" /><br/><br />
         <input type="submit" name='login' value="Login" onclick="./Login.php"/>
-         <a href="">Sign-Up</a>
+         <a href="./signup.php">Sign-Up</a>
   
         </form> 
       
