@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> GameRepo </title>
-    <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width">
     <style>
         body {
@@ -73,17 +73,16 @@
 
      <div class="nav">
 
-            <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
-
-            <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-
-            <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-
-            <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-
-            <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-
-            <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+       <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+       <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+       <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+       <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+       <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+       {if isset($first_name)}
+         <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
+       {else}
+         <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+       {/if}
 
         </div>
     <div class="container">
@@ -111,23 +110,7 @@
             <h3><a href="./game_rules.php?link=monopoly">Monopoly</a></h3>
           </picture>
         </div>
-        {*<table>*}
-          {*<tr>*}
-            {*<th colspan = 3>Database Test</th>*}
-          {*</tr>*}
-          {*<tr>*}
-            {*<th>First Name</th>*}
-            {*<th>Last Name</th>*}
-            {*<th>Email</th>*}
-          {*</tr>*}
-          {*<tr>*}
-            {*<th>{$name}</th>*}
-            {*<th>{$name2}</th>*}
-            {*<th>{$email}</th>*}
-          {*</tr>*}
-        {*</table>*}
-        </div>
-        </div>
+
     <script src="./script/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
   </body>
