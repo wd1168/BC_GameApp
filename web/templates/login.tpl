@@ -86,7 +86,7 @@
             <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
 
         </div>
-    <main role="main" class="container">
+    <main role="main" class="container" align="center">
 
         <div class="content">
         
@@ -100,7 +100,7 @@
 When back end is fully developed, form action can be implemented to submit to where information needs to go
 -->        
        <form >
-		<h2> Login or Sign-Up!</h2>
+		<h2 align="center"> Login or Sign-Up!</h2>
         <p>Email:</p>		
         <input type="text" name="username" value="" autocomplete="off" class="box"/><br /><br />
         <p>Password:</p>
