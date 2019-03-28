@@ -3,31 +3,55 @@
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 
-$query = "SELECT First_Name, Last_Name, Email FROM user
-          WHERE User_ID = 2";
+session_start();
+if (isset($_SESSION['User'])){
+    $query = "SELECT First_Name, Last_Name FROM user
+          WHERE User_ID = :id";
 
-$statement = $pdo->prepare($query);
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(':id', $_SESSION['User']);
+    $statement ->execute();
 
-//$statement->bindParam('First_Name', $first_name);
-//$statement->bindParam('Last_Name', $last_name);
-//$statement->bindParam('Email', $email);
-$statement ->execute();
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+    $fname = $result["First_Name"];
+    $lname = $result['Last_Name'];
 
-//echo ($first_name);
-//echo($last_name);
-//echo($first_name);
+    $smarty -> assign('first_name', $fname);
+    $smarty -> assign('last_name', $lname);
+}
 
-$smarty -> assign('Last_Name', $last_name);
-$smarty -> assign('Email', $email);
+$g_query =
+    "SELECT g.Game_ID, g.Name, i.Name AS 'Image'
+        FROM game g LEFT JOIN game_image i ON g.Image_ID = i.G_Image_ID WHERE g.Type = 'board'";
+$g_statement = $pdo->prepare($g_query);
+$g_statement ->execute();
 
-$result = $statement->fetch(PDO::FETCH_ASSOC);
-$name = $result["First_Name"];
-$name2 = $result['Last_Name'];
-$email = $result['Email'];
+$old_game = -1;
+$game_list= array();
+$results = false;
 
-$smarty -> assign('name', $name);
-$smarty -> assign('name2', $name2);
-$smarty -> assign('email', $email);
+while($row = $g_statement->fetch(PDO::FETCH_ASSOC)){
+    $results = true;
+
+    if ($old_game != $row['Game_ID']) {
+        if($old_game != -1){
+            $game_list[$old_game] = $game;
+        }
+        $game = array (
+        "Game_ID" => $row['Game_ID'],
+        "Name" => $row['Name'],
+        "Image" => $row['Image']
+        );
+
+        $old_game = $row['Game_ID'];
+
+    }
+}
+
+$game_list[$old_game] = $game;
+
+$smarty->assign("results", $results);
+$smarty->assign("game_list", $game_list);
 
 $smarty->display('board_games.tpl');
 

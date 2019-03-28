@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> GameRepo </title>
-    <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width">
     <style>
         body {
@@ -71,15 +71,22 @@
 
     </header>
    
-    <div class="nav">
-            <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
+      <div class="nav">
+
+            <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+
             <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+
             <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+
             <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-	    <div><a href="./Login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+
+            <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+
         </div>
-    <main role="main" class="container">
+    <main role="main" class="container" align="center">
 
         <div class="content">
         
@@ -93,13 +100,13 @@
 When back end is fully developed, form action can be implemented to submit to where information needs to go
 -->        
        <form >
-		<h2> Login or Sign-Up!</h2>
+		<h2 align="center"> Login or Sign-Up!</h2>
         <p>Email:</p>		
         <input type="text" name="username" value="" autocomplete="off" class="box"/><br /><br />
         <p>Password:</p>
         <input type="password" name="password" value="" autocomplete="off" class="box" /><br/><br />
         <input type="submit" name='login' value="Login" onclick="./Login.php"/>
-         <a href="">Sign-Up</a>
+         <a href="./signup.php">Sign-Up</a>
   
         </form> 
       

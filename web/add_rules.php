@@ -1,9 +1,4 @@
 <?php
-/**
- * Example Application
- *
- * @package Example-application
- */
 
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
@@ -25,5 +20,4 @@ if (isset($_SESSION['User'])){
     $smarty -> assign('last_name', $lname);
 }
 
-
-$smarty->display('index.tpl');
+$smarty->display('add_rules.tpl');

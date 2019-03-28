@@ -74,44 +74,48 @@
 </header>
 
 <div class="nav">
-
-    <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+    <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
     <div><a href="./board_games.php"><strong>Boards</strong></a></div>
     <div><a href="./card_games.php"><strong>Cards</strong></a></div>
     <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-    <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-    {if isset($first_name)}
-        <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
-    {else}
-        <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-    {/if}
-
+    <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
 </div>
-<div class="container">
-    <div class="content">
-        <div class="jumbotron col-md-12 col-lg-12">
-            <center><h2>Card Games</h2></center>
-        </div>
-        {if $results == 'TRUE'}
-            <div class="row">
-                {foreach $game_list as $game}
-                    <div class="col-md-4 col-lg-4">
-                        <picture>
-                            <source srcset="images\{$game.Image}">
-                            <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}"
-                                                                        class="img-fluid img-thumbnail mx-auto"
-                                                                        alt="{$game.Name}"
-                                                                        width="100" height="100"></a>
-                            <h3><a href="./game_rules.php?link={$game.Name}">{$game.Name}</a></h3>
-                        </picture>
-                    </div>
-                {/foreach}
-            </div>
-        {else}
-            <h2 class="text-center">No games. D:</h2>
-        {/if}
+<main role="main" class="container" align="center">
 
-        <script src="./script/jquery-3.3.1.min.js"></script>
-        <script src="./scripts/bootstrap.min.js"></script>
+    <div class="content">
+
+
+        <form action="signup.php" method="post">
+            <h2 align="center"> Sign-Up</h2>
+            First Name: <br>
+            <input type="text" name="first_name" value="">
+            <br>
+            <br>
+            Last Name: <br>
+            <input type="text" name="last_name" value="">
+            <br>
+            <br>
+            E-mail:<br>
+            <input type=email name="email" value="">
+            <br>
+            <br>
+            Password:<br>
+            <input type="password" name="password" value="">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+            <a href="./login.php">Log in if you already have an account</a>
+
+        </form>
+        <br>
+
+    </div>
+</main>
+
+<script src="./scripts/jquery-3.3.1.min.js"></script>
+<script src="./scripts/bootstrap.min.js"></script>
+
+
 </body>
 </html>

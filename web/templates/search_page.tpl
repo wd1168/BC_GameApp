@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> GameRepo </title>
-    <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
@@ -108,13 +108,19 @@
 
     </header>
    
-    <div class="nav">
-            <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
-            <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-            <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-            <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-            <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-            <div><a href="./Login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+     <div class="nav">
+
+         <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+         <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+         <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+         <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+         <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+         {if isset($first_name)}
+             <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
+         {else}
+             <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+         {/if}
+
         </div>
     <main role="main" class="container">
 
