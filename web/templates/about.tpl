@@ -136,16 +136,16 @@
         </tr>
     </table>
     <br>
-    <h3> What is the Purpose of our application?</h3>
-    <p> <em>The Game Rule Checker</em> is an app designed for board and card game enthusiasts who would benefit from a central repository of game rules.
+    <h3> What is the purpose of our application?</h3>
+    <p> <em>GameRepo</em> is an app designed for board and card game enthusiasts who would benefit from a central repository of game rules.
        With this app, the user is able to select a supported game and search for a rule by keyword. In addition, users will be able to log-in, ask
         their own questions, and submit their own house rules. </p>
     <br>
     <h3>Features of our Application</h3>
     <ol>
-      <li> Pages with various rules for board and card games</li>
-      <li> Ability to add Rules and have it approved by our team</li>
-      <li>Users can search for various rules through a functioning search bar</li>
+      <li> Pages with various rules for board and card games, as well as their expansion packs.</li>
+      <li> Ability to add rules and have it approved by our team.</li>
+      <li> Users can search for various rules through a functioning search bar.</li>
     </ol>
   </main>
 <script src="./scripts/jquery-3.3.1.min.js"></script>
