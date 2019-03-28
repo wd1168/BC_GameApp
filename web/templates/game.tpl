@@ -82,16 +82,15 @@
         </div>
     <main role="main" class="container">
       <div class="content">
-        <h1><strong>Sample Game Page; Game Title Goes Here</strong></h1>
+        <h1><strong>{$game['Name']}</strong></h1>
         <img class="image-fluid" src='./images/GrLogo_Black.svg' height="auto" style="max-width: 20%">
         <br>
-        <h5>Players</h5> <p><i>Player count goes here</i></p>
-        <h5>Ages</h5> <p><i>player age goes here</i></p>
+        <h5>Players</h5> <p><i>{$game['Player_Count']}</i></p>
+        <h5>Ages</h5> <p><i>+ {$game['Age']}</i></p>
         <h5>Manufacturer</h5>
-        <p><i>Manufacturer goes here</i></p>
+        <p><i>{$game['Manufacturer']}</i></p>
         <h5>Description</h5>
-        <p>This sample text is where the description of the game will go. The description will
-          contain a small blurb about the game and what its objectives are. For now, here's a smily face :) </p>
+        <p>{$game['Description']}</p>
         <div class="text-center">
           <button class="btn btn-outline-primary btn-lg">Rules</button>
           <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
