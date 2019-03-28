@@ -122,22 +122,22 @@
         <div class="row">
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
-            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
-            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
+            <source srcset="images\def-card.jpg">
+            <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100" height="100">
             <h5><a href="./game_rules.php?link=gofish">Go Fish</a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
-            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
-            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
+            <source srcset="images\def-card.jpg">
+            <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100" height="100">
             <h5><a href="./game_rules.php?link=solitaire">Solitaire</a></h5>
           </picture>
         </div>
         <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
           <picture>
-            <source srcset="images\photo-1529480384838-c1681c84aca5.jpg">
-            <img src="images\photo-1529480384838-c1681c84aca5.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
+            <source srcset="images\def-card.jpg">
+            <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100" height="100">
             <h5><a href="./game_rules.php?link=war">War</a></h5>
           </picture>
         </div>
