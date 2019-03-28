@@ -1,26 +1,6 @@
 <?php
 
 
-if( $_GET['link']=='Go Fish' ){
-    $game_name = "Go Fish";
-}
-else if( $_GET['link']=='Solitaire' ){
-    $game_name = "Solitaire";
-}
-else if( $_GET['link']=='War' ){
-    $game_name = "War";
-}
-else if( $_GET['link']=='Battleship' ){
-    $game_name = "Battleship";
-}
-else if( $_GET['link']=='Othello' ){
-    $game_name = "Othello";
-}
-else{
-    $game_name = "Monopoly";
-}
-
-
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 
@@ -41,15 +21,12 @@ if (isset($_SESSION['User'])){
     $smarty -> assign('last_name', $lname);
 }
 
-
-
-
+$game_name = $_GET['link'];
 
 $rule_query = "SELECT Rule, `Name`, `Type`, Age, Player_Count, Category, Subcategory FROM game_rule
 INNER JOIN game ON game_rule.Game_ID=game.Game_ID where game.Name = '$game_name';";
 
 $statement2 = $pdo->prepare($rule_query);
-
 $statement2 ->execute();
 
 try
