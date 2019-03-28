@@ -20,4 +20,37 @@ if (isset($_SESSION['User'])){
     $smarty -> assign('last_name', $lname);
 }
 
+$g_query =
+    "SELECT g.Game_ID, g.Name, i.Name AS 'Image'
+        FROM game g LEFT JOIN game_image i ON g.Image_ID = i.G_Image_ID WHERE g.Type = 'card'";
+$g_statement = $pdo->prepare($g_query);
+$g_statement ->execute();
+
+$old_game = -1;
+$game_list= array();
+$results = false;
+
+while($row = $g_statement->fetch(PDO::FETCH_ASSOC)){
+    $results = true;
+
+    if ($old_game != $row['Game_ID']) {
+        if($old_game != -1){
+            $game_list[$old_game] = $game;
+        }
+        $game = array (
+            "Game_ID" => $row['Game_ID'],
+            "Name" => $row['Name'],
+            "Image" => $row['Image']
+        );
+
+        $old_game = $row['Game_ID'];
+
+    }
+}
+
+$game_list[$old_game] = $game;
+
+$smarty->assign("results", $results);
+$smarty->assign("game_list", $game_list);
+
 $smarty->display('card_games.tpl');

@@ -1,5 +1,5 @@
 <html>
-  <head>
+<head>
     <title> GameRepo </title>
     <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width">
@@ -11,6 +11,7 @@
         body > .container {
             padding: 20px 15px 0;
         }
+
         .content {
 
             border-radius: 25px;
@@ -63,55 +64,52 @@
             padding-left: .25em;
         }
     </style>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
 
-    <header>
+<header>
 
-    </header>
+</header>
 
-     <div class="nav">
+<div class="nav">
 
-       <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
-       <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-       <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-       <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-       <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-       {if isset($first_name)}
-         <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
-       {else}
-         <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-       {/if}
+    <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+    <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+    <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+    <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+    <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+    {if isset($first_name)}
+        <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
+    {else}
+        <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+    {/if}
 
-        </div>
-    <div class="container">
+</div>
+<div class="container">
     <div class="content">
-      <div class="jumbotron col-md-12 col-lg-12"><center><h2>Board Games</h2></center></div>
-      <div class="row">
-        <div class="col-md-4 col-lg-4">
-          <picture>
-            <source srcset="images\battleship-logo.jpg">
-            <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship" width="100" height="100">
-            <h3><a href="./game_rules.php?link=battleship">Battleship</a></h3>
-          </picture>
+        <div class="jumbotron col-md-12 col-lg-12">
+            <center><h2>Board Games</h2></center>
         </div>
-        <div class="col-md-4 col-lg-4">
-          <picture>
-            <source srcset="images\othello.jpg">
-            <img src="images\othello.jpg" class="img-fluid img-thumbnail mx-auto" alt="Othello" width="100" height="100">
-            <h3><a href="./game_rules.php?link=othello">Othello</a></h3>
-          </picture>
-        </div>
-        <div class="col-md-4 col-lg-4">
-          <picture>
-            <source srcset="images\monopoly.jpg">
-            <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100" height="100">
-            <h3><a href="./game_rules.php?link=monopoly">Monopoly</a></h3>
-          </picture>
-        </div>
+        {if $results == 'TRUE'}
+            <div class="row">
+                {foreach $game_list as $game}
+                    <div class="col-md-4 col-lg-4">
+                        <picture>
+                            <source srcset="images\{$game.Image}">
+                            <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}" class="img-fluid img-thumbnail mx-auto" alt="{$game.Name}"
+                                    width="100" height="100"></a>
+                            <h3><a href="./game_rules.php?link={$game.Name}">{$game.Name}</a></h3>
+                        </picture>
+                    </div>
+                {/foreach}
+            </div>
+        {else}
+            <h2 class="text-center">No games. D:</h2>
+        {/if}
 
-    <script src="./script/jquery-3.3.1.min.js"></script>
-    <script src="./scripts/bootstrap.min.js"></script>
-  </body>
+        <script src="./script/jquery-3.3.1.min.js"></script>
+        <script src="./scripts/bootstrap.min.js"></script>
+</body>
 </html>
