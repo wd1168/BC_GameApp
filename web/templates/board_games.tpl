@@ -100,7 +100,7 @@
                             <source srcset="images\{$game.Image}">
                             <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}" class="img-fluid img-thumbnail mx-auto" alt="{$game.Name}"
                                     width="100" height="100"></a>
-                            <h3><a href="./game_rules.php?link={$game.Name}">{$game.Name}</a></h3>
+                            <h3><a href="./game.php?link={$game.Name}">{$game.Name}</a></h3>
                         </picture>
                     </div>
                 {/foreach}

@@ -92,7 +92,7 @@
         <h5>Description</h5>
         <p>{$game['Description']}</p>
         <div class="text-center">
-          <button class="btn btn-outline-primary btn-lg">Rules</button>
+          <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
           <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
         </div>
       </div>
