@@ -1,23 +1,23 @@
 <?php
 
 
-if( $_GET['link']=='gofish' ){
-    $game_name = "gofish";
-} 
-else if( $_GET['link']=='solitaire' ){
-    $game_name = "solitaire";
+if( $_GET['link']=='Go Fish' ){
+    $game_name = "Go Fish";
 }
-else if( $_GET['link']=='war' ){
-    $game_name = "war";
+else if( $_GET['link']=='Solitaire' ){
+    $game_name = "Solitaire";
 }
-else if( $_GET['link']=='battleship' ){
-    $game_name = "battleship";
+else if( $_GET['link']=='War' ){
+    $game_name = "War";
 }
-else if( $_GET['link']=='othello' ){
-    $game_name = "othello";
+else if( $_GET['link']=='Battleship' ){
+    $game_name = "Battleship";
+}
+else if( $_GET['link']=='Othello' ){
+    $game_name = "Othello";
 }
 else{
-    $game_name = "monopoly";
+    $game_name = "Monopoly";
 }
 
 
@@ -52,7 +52,7 @@ $statement2 = $pdo->prepare($rule_query);
 
 $statement2 ->execute();
 
-try 
+try
     {
         $rules = array();
         $info = array();
@@ -63,7 +63,7 @@ try
                array_push($category, $row['Category']);
                array_push($info,  $row["Name"], $row["Type"], $row["Age"],$row["Player_Count"]);
         }
-        
+
     }
     catch(PDOException $e)
         {
@@ -74,5 +74,5 @@ try
     $smarty -> assign('rules', $rules);
     $smarty -> assign('info', $info);
     $smarty -> assign('category', $category);
- 
+
 $smarty->display('game_rules.tpl');

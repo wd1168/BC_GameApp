@@ -7,26 +7,26 @@
         body {
             background-color: rgb(91, 136, 216);
         }
-    
+
         body > .container {
             padding: 20px 15px 0;
         }
         .content {
-            
+
             border-radius: 25px;
             border: 2px solid white;
             background-color: white;
-            padding: 30px; 
+            padding: 30px;
             margin-bottom: 20px;
             /*box-shadow: 0px 10px 20px grey;*/
             z-index: 1;
         }
-        
+
         .nav {
             margin-left: 12px;
-            
+
         }
-        
+
         .nav > * {
             border-bottom-left-radius: 9px;
             border-bottom-right-radius: 9px;
@@ -45,19 +45,19 @@
             margin-right: 3px;
             /*z-index: -1;*/
         }
-        
+
         a i {
             color: white;
         }
-        
+
         a strong {
             color: white;
         }
-        
+
         a:hover {
             text-decoration: none;
         }
-        
+
         ul, li {
             margin: 0;
             padding-left: .25em;
@@ -70,7 +70,7 @@
     <header>
 
     </header>
-   
+
      <div class="nav">
 
          <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
@@ -89,19 +89,22 @@
     <div class="content">
       <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
       <div class="row">
-          <div class="jumbotron col-md-4 col-lg-4"> 
+          <div class="jumbotron col-md-4 col-lg-4">
             <p><b> Game Type: </b> {$info[1]} </p>
             <p><b> Age: </b> {$info[2]} + </p>
             <p><b> Players: </b> {$info[3]} </p>
           </div>
           <div class="col-md-8 col-lg-4">
-          
-                   {for $x = 0 to sizeof($rules)}
-                      {if $category[$x] != $category[$x-1]}
-                         <p><strong>{$category[$x]}</strong></p>
-                      {/if}
-                      <article><p>{$rules[$x]}</p></article>
-                   {/for}
+                {if (sizeof($rules)!=0)}
+                  {for $x = 0 to sizeof($rules)}
+                    {if $category[$x] != $category[$x-1]}
+                      <p><strong>{$category[$x]}</strong></p>
+                    {/if}
+                    <article><p>{$rules[$x]}</p></article>
+                  {/for}
+                {else}
+                    <p><strong>No rules in our database! :( Check back later!</strong></p>
+                {/if}
           </div>
         </div>
         </div>

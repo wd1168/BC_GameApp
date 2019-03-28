@@ -126,7 +126,7 @@
                     <source srcset="images\def-card.jpg">
                     <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100"
                          height="100">
-                    <h5><a href="./game.php?link=gofish">Go Fish</a></h5>
+                    <h5><a href="./game.php?link=Go Fish">Go Fish</a></h5>
                 </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -134,7 +134,7 @@
                     <source srcset="images\def-card.jpg">
                     <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100"
                          height="100">
-                    <h5><a href="./game.php?link=solitaire">Solitaire</a></h5>
+                    <h5><a href="./game.php?link=Solitaire">Solitaire</a></h5>
                 </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -142,7 +142,7 @@
                     <source srcset="images\def-card.jpg">
                     <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100"
                          height="100">
-                    <h5><a href="./game.php?link=war">War</a></h5>
+                    <h5><a href="./game.php?link=War">War</a></h5>
                 </picture>
             </div>
         </div>
