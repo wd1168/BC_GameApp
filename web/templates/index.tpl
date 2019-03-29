@@ -102,7 +102,7 @@
                     <source srcset="images\battleship-logo.jpg">
                     <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship"
                          width="100" height="100">
-                    <h5><a href="./game_rules.php?link=battleship"> Battleship </a></h5>
+                    <h5><a href="./game_rules.php?link=Battleship"> Battleship </a></h5>
                 </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -110,7 +110,7 @@
                     <source srcset="images\othello.jpg">
                     <img src="images\othello.jpg" class="img-fluid img-thumbnail mx-auto" alt="Othello" width="100"
                          height="100">
-                    <h5><a href="./game_rules.php?link=othello"> Othello </a></h5>
+                    <h5><a href="./game_rules.php?link=Othello"> Othello </a></h5>
                 </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -118,7 +118,7 @@
                     <source srcset="images\monopoly.jpg">
                     <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100"
                          height="100">
-                    <h5><a href="./game_rules.php?link=monopoly"> Monopoly </a></h5>
+                    <h5><a href="./game_rules.php?link=Monopoly"> Monopoly </a></h5>
                 </picture>
             </div>
         </div>
@@ -130,7 +130,7 @@
                     <source srcset="images\def-card.jpg">
                     <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100"
                          height="100">
-                    <h5><a href="./game_rules.php?link=gofish">Go Fish</a></h5>
+                    <h5><a href="./game_rules.php?link=Go Fish">Go Fish</a></h5>
                 </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -138,7 +138,7 @@
                     <source srcset="images\def-card.jpg">
                     <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100"
                          height="100">
-                    <h5><a href="./game_rules.php?link=solitaire">Solitaire</a></h5>
+                    <h5><a href="./game_rules.php?link=Solitaire">Solitaire</a></h5>
                 </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -146,7 +146,7 @@
                     <source srcset="images\def-card.jpg">
                     <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100"
                          height="100">
-                    <h5><a href="./game_rules.php?link=war">War</a></h5>
+                    <h5><a href="./game_rules.php?link=War">War</a></h5>
                 </picture>
             </div>
         </div>
