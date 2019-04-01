@@ -41,19 +41,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-  $sql = "SELECT COUNT(*)
-              FROM user 
+  
+  $sql = "SELECT *FROM user 
               WHERE Email = '$email';";
   
   
-    $statement = $pdo->prepare($sql);
-
-        $statement->execute();
-
-        $row = $statement->fetch(PDO::FETCH_ASSOC);
-
-
-    if ($row['Email']) {
+     $query = $pdo->query($sql);
+     $rows = $query->fetchAll();
+     $rowCount = count($rows);
+    
+        
+    if ($rowCount == 1) {
          $message = "Email already registered \n 
                       Please use a different email address";
          $smarty->assign('msg', $message);
@@ -64,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   (Email, `Password`, First_Name, Last_Name)
                   VALUES
                   (:e, :p, :f, :l)";
-                 
+               
         }
     
     function clean_input($data) {
