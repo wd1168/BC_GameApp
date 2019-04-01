@@ -76,7 +76,8 @@
 
 
         <form action="signup.php" method="post">
-            <h2 align="center"> Sign-Up</h2>
+            <h2 align="center"> Sign-Up</h2><br/>
+            <h3 style="color:#FF0000;text-align:center;font-size:17px;"> {$msg} </h3>
             {literal}
             <label for="First Name" >First Name: </label><br>
             <input type="text" name="first_name" value="" placeholder="First Name" required>
