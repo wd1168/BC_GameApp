@@ -99,16 +99,17 @@
   <!--  Log in Form
 When back end is fully developed, form action can be implemented to submit to where information needs to go
 -->        
-       <form >
-		<h2 align="center"> Login or Sign-Up!</h2>
-        <p>Email:</p>		
-        <input type="text" name="username" value="" autocomplete="off" class="box"/><br /><br />
-        <p>Password:</p>
-        <input type="password" name="password" value="" autocomplete="off" class="box" /><br/><br />
-        <input type="submit" name='login' value="Login" onclick="./Login.php"/>
-         <a href="./signup.php">Sign-Up</a>
-  
-        </form> 
+        <form action="login.php" method="post">
+		        <h2 align="center"> Login </h2>
+                <label for="email"> Email: </label>	<br/>	
+                <input type="email" name="email" value="" placeholder="Email" 
+                        title="Please Enter a valid Email address" required><br /><br />
+                <label for="password"> Password: </label><br/>
+                <input type="password" name="password" value="" placeholder="Password" required><br/><br />
+                <input type="submit" name='login' value="login" onclick="./login.php"/>
+                <a href="./signup.php">Sign-Up</a>
+                
+         </form> 
       
         </div>
     </main>
