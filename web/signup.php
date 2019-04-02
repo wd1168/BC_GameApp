@@ -73,9 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
 $stmt = $pdo->prepare($sql);
-$stmt->bindParam(':e', $_POST['email']);
+$stmt->bindParam(':e', $email);
 $stmt->bindParam(':p', $hash);
-$stmt->bindParam(':f', $_POST['first_name']);
-$stmt->bindParam(':l', $_POST['last_name']);
+$stmt->bindParam(':f', $first_name);
+$stmt->bindParam(':l', $last_name);
 $stmt->execute();
 header("Location: index.php");
