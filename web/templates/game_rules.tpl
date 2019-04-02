@@ -98,7 +98,10 @@
                 {if (sizeof($rules)!=0)}
                   {for $x = 0 to sizeof($rules)}
                     {if $category[$x] != $category[$x-1]}
-                      <p><strong>{$category[$x]}</strong></p>
+                      <h3><strong>{$category[$x]}</strong></h3>
+                    {/if}
+                    {if !is_null($subcategory[$x]) And $subcategory[$x] != $subcategory[$x-1]}
+                      <h4><strong>{$subcategory[$x]}</strong></h4>
                     {/if}
                     <article><p>{$rules[$x]}</p></article>
                   {/for}
