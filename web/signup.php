@@ -46,8 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               WHERE Email = :e;";
   
   
-     $stmt = $pdo->query($sql);
-     $rows = $stmt->fetchAll();
+     $query = $pdo->query($sql);
+     $query->bindParam(':e', $email);
+     $rows = $query->fetchAll();
+     
      $rowCount = count($rows);
      
         
