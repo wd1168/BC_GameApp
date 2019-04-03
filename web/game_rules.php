@@ -30,18 +30,20 @@ $statement2 = $pdo->prepare($rule_query);
 $statement2->bindParam(':game_name', $game_name);
 $statement2 ->execute();
 
-try 
+try
     {
         $rules = array();
         $info = array();
         $category = array();
+        $subcategory = array();
 
         while ($row = $statement2->fetch(PDO::FETCH_ASSOC)) {
                array_push($rules, $row['Rule']);
                array_push($category, $row['Category']);
+               array_push($subcategory, $row["Subcategory"]);
                array_push($info,  $row["Name"], $row["Type"], $row["Age"],$row["Player_Count"]);
         }
-        
+
     }
     catch(PDOException $e)
         {
@@ -52,5 +54,6 @@ try
     $smarty -> assign('rules', $rules);
     $smarty -> assign('info', $info);
     $smarty -> assign('category', $category);
- 
+    $smarty -> assign('subcategory', $subcategory);
+
 $smarty->display('game_rules.tpl');
