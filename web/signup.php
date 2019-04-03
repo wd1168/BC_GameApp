@@ -43,11 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   
   $sql = "SELECT *FROM user 
-              WHERE Email = :e;";
+              WHERE Email = '$email';";
   
   
      $query = $pdo->query($sql);
-     $query->bindParam(':e', $email);
      $rows = $query->fetchAll();
      
      $rowCount = count($rows);
