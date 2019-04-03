@@ -46,10 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               WHERE Email = :e;";
   
   
-     $query = $pdo->query($sql);
-     $rows = $query->fetchAll();
+     $stmt = $pdo->query($sql);
+     $rows = $stmt->fetchAll();
      $rowCount = count($rows);
-    
+     $pdo = null;
         
     if ($rowCount == 1) {
          $message = "Email already registered \n 
