@@ -98,7 +98,24 @@
       </div>
       <div class="content">
         <h5>Expansions</h5> <p>Expansions will go here in a list format, pulled from the database</p>
-        <a href="./expansion.php">Sample Expansion</a>
+        {if $exp_results == 'TRUE'}
+          <div class="row">
+            {foreach $exp_list as $exp}
+              <div class="col-md-4 col-lg-4">
+                <picture>
+                  <source srcset="images\{$exp.Image}">
+                  <a href="./expansion.php?link={$exp.Name}"><img src="images\{$exp.Image}"
+                                                              class="img-fluid img-thumbnail mx-auto"
+                                                              alt="{$exp.Name}"
+                                                              width="100" height="100"></a>
+                  <h3><a href="./expansion_rules.php?link={$exp.Name}">{$exp.Name}</a></h3>
+                </picture>
+              </div>
+            {/foreach}
+          </div>
+        {else}
+          <h2 class="text-center">No expansions. D:</h2>
+        {/if}
       </div>
     </main>
 

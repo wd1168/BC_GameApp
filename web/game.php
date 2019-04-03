@@ -1,9 +1,5 @@
 <?php
-/**
- * Example Application
- *
- * @package Example-application
- */
+
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 
@@ -39,5 +35,41 @@ while ($row = $statement2->fetch(PDO::FETCH_ASSOC)) {
 }
 
 $smarty->assign('game', $game);
+
+//Expansion Code- below
+
+$exp_query = "SELECT Expansion_ID, e.Name AS 'Name' , g.Name AS 'G_Name', i.Name AS 'Image' FROM
+                  expansion e LEFT JOIN game g ON e.Game_ID = g.Game_ID LEFT JOIN game_image i ON g.Image_ID = i.G_Image_ID WHERE g.Name = :e";
+$exp_statement = $pdo->prepare($exp_query);
+$exp_statement ->bindParam(':e', $title);
+$exp_statement ->execute();
+
+$old_exp = -1;
+$exp_list= array();
+$exp_results = false;
+
+while($xrow = $exp_statement->fetch(PDO::FETCH_ASSOC)){
+    $exp_results = true;
+    if ($old_exp != $xrow['Game_ID']) {
+        if($old_exp != -1){
+            $exp_list[$old_exp] = $expansion;
+        }
+        $expansion = array (
+            "Expansion_ID" => $xrow['Expansion_ID'],
+            "Name" => $xrow['Name'],
+            "G_Name" => $xrow['G_Name'],
+            "Image" => $xrow['Image']
+        );
+
+        $old_exp = $xrow['Expansion_ID'];
+
+    }
+}
+$exp_list[$old_exp] = $expansion;
+
+$smarty->assign('exp_results', $exp_results);
+$smarty->assign('exp_list', $exp_list);
+
+
 
 $smarty->display('game.tpl');
