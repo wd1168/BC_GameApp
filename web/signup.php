@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $stmt = $pdo->query($sql);
      $rows = $stmt->fetchAll();
      $rowCount = count($rows);
-     $pdo = null;
+     
         
     if ($rowCount == 1) {
          $message = "Email already registered \n 
