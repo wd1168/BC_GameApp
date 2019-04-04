@@ -108,6 +108,9 @@
         {else}
             <h2 class="text-center">No games. D:</h2>
         {/if}
+        <div>
+        <div><a href="./add_game.php"> Add new game </a></div>
+        </div>
 
         <script src="./script/jquery-3.3.1.min.js"></script>
         <script src="./scripts/bootstrap.min.js"></script>
