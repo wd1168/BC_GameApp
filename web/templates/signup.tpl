@@ -115,7 +115,7 @@
             <br>
             <input type="submit" value="Submit">
             <br>
-            <a href="./login.php">Log in if you already have an account</a>
+            <a href="./login.php">Log in instead if you already have an account</a>
         {/literal}
         </form>
         <br>
