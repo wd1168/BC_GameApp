@@ -1,32 +1,27 @@
 <html>
-  <head>
-    <title> Add Games </title>
-    <link rel="stylesheet" href="../Styles/bootstrap.min.css"/>
+<head>
+    <title> GameRepo </title>
+    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width">
     <style>
         body {
             background-color: rgb(91, 136, 216);
         }
-    
         body > .container {
             padding: 20px 15px 0;
         }
         .content {
-            
             border-radius: 25px;
             border: 2px solid white;
             background-color: white;
-            padding: 30px; 
+            padding: 30px;
             margin-bottom: 20px;
             /*box-shadow: 0px 10px 20px grey;*/
             z-index: 1;
         }
-        
         .nav {
             margin-left: 12px;
-            
         }
-        
         .nav > * {
             border-bottom-left-radius: 9px;
             border-bottom-right-radius: 9px;
@@ -45,122 +40,87 @@
             margin-right: 3px;
             /*z-index: -1;*/
         }
-        
         a i {
             color: white;
         }
-        
         a strong {
             color: white;
         }
-        
         a:hover {
             text-decoration: none;
         }
-        
         ul, li {
             margin: 0;
             padding-left: .25em;
         }
-        
-        form { margin: 0 auto; }
     </style>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
 
-    <header>
+<header>
 
-    </header>
-   
-    <div class="nav">
-        <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
-        <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-        <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-        <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-        <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-        {if isset($first_name)}
-            <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
-        {else}
-            <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-        {/if}
-        </div>
-    <main role="main" class="container">
+</header>
 
-        <div class="content">
-            
-            
-            
-            
-            <h2 align="center">Add Games</h2>
-            
-            <form name ="NewRules" align="center">
-                <h5> Title of Game</h5>
+<div class="nav">
+    <div><a href="./index.php"><i class="fas fa-home fa-md" style="padding-top: .275em;"></i></a></div>
+    <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+    <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+    <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+    <div><a href="./search.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
+</div>
+<main role="main" class="container" align="center">
+
+    <div class="content">
+
+
+        <form action="add_game.php" method="post">
+            <h2 align="center"> Add New Game </h2>
+                <h3 style="color:#FF0000;text-align:center;font-size:17px;">{$msg}</h3>
+                <label for="Game Name" >Game Name: </label><br>
+                <input type="text" name="name" value="{$name}" placeholder="Game Name" required>
             <br>
-                <input type = "text" name ="GameTitle" value="">
-                <br>
-                <br>
-                <h5>Game Description</h5>
-                 <br>
-                <input type="text" name ="GameDescription" value="">
-                 <br>
-                <br>
-                <h5>Player Count</h5>
-                <br>
-                <input type="number" name ="PlayerCount" value ="0">
-                 <br>
-                <br>
-                <h5>Age Requirement</h5>
-                <br>
-                <input type="number" name ="AgeRequirement" value ="0">
-                 <br>
-                <br>
-                <h5>Manufacturer</h5>
-                <br>
-                <input type="text" name ="Manufacturer" value ="">
-                 <br>
-                <br>
-                <h5>Game Type</h5>
-                <br> 
-                <h6>Board/Card Games</h6>
-                <input type="radio" name="GameType" value ="board">Board Game
-                  <input type="radio" name="GameType" value= "card">Card Game
-                <br>
-                 <br>
-                <h6>Deck</h6>
-                <input type="radio" name="GameType" value ="standard">Standard
-                  <input type="radio" name="GameType" value= "custom">Custom
-                 <input type="radio" name="GameType" value= "N_available">N/a
+            <br>
+                <label for="Game Description" >Game Description: </label><br>
+                <textarea rows="5" cols="50" type="text" name="description" required>{$description}</textarea>
+            <br>
+            <br>
+                <label for="Age Rating"> Age Rating: </label><br>
+                <input type="number" name="age" value="{$age}" placeholder="Age Rating" min="4" required>
+            <br>
+            <br>
+                 <label for="Player Count"> Number of Players: </label><br>
+                 <input type="number" name="count" value="{$count}" placeholder="Player Count" min="1" required>
+            <br>
+            <br>
+                <fieldset>
+                    <legend > Game Type: </legend><br>
+                        <input type="radio" name="type" value="card" required> Card Game <br>
+                        <input type="radio" name="type" value="board"> Board Game 
+                </fieldset>
+            <br>
+            <br>
+                <fieldset>
+                    <legend> Deck Type: </legend><br>
+                        <input type="radio" name="deck" value ="Standard" required selected> Standard<br>
+                        <input type="radio" name="deck" value= "Custom"> Custom<br>
+                        <input type="radio" name="deck" value= "N/A">  N/A 
+                </fieldset>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+       
+        </form>
+        <br>
 
-                <br>
-                <!--<bold>Add Game</bold>-->
-                <br>
-                <input type ="submit" value ="Submit">
-            </form>
-            <!--<textarea rows = "4" cols = "50" name ="NewRules"> Enter Rules here...</textarea>-->
-                </div>
-    </main>
-        
-     
-            
-  <!--  Log in Form
-When back end is fully developed, form action can be implemented to submit to where information needs to go
--->        
+    </div>
+</main>
 
-            
-            
-           
- 
- 
- 
- 
-            
-            
-    
-
-    <script src="./scripts/jquery-3.3.1.min.js"></script>
-    <script src="./scripts/bootstrap.min.js"></script>
+<script src="./scripts/jquery-3.3.1.min.js"></script>
+<script src="./scripts/bootstrap.min.js"></script>
 
 
-  </body>
+</body>
 </html>
