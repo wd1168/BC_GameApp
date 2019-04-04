@@ -97,6 +97,31 @@
           <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
         </div>
       </div>
+        
+        
+        <div class="content">
+            
+            <form>
+                Enter your Question: <input type="text" name ="questionbox">
+                <br>
+                <br>
+            
+                <input type="submit" value="Reply" name= "replybtn">
+            
+            </form>
+            
+            
+            <h4>Sample Reply</h4>
+            
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan nisi nec massa scelerisque suscipit. Suspendisse leo libero, malesuada ut massa eget, condimentum tempus sapien. Aliquam a mi urna. Duis iaculis commodo eros ut malesuada. Vestibulum auctor ante elementum enim aliquet, porta condimentum nulla eleifend. Sed id imperdiet nisl, eget commodo justo. In nec tempor sem. Morbi eu orci eu tellus luctus egestas.</p>
+            
+            <h5 align="right">Sample UserName</h5>
+            
+        </div>
+        
+        
+        
+        
       <div class="content">
         <h5>Expansions</h5>
         {if $exp_results == 'TRUE'}
