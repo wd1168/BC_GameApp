@@ -45,7 +45,7 @@ if (isset($_POST['login'])) {
 $pdo = null;
 $smarty->assign('errMsg', $errMsg);
 $smarty->assign('msg', $msg);
-$smarty->assign('email', $username);
+$smarty->assign('email', $_POST['email']);
 $smarty->display('login.tpl');
 
                 
