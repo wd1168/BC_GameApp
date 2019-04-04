@@ -87,20 +87,21 @@
         <form action="signup.php" method="post">
             <h2 align="center"> Sign-Up</h2><br/>
             <h3 style="color:#FF0000;text-align:center;font-size:17px;"> {$msg} </h3>
-            {literal}
+            
             <label for="First Name" >First Name: </label><br>
-            <input type="text" name="first_name" value="" placeholder="First Name" required>
+            <input type="text" name="first_name" value="{$first_name}" placeholder="First Name" required>
             <br>
             <br>
             <label for="Last Name" >Last Name: </label><br>
-            <input type="text" name="last_name" value="" placeholder="Last Name" required>
+            <input type="text" name="last_name" value="{$last_name}" placeholder="Last Name" required>
             <br>
             <br>
             <label for="Email"> E-mail: </label><br>
-            <input type="Email" name="email" value="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+            <input type="Email" name="email" value="{$email}" placeholder="Email" pattern="{literal}[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}${/literal}" 
             title="e.g example@email.com " required>
             <br>
             <br>
+            {literal}
             <label for="password"> Password: </label><br>
             <input type="password" name="password" value="" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
             title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 
