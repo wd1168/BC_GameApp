@@ -88,13 +88,14 @@
 
 </div>
 <div class="container">
-    <div class="content">
-        <div class="jumbotron col-md-12 col-lg-12">
-        
-          <div>
+
+        <div>
                 <div><a href="./add_game.php"> Add new game </a></div>
           </div>
         
+    
+    <div class="content">
+        <div class="jumbotron col-md-12 col-lg-12">
             <center><h2>Board Games</h2></center>
         </div>
         {if $results == 'TRUE'}
