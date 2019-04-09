@@ -478,6 +478,7 @@ mark,
   border-radius: 0.25rem;
   max-width: auto;
   max-height: inherit;
+  object-fit: scale-down; 
 }
 
 .figure {
