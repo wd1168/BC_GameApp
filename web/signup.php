@@ -35,6 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($password != $confirm){
   
   $message = "Please make sure your confirmation password matches your password";
+  $smarty->assign('first_name', $first_name);
+  $smarty->assign('last_name', $last_name);
+  $smarty->assign('email', $email);
   $smarty->assign('msg', $message);
   $smarty->display('signup.tpl');
   exit();

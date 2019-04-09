@@ -23,7 +23,7 @@ if (isset($_SESSION['User'])){
 $game_name = $_GET['link'];
 
 $rule_query = "SELECT g.Name AS 'G_Name', Age, Player_Count, e.Name AS 'E_Name', Rule, Category, Subcategory
-    FROM expansion e INNER JOIN expansion_rule r ON e.Expansion_ID = r.E_Rule_FK INNER JOIN
+    FROM expansion e INNER JOIN expansion_rule r ON e.Expansion_ID = r.Expansion_ID INNER JOIN
         game g ON e.Game_ID = g.Game_ID WHERE e.Name = :game_name";
 
 $statement2 = $pdo->prepare($rule_query);

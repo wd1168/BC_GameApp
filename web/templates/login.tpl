@@ -102,8 +102,8 @@ When back end is fully developed, form action can be implemented to submit to wh
         <form action="login.php" method="post">
 		        <h2 align="center"> Login </h2>
                 <label for="email"> Email: </label>	<br/>	
-                <input type="email" name="email" value="" placeholder="Email" 
-                        title="Please Enter a valid Email address" required><br /><br />
+                <input type="email" name="email" value="{$email}" placeholder="Email" pattern="{literal}[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}${/literal}" 
+title="e.g example@email.com " required><br /><br />
                 <label for="password"> Password: </label><br/>
                 <input type="password" name="password" value="" placeholder="Password" required><br/><br />
                 <input type="submit" name='login' value="login" onclick="./login.php"/>

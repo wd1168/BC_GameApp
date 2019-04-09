@@ -71,6 +71,7 @@
        <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
        <div><a href="./board_games.php"><strong>Boards</strong></a></div>
        <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+        <div><a href="./add_rules.php"><strong>Add Rules</strong></a></div>
        <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
        <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
        {if isset($first_name)}
@@ -96,15 +97,40 @@
           <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
         </div>
       </div>
+        
+        
+        <div class="content">
+            
+            <form>
+                Enter your Question: <input type="text" name ="questionbox">
+                <br>
+                <br>
+            
+                <input type="submit" value="Reply" name= "replybtn">
+            
+            </form>
+            
+            
+            <h4>Sample Reply</h4>
+            
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan nisi nec massa scelerisque suscipit. Suspendisse leo libero, malesuada ut massa eget, condimentum tempus sapien. Aliquam a mi urna. Duis iaculis commodo eros ut malesuada. Vestibulum auctor ante elementum enim aliquet, porta condimentum nulla eleifend. Sed id imperdiet nisl, eget commodo justo. In nec tempor sem. Morbi eu orci eu tellus luctus egestas.</p>
+            
+            <h5 align="right">Sample UserName</h5>
+            
+        </div>
+        
+        
+        
+        
       <div class="content">
-        <h5>Expansions</h5> <p>Expansions will go here in a list format, pulled from the database</p>
+        <h5>Expansions</h5>
         {if $exp_results == 'TRUE'}
           <div class="row">
             {foreach $exp_list as $exp}
               <div class="col-md-4 col-lg-4">
                 <picture>
                   <source srcset="images\{$exp.Image}">
-                  <a href="./expansion.php?link={$exp.Name}"><img src="images\{$exp.Image}"
+                  <a href="./expansion_rules.php?link={$exp.Name}"><img src="images\{$exp.Image}"
                                                               class="img-fluid img-thumbnail mx-auto"
                                                               alt="{$exp.Name}"
                                                               width="100" height="100"></a>
