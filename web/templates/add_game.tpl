@@ -54,6 +54,7 @@
             padding-left: .25em;
         }
     </style>
+    <link rel="shortcut icon" href="images/GrLogo_Black.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
@@ -106,7 +107,7 @@
                 <fieldset>
                     <legend > Game Type: </legend><br>
                         <input type="radio" name="type" value="card" required> Card Game <br>
-                        <input type="radio" name="type" value="board"> Board Game 
+                        <input type="radio" name="type" value="board"> Board Game
                 </fieldset>
             <br>
             <br>
@@ -114,13 +115,13 @@
                     <legend> Deck Type: </legend><br>
                         <input type="radio" name="deck" value ="Standard" required selected> Standard<br>
                         <input type="radio" name="deck" value= "Custom"> Custom<br>
-                        <input type="radio" name="deck" value= "N/A">  N/A 
+                        <input type="radio" name="deck" value= "N/A">  N/A
                 </fieldset>
             <br>
             <br>
             <input type="submit" value="Submit">
             <br>
-       
+
         </form>
         <br>
 
