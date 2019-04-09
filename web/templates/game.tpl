@@ -64,6 +64,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/GrLogo_Black.png">
   </head>
   <body>
      <div class="nav">
@@ -72,7 +73,7 @@
        <div><a href="./board_games.php"><strong>Boards</strong></a></div>
        <div><a href="./card_games.php"><strong>Cards</strong></a></div>
         <div><a href="./add_rules.php"><strong>Add Rules</strong></a></div>
-       <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+       <div><a href="./about.php"><strong>About Us</strong></a></div>
        <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
        {if isset($first_name)}
          <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
@@ -83,8 +84,8 @@
         </div>
     <main role="main" class="container">
       <div class="content">
-        <h1><strong>{$game['Name']}</strong></h1>
-        <img class="image-fluid" src='./images/GrLogo_Black.svg' height="auto" style="max-width: 20%">
+        <h1><strong>{$game['Name']}</strong>
+        <img class="image-fluid" src='./images/GrLogo_Black.svg' height="auto" style="max-width: 20%"></h1>
         <br>
         <h5>Players</h5> <p><i>{$game['Player_Count']}</i></p>
         <h5>Ages</h5> <p><i>+ {$game['Age']}</i></p>
@@ -97,31 +98,31 @@
           <button class="btn btn-outline-primary btn-lg">Suggest a rule</button>
         </div>
       </div>
-        
-        
+
+
         <div class="content">
-            
+
             <form>
                 Enter your Question: <input type="text" name ="questionbox">
                 <br>
                 <br>
-            
+
                 <input type="submit" value="Reply" name= "replybtn">
-            
+
             </form>
-            
-            
+
+
             <h4>Sample Reply</h4>
-            
+
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan nisi nec massa scelerisque suscipit. Suspendisse leo libero, malesuada ut massa eget, condimentum tempus sapien. Aliquam a mi urna. Duis iaculis commodo eros ut malesuada. Vestibulum auctor ante elementum enim aliquet, porta condimentum nulla eleifend. Sed id imperdiet nisl, eget commodo justo. In nec tempor sem. Morbi eu orci eu tellus luctus egestas.</p>
-            
+
             <h5 align="right">Sample UserName</h5>
-            
+
         </div>
-        
-        
-        
-        
+
+
+
+
       <div class="content">
         <h5>Expansions</h5>
         {if $exp_results == 'TRUE'}
