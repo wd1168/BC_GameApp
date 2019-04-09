@@ -1,7 +1,7 @@
 <html>
 <head>
     <title> GameRepo </title>
-    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Styles/bootstrap.css"/>
     <meta name="viewport" content="width=device-width">
     <style>
         body {
@@ -10,6 +10,10 @@
 
         body > .container {
             padding: 20px 15px 0;
+        }
+
+        .img {
+            object-fit: cover
         }
 
         .content {
@@ -66,6 +70,7 @@
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.ico">
 </head>
 <body>
 
@@ -74,7 +79,7 @@
     <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
     <div><a href="./board_games.php"><strong>Boards</strong></a></div>
     <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-    <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+    <div><a href="./about.php"><strong>About Us</strong></a></div>
     <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
     {if isset($first_name)}
         <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
@@ -94,32 +99,23 @@
         <h4><strong>Popular Board Games</strong></h4>
         <div class="row">
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\battleship-logo.jpg">
-                    <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship"
+
+                    <img src="images\battleship-logo.jpg" class="img-thumbnail mx-auto" alt="Battleship"
                          width="100" height="100">
 
                     <h5><a href="./game.php?link=battleship"> Battleship </a></h5>
-
-                </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\othello.jpg">
-                    <img src="images\othello.jpg" class="img-fluid img-thumbnail mx-auto" alt="Othello" width="100"
+
+                    <img src="images\othello.jpg" class="img-thumbnail mx-auto" alt="Othello" width="100"
                          height="100">
                     <h5><a href="./game.php?link=Othello"> Othello </a></h5>
 
-                </picture>
             </div>
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\monopoly.jpg">
-                    <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100"
+                    <img src="images\monopoly.jpg" class="img-thumbnail mx-auto" alt="Monopoly" width="100"
                          height="100">
                     <h5><a href="./game.php?link=Monopoly"> Monopoly </a></h5>
-
-                </picture>
             </div>
         </div>
         <br>
@@ -128,7 +124,7 @@
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <picture>
                     <source srcset="images\def-card.jpg">
-                    <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100"
+                    <img src="images\def-card.jpg" class="img-thumbnail mx-auto" alt="Go Fish" width="100"
                          height="100">
                     <h5><a href="./game.php?link=Go Fish">Go Fish</a></h5>
                 </picture>
@@ -136,7 +132,7 @@
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <picture>
                     <source srcset="images\def-card.jpg">
-                    <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100"
+                    <img src="images\def-card.jpg" class="img-thumbnail mx-auto" alt="Solitaire" width="100"
                          height="100">
                     <h5><a href="./game.php?link=Solitaire">Solitaire</a></h5>
 
@@ -145,7 +141,7 @@
             <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <picture>
                     <source srcset="images\def-card.jpg">
-                    <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100"
+                    <img src="images\def-card.jpg" class="img-thumbnail mx-auto" alt="War" width="100"
                          height="100">
 
                     <h5><a href="./game.php?link=War">War</a></h5>
