@@ -1,7 +1,7 @@
 <html>
 <head>
     <title> GameRepo </title>
-    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Styles/bootstrap.css"/>
     <meta name="viewport" content="width=device-width">
     <style>
         body {
@@ -78,7 +78,7 @@
     <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
     <div><a href="./board_games.php"><strong>Boards</strong></a></div>
     <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-    <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+    <div><a href="./about.php"><strong>About Us</strong></a></div>
     <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
     {if isset($first_name)}
         <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
@@ -89,9 +89,9 @@
 </div>
 <div class="container">
     <div class="content">
-    
+
         <div><a href="./add_game.php"> Add new game </a></div>
-        
+
         <div class="jumbotron col-md-12 col-lg-12">
             <center><h2>Board Games</h2></center>
         </div>
@@ -101,7 +101,7 @@
                     <div class="col-md-4 col-lg-4">
                         <picture>
                             <source srcset="images\{$game.Image}">
-                            <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}" class="img-fluid img-thumbnail mx-auto" alt="{$game.Name}"
+                            <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}" class="img-thumbnail mx-auto" alt="{$game.Name}"
                                     width="100" height="100"></a>
                             <h3><a href="./game.php?link={$game.Name}">{$game.Name}</a></h3>
                         </picture>
@@ -111,7 +111,7 @@
         {else}
             <h2 class="text-center">No games. D:</h2>
         {/if}
-      
+
 
         <script src="./script/jquery-3.3.1.min.js"></script>
         <script src="./scripts/bootstrap.min.js"></script>
