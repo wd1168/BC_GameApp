@@ -82,7 +82,7 @@
     <main role="main" class="container">
 
         <div class="content">
-            <h4>Here You can add Rules for various games and have them approved to be on our site</h4>
+            <h1 class="text-center">Add Rules</h1>
             <form name ="NewRules">
                 <bold> Title of Game</bold>
             <br>
@@ -94,21 +94,6 @@
                 <input type ="submit" value ="Submit Rule">
             </form>
             <textarea rows = "4" cols = "50" name ="NewRules"> Enter Rules here...</textarea>
-
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <div class="nav">
-              <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
-              <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-              <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-              <div><a href="./add_rules.php"><strong>Add Rules</strong></a></div>
-              <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-              <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-              <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-            </div>
           </div>
     </main>
 
