@@ -24,7 +24,14 @@
 
         .nav {
             margin-left: 12px;
+        }
 
+        .sidebar {
+          border-radius: 25px;
+          border: 2px solid rgb(91, 136, 216);
+          background-color: white;
+          padding: 30px;
+          margin: 20px;
         }
 
         .nav > * {
@@ -89,10 +96,12 @@
     <div class="content">
       <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
       <div class="row">
-          <div class="jumbotron col-md-4 col-lg-3">
-            <p><b> Game Type: </b> {$info[1]} </p>
-            <p><b> Age: </b> {$info[2]} + </p>
-            <p><b> Players: </b> {$info[3]} </p>
+          <div class="col-md-4 col-lg-3">
+            <div class="sidebar">
+              <p><b> Game Type: </b> {$info[1]} </p>
+              <p><b> Age: </b> {$info[2]} + </p>
+              <p><b> Players: </b> {$info[3]} </p>
+            </div>
           </div>
           <div class="col-md-8 col-lg-8">
                 {if (sizeof($rules)!=0)}
