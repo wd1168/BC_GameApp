@@ -72,7 +72,7 @@
 
             <div><a href="./card_games.php"><strong>Cards</strong></a></div>
 
-            <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+            <div><a href="./about.php"><strong>About Us</strong></a></div>
 
             <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
 
