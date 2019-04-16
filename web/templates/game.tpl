@@ -27,6 +27,10 @@
             margin-right: 12px;
         }
 
+        .small {
+          font-style: italic;
+        }
+
         .nav > * {
             border-bottom-left-radius: 9px;
             border-bottom-right-radius: 9px;
@@ -82,15 +86,19 @@
         </div>
     <main role="main" class="container">
       <div class="content">
-        <h1><strong>{$game['Name']}</strong>
-        <img class="image-fluid" src='./images/GrLogo_Black.svg' height="auto" style="max-width: 20%"></h1>
-        <br>
-        <h5>Players</h5> <p><i>{$game['Player_Count']}</i></p>
-        <h5>Ages</h5> <p><i>+ {$game['Age']}</i></p>
-        <h5>Manufacturer</h5>
-        <p><i>{$game['Manufacturer']}</i></p>
-        <h5>Description</h5>
-        <p>{$game['Description']}</p>
+        <h1><strong>{$game['Name']}</strong></h1>
+
+        <div class="row">
+          <div class="col-lg-2">
+            <img class="image-fluid" src='./images/GrLogo_Black.svg' height="150px">
+          </div>
+          <div class="col-lg-4">
+            <h5>Players: &nbsp;<text class="small">{$game['Player_Count']}</text></h5>
+            <h5>Ages: &nbsp;<text class="small">+ {$game['Age']}</text></h5>
+            <h5>Manufacturer: &nbsp;<text class="small">{$game['Manufacturer']}</text></h5>
+          </div>
+        </div></br>
+        <h4>Description</h4><p>{$game['Description']}</p>
         <div class="text-center">
           <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
           <a href="./add_rules.php"><button class="btn btn-outline-primary btn-lg">Add Rules</button></a>
@@ -112,27 +120,24 @@
 
         </div>
 
-      <div class="content">
-        <h5>Expansions</h5>
         {if $exp_results == 'TRUE'}
-          <div class="row">
+          <div class="content">
+            <h5>Expansions</h5>
+            <div class="row">
             {foreach $exp_list as $exp}
               <div class="col-md-4 col-lg-4">
                 <picture>
                   <source srcset="images\{$exp.Image}">
-                  <a href="./expansion_rules.php?link={$exp.Name}"><img src="images\{$exp.Image}"
-                                                              class="img-fluid img-thumbnail mx-auto"
-                                                              alt="{$exp.Name}"
-                                                              width="100" height="100"></a>
-                  <h3><a href="./expansion_rules.php?link={$exp.Name}">{$exp.Name}</a></h3>
+                    <a href="./expansion_rules.php?link={$exp.Name}">
+                      <img src="images\{$exp.Image}" class="img-fluid img-thumbnail mx-auto"
+                      alt="{$exp.Name}" width="100" height="100">
+                    </a><h3><a href="./expansion_rules.php?link={$exp.Name}">{$exp.Name}</a></h3>
                 </picture>
               </div>
             {/foreach}
-          </div>
-        {else}
-          <h2 class="text-center">No expansions. D:</h2>
+            </div>
+          <div>
         {/if}
-      </div>
     </main>
 
     <script src="./scripts/jquery-3.3.1.min.js"></script>
