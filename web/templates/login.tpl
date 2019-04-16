@@ -105,11 +105,11 @@
             <div class="col-3"></div>
           </div>
           </br>
-          <div class="form-group-row">
-            <input class="btn btn-outline-primary btn-lg col-2 col-offset-4" type="submit" name='login' value="Login" onclick="./login.php"/>
-          <a href="./signup.php"><button class=" col-2 btn btn-outline-primary btn-lg">Sign-Up</button></a>
+
           <div class="col-4"></div>
-        </div>
+            <button class="col-2 btn btn-outline-primary" type="submit" name='login' onclick="./login.php">Login</button>
+            <a href="./signup.php"><button class="col-2 btn btn-outline-primary">Sign-Up</button></a>
+          <div class="col-4"></div>
         </form>
       </div>
     </main>
