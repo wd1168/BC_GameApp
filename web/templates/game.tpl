@@ -90,7 +90,7 @@
 
         <div class="row">
           <div class="col-lg-2">
-            <img class="image-fluid" src='./images/GrLogo_Black.svg' height="150px">
+            <img class="image-fluid" src='./images/{$game['Image']}' height="150px">
           </div>
           <div class="col-lg-4">
             <h5>Players: &nbsp;<text class="small">{$game['Player_Count']}</text></h5>
