@@ -84,7 +84,7 @@
     <main role="main" class="container">
       <div class="content">
         <h1><strong>{$game['Name']}</strong></h1>
-        <img class="image-fluid" src='./images/GrLogo_Black.svg' height="auto" style="max-width: 20%">
+        <img class="image-fluid" src='./images/{$game['Image']}' height="auto" style="max-width: 20%">
         <br>
         <h5>Players</h5> <p><i>{$game['Player_Count']}</i></p>
         <h5>Ages</h5> <p><i>+ {$game['Age']}</i></p>
