@@ -24,13 +24,14 @@ if (isset($_SESSION['User'])) {
 $title = $_GET['link'];
 
 $game_query =
-    "SELECT g.Name, Description, Age, Player_Count, m.Name AS 'Manufacturer' FROM
-        game g LEFT JOIN manufacturer m ON g.Manufacturer_ID = m.Manufacturer_ID WHERE g.Name = :n";
+    "SELECT g.Name, i.Name AS 'Image', Description, Age, Player_Count, m.Name AS 'Manufacturer' FROM
+        game g LEFT JOIN manufacturer m ON g.Manufacturer_ID = m.Manufacturer_ID LEFT JOIN game_image i 
+        ON g.Image_ID = i.G_Image_ID WHERE g.Name = :n";
 $statement2 = $pdo->prepare($game_query);
 $statement2->bindParam(':n', $title);
 $statement2->execute();
 while ($row = $statement2->fetch(PDO::FETCH_ASSOC)) {
-    $game = array('Name' => $row['Name'], 'Description' => $row['Description'],
+    $game = array('Name' => $row['Name'], 'Image' => $row['Image'], 'Description' => $row['Description'],
         'Age' => $row['Age'], 'Player_Count' => $row['Player_Count'], 'Manufacturer' => $row['Manufacturer']);
 }
 
