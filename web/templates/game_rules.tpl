@@ -106,12 +106,12 @@
       <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
       <div class="row">
           <div class="col-md-4 col-lg-3">
-            <div class="sidebar">
+            <div class="sidebar"
               <p><b> Game Type: </b> {$info[1]} </p>
               <p><b> Age: </b> {$info[2]} + </p>
               <p><b> Players: </b> {$info[3]} </p>
-            </div>
           </div>
+        </div>
           <div class="col-md-8 col-lg-8">
                 {if (sizeof($rules)!=0)}
                   {for $x = 0 to sizeof($rules)}
