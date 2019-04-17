@@ -27,6 +27,14 @@
 
         }
 
+        .sidebar {
+          border-radius: 25px;
+          border: 2px solid rgb(91, 136, 216);
+          background-color: white;
+          padding: 30px;
+          margin: 20px;
+        }
+
         .nav > * {
             border-bottom-left-radius: 9px;
             border-bottom-right-radius: 9px;
@@ -63,6 +71,7 @@
             padding-left: .25em;
         }
     </style>
+    <link rel="shortcut icon" href="images/GrLogo_Black.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
@@ -76,7 +85,7 @@
     <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
     <div><a href="./board_games.php"><strong>Boards</strong></a></div>
     <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-    <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+    <div><a href="./about.php"><strong>About Us</strong></a></div>
     <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
     {if isset($first_name)}
         <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
@@ -89,19 +98,26 @@
     <div class="content">
         <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
         <div class="row">
-            <div class="jumbotron col-md-4 col-lg-4">
+            <div class="col-md-4 col-lg-3">
+              <div class="sidebar">
                 <p><b> Associated Game: </b> {$info[1]} </p>
                 <p><b> Age: </b> {$info[2]} + </p>
                 <p><b> Players: </b> {$info[3]} </p>
-            </div>
-            <div class="col-md-8 col-lg-4">
-
+            </div></div>
+            <div class="col-md-8 col-lg-8">
+              {if (sizeof($rules)!=0)}
                 {for $x = 0 to sizeof($rules)}
-                    {if $category[$x] != $category[$x-1]}
-                        <p><strong>{$category[$x]}</strong></p>
-                    {/if}
-                    <article><p>{$rules[$x]}</p></article>
+                  {if $category[$x] != $category[$x-1]}
+                    <h3><strong>{$category[$x]}</strong></h3>
+                  {/if}
+                  {if !is_null($subcategory[$x]) And $subcategory[$x] != $subcategory[$x-1]}
+                    <h4>{$subcategory[$x]}</h4>
+                  {/if}
+                  <article><p>{$rules[$x]}</p></article>
                 {/for}
+              {else}
+                  <p><strong>No expansion rules in our database! :( Check back later!</strong></p>
+              {/if}
             </div>
         </div>
     </div>
