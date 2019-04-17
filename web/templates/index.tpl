@@ -21,7 +21,7 @@
 
     <div class="content">
 
-        <h1><strong>GameRepo</strong> &ndash; gamerule lookup</h1>
+        <h1><strong>GameRepo</strong> &ndash; board/card game rule lookup</h1>
 
         <p><i>Welcome! Please enjoy this repo for all of your favorite board and card game rules.</i></p>
 
