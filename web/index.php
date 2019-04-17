@@ -8,6 +8,8 @@
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 
+include 'search.php';
+
 session_start();
 if (isset($_SESSION['User'])){
     $query = "SELECT First_Name, Last_Name FROM user
