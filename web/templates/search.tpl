@@ -1,4 +1,4 @@
-<h2>Game Search</h2>
+<!--<h2>Game Search</h2>-->
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a name">
 
