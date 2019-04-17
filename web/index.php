@@ -7,7 +7,6 @@
 
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
-require_once "search.php";
 
 session_start();
 if (isset($_SESSION['User'])){
@@ -25,6 +24,24 @@ if (isset($_SESSION['User'])){
     $smarty -> assign('first_name', $fname);
     $smarty -> assign('last_name', $lname);
 }
+
+$search_query = "SELECT `Name` FROM game;";
+$statement2 = $pdo->prepare($search_query);
+$statement2 ->execute();
+try 
+    {
+        $games = array();
+        while ($row = $statement2->fetch(PDO::FETCH_ASSOC)) {
+            array_push($games, $row['Name']);
+        }
+        
+    }
+    catch(PDOException $e)
+        {
+        echo "Error: " . $e->getMessage();
+        }
+    $pdo = null;
+$smarty -> assign('games', $games);
 
 
 $smarty->display('index.tpl');
