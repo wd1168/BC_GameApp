@@ -1,4 +1,4 @@
-<title> GameRepo </title>
+<title> GameRepo &ndash; know the rules</title>
 <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
 <meta name="viewport" content="width=device-width">
 <style>
