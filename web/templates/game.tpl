@@ -5,6 +5,13 @@
   .small {
     font-style: italic;
   }
+  .thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    object-fit: scale-down;
+  }
   </style>
   </head>
   <body>
@@ -16,7 +23,7 @@
 
         <div class="row">
           <div class="col-lg-2">
-            <img class="img-thumbnail mx-auto" src='./images/{$game['Image']}' height="150" width="150">
+            <img class="thumbnail mx-auto" src='./images/{$game['Image']}' height="150" width="150">
           </div>
           <div class="col-lg-4">
           </br>
