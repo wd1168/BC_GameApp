@@ -7,8 +7,7 @@
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: 0.25rem;
-    max-width: 100%;
-    height: auto;
+    object-fit: scale-down;
   }
   </style>
 </head>
