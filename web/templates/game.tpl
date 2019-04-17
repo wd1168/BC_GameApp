@@ -1,9 +1,11 @@
 <html>
   <head>
   {include "head.tpl"}
+  <style>
   .small {
     font-style: italic;
   }
+  </style>
   </head>
   <body>
   {include "nav_bar.tpl"}

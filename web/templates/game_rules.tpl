@@ -1,6 +1,11 @@
 <html>
   <head>
     {include "head.tpl"}
+    <style>
+    .sidebar{
+      
+    }
+    </style>
   </head>
   <body>
     {include "nav_bar.tpl"}
