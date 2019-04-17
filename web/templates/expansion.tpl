@@ -63,6 +63,7 @@
             padding-left: .25em;
         }
     </style>
+    <link rel="shortcut icon" href="images/GrLogo_Black.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
@@ -71,7 +72,7 @@
          <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
          <div><a href="./board_games.php"><strong>Boards</strong></a></div>
          <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-         <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
+         <div><a href="./about.php"><strong>About Us</strong></a></div>
          <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
          {if isset($first_name)}
              <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
