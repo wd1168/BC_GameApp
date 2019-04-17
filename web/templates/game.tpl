@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> GameRepo </title>
-    <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Styles/bootstrap.css"/>
     <meta name="viewport" content="width=device-width">
     <style>
         body {
@@ -90,9 +90,10 @@
 
         <div class="row">
           <div class="col-lg-2">
-            <img class="image-fluid" src='./images/{$game['Image']}' height="150px">
+            <img class="img-thumbnail mx-auto" src='./images/{$game['Image']}' height="150" width="150">
           </div>
           <div class="col-lg-4">
+          </br>
             <h5>Players: &nbsp;<text class="small">{$game['Player_Count']}</text></h5>
             <h5>Ages: &nbsp;<text class="small">+ {$game['Age']}</text></h5>
             <h5>Manufacturer: &nbsp;<text class="small">{$game['Manufacturer']}</text></h5>
