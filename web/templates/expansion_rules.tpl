@@ -71,20 +71,8 @@
 
 </header>
 
-<div class="nav">
+{include "nav_bar.tpl"}
 
-    <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
-    <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-    <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-    <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-    <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-    {if isset($first_name)}
-        <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
-    {else}
-        <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-    {/if}
-
-</div>
 <div class="container">
     <div class="content">
         <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
