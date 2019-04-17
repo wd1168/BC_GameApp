@@ -25,6 +25,8 @@
 
         <p><i>Welcome! Please enjoy this repo for all of your favorite board and card game rules.</i></p>
 
+{include "search.tpl"}
+
 	<h4><strong>Popular Board Games</strong></h4>
         
         <div class="row">
