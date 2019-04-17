@@ -105,7 +105,6 @@
             <div class="col-3"></div>
           </div>
           </br>
-
           <div class="col-4"></div>
             <button class="col-2 btn btn-outline-primary" type="submit" name='login' onclick="./login.php">Login</button>
             <a href="./signup.php"><button class="col-2 btn btn-outline-primary">Sign-Up</button></a>
