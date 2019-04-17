@@ -21,11 +21,11 @@
 
     <div class="content">
 
-        <h1><strong>GameRepo</strong> &ndash; know the rules</h1>
+        <h1><strong>GameRepo</strong> &ndash; rule lookup for tabletop games</h1>
 
         <p><i>Welcome! Please enjoy this repo for all of your favorite board and card game rules.</i></p>
 
-                <h4><strong>Popular Board Games</strong></h4>
+	<h4><strong>Popular Board Games</strong></h4>
         
         <div class="row">
             
