@@ -66,22 +66,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
-     <div class="nav">
+  {include "nav_bar.tpl"}
 
-       <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
-       <div><a href="./board_games.php"><strong>Boards</strong></a></div>
-       <div><a href="./card_games.php"><strong>Cards</strong></a></div>
-        <div><a href="./add_rules.php"><strong>Add Rules</strong></a></div>
-       <div><a href="./about.php"><i class="fas fa-question fa-md" style="padding-top: .275em"></i></a></div>
-       <div><a href="./search_page.php"><i class="fas fa-search fa-md" style="padding-top: .275em;"></i></a></div>
-       {if isset($first_name)}
-         <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
-       {else}
-         <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-       {/if}
-
-        </div>
-    <main role="main" class="container">
+  <main role="main" class="container">
       <div class="content">
         <h1><strong>{$game['Name']}</strong></h1>
         <img class="image-fluid" src='./images/{$game['Image']}' height="auto" style="max-width: 20%">
