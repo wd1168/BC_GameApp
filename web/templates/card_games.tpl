@@ -1,6 +1,16 @@
 <html>
 <head>
     {include "head.tpl"}
+  <style>
+  .thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+  }
+  </style>
 </head>
 <body>
 
@@ -21,9 +31,8 @@
                         <picture>
                             <source srcset="images\{$game.Image}">
                             <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}"
-                                                                        class="img-fluid img-thumbnail mx-auto"
-                                                                        alt="{$game.Name}"
-                                                                        width="100" height="100"></a>
+                                                                        class="thumbnail mx-auto"
+                                                                        alt="{$game.Name}" width="100" height="100"></a>
                             <h3><a href="./game.php?link={$game.Name}">{$game.Name}</a></h3>
                         </picture>
                     </div>
