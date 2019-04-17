@@ -2,7 +2,7 @@
 <head>
     {include "head.tpl"}
     <style>
-    
+
     .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
     .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
     .MultiCarousel .MultiCarousel-inner .item { float: left;}
@@ -11,9 +11,9 @@
     .MultiCarousel .leftLst { left:0; }
     .MultiCarousel .rightLst { right:0; }
     .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-    
+
     </style>
-    
+
 </head>
 <body>
 {include "nav_bar.tpl"}
@@ -26,9 +26,9 @@
         <p>board/card game rule lookup</p>
 
 	<h4><strong>Popular Board Games</strong></h4>
-        
+
         <div class="row">
-            
+
         <div class="container">
 	<div class="row">
 		<div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
@@ -83,26 +83,26 @@
                     </div>
                 </div>
 
-                
+
             </div>
             <button class="btn btn-primary leftLst"><</button>
             <button class="btn btn-primary rightLst">></button>
         </div>
 	</div>
-	
+
 </div>
-            
+
         </div>
-        
-        
+
+
         <div class="row">
-            
+
 
         </div>
         <br>
         <h4><strong>Popular Card Games</strong></h4>
-        <div class="row"> 
-        
+        <div class="row">
+
         <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
         <div class="MultiCarousel-inner">
                 <div class="item">
@@ -154,16 +154,16 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <button class="btn btn-primary leftLst"><</button>
             <button class="btn btn-primary rightLst">></button>
         </div>
-	
-        
-        
- 
-   
+
+
+
+
+
         </div>
 
         <br>

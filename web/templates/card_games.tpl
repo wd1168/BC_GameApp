@@ -1,19 +1,25 @@
 <html>
 <head>
     {include "head.tpl"}
+  <style>
+  .thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    object-fit: scale-down;
+  }
+  </style>
 </head>
 <body>
 
-<header>
-
-</header>
 {include "nav_bar.tpl"}
 
 <div class="container">
     <div class="content">
-    
+
                 <div><a href="./add_game.php"> Add new game </a></div>
-    
+
         <div class="jumbotron col-md-12 col-lg-12">
             <center><h2>Card Games</h2></center>
         </div>
@@ -24,9 +30,8 @@
                         <picture>
                             <source srcset="images\{$game.Image}">
                             <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}"
-                                                                        class="img-fluid img-thumbnail mx-auto"
-                                                                        alt="{$game.Name}"
-                                                                        width="100" height="100"></a>
+                                                                        class="thumbnail mx-auto"
+                                                                        alt="{$game.Name}" width="100" height="100"></a>
                             <h3><a href="./game.php?link={$game.Name}">{$game.Name}</a></h3>
                         </picture>
                     </div>

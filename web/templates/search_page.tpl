@@ -36,14 +36,11 @@
 
           #myUL li a:hover:not(.header) {
             background-color: #eee;
-          }       
+          }
     </style>
 </head>
   <body>
 
-    <header>
-
-    </header>
     {include "nav_bar.tpl"}
 
     <main role="main" class="container">

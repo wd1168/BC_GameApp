@@ -35,10 +35,12 @@ try
     $rules = array();
     $info = array();
     $category = array();
+    $subcategory = array();
 
     while ($row = $statement2->fetch(PDO::FETCH_ASSOC)) {
         array_push($rules, $row['Rule']);
         array_push($category, $row['Category']);
+        array_push($subcategory, $row['Subcategory']);
         array_push($info, $row["E_Name"], $row["G_Name"], $row["Age"], $row['Player_Count']);
 
     }
@@ -53,5 +55,6 @@ $pdo = null;
 $smarty -> assign('info', $info);
 $smarty -> assign('rules', $rules);
 $smarty -> assign('category', $category);
+$smarty -> assign('subcategory', $subcategory);
 
 $smarty->display('expansion_rules.tpl');
