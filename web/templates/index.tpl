@@ -81,7 +81,7 @@
 
         <br>
 
-        <h4><strong>Developers</strong></h4>
+        <!--<h4><strong>Developers</strong></h4>
 
         <ul style="list-style: none; ">
             <li><strong>Wyatt Derk</strong>, Project Lead</li>
@@ -90,7 +90,7 @@
             <li><strong>Ibinabo Braide</strong>, Design</li>
             <li><strong>Joshua Simmons</strong>, Design</li>
 
-        </ul>
+        </ul>-->
     </div>
 </main>
 
