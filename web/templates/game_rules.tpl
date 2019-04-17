@@ -2,8 +2,12 @@
   <head>
     {include "head.tpl"}
     <style>
-    .sidebar{
-      
+    .sidebar {
+      border-radius: 25px;
+      border: 2px solid rgb(91, 136, 216);
+      background-color: white;
+      padding: 30px;
+      margin: 20px;
     }
     </style>
   </head>
@@ -25,10 +29,10 @@
                 {if (sizeof($rules)!=0)}
                   {for $x = 0 to sizeof($rules)}
                     {if $category[$x] != $category[$x-1]}
-                      <h3><strong>{$category[$x]}</strong></h3>
+                      <h3 style="color: rgb(91, 136, 216)"><strong>{$category[$x]}</strong></h3>
                     {/if}
                     {if !is_null($subcategory[$x]) And $subcategory[$x] != $subcategory[$x-1]}
-                      <h4><strong>{$subcategory[$x]}</strong></h4>
+                      <h4>{$subcategory[$x]}</h4>
                     {/if}
                     <article><p>{$rules[$x]}</p></article>
                   {/for}
