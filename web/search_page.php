@@ -19,17 +19,12 @@ if (isset($_SESSION['User'])){
     $smarty -> assign('last_name', $lname);
 }
 
-
 $search_query = "SELECT `Name` FROM game;";
-
 $statement2 = $pdo->prepare($search_query);
-
 $statement2 ->execute();
-
 try 
     {
         $games = array();
-
         while ($row = $statement2->fetch(PDO::FETCH_ASSOC)) {
             array_push($games, $row['Name']);
         }
@@ -40,6 +35,6 @@ try
         echo "Error: " . $e->getMessage();
         }
     $pdo = null;
-    $smarty -> assign('games', $games);
+$smarty -> assign('games', $games);
  
 $smarty->display('search_page.tpl');

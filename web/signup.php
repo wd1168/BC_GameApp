@@ -6,23 +6,15 @@
  */
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
-
-
 session_start();
 if (isset ($_SESSION['User'])){
     header("Location: index.php");
 }
-
 if(!isset($_POST['first_name'])) {
     $smarty->display('signup.tpl');
     exit();
 }
-
-
-
-
 $first_name = $last_name = $email = $password = $confirm = "";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $first_name = clean_input($_POST["first_name"]);
   $last_name = clean_input($_POST["last_name"]);
@@ -31,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $confirm = clean_input($_POST["confirm"]);
   $hash = crypt($password);
 } 
-
   if ($password != $confirm){
   
   $message = "Please make sure your confirmation password matches your password";
@@ -42,17 +33,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $smarty->display('signup.tpl');
   exit();
 }
-
-
   
   $sql = "SELECT *FROM user 
-              WHERE Email = '$email';";
+              WHERE Email = :email;";
   
   
-     $query = $pdo->query($sql);
-     $rows = $query->fetchAll();
-     
-     $rowCount = count($rows);
+  $stmt = $pdo->prepare($sql);
+  $stmt->bindParam(':email', $email);
+  $stmt->execute();
+  $rows = $stmt->fetchAll();
+  $rowCount = count($rows);
      
         
     if ($rowCount == 1) {
@@ -75,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       return $data;
     }
     
-
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':e', $email);
 $stmt->bindParam(':p', $hash);

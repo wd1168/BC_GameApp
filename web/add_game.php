@@ -5,10 +5,9 @@
  * @package Example-application
  */
 
+ 
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
-
-
 
 session_start();
 if (isset ($_SESSION['User'])){
@@ -18,10 +17,7 @@ if(!isset($_POST['name'])) {
     $smarty->display('add_game.tpl');
     exit();
 }
-
-
 $msg = $name = $description = $age = $count = $type = $deck = "";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = clean_input($_POST["name"]);
   $description = clean_input($_POST["description"]);
@@ -43,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $msg = "Please make sure player count is one of more";
             $err = 1;
         }
-     
+        
         $smarty->assign('msg', $msg);
         $smarty->assign('name', $name);
         $smarty->assign('description', $description);
@@ -51,21 +47,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $smarty->assign('count', $count);
         $smarty->assign('type', $type);
         $smarty->assign('deck', $deck);
-    if ($err){
+
+        if ($err){
         $smarty->display('add_game.tpl');
         exit();
     }
 } 
  
-  
+
   $sql = "SELECT *FROM game 
-              WHERE `name` = '$name';";
+              WHERE `name` = :name;";
   
-  
-     $query = $pdo->query($sql);
-     $rows = $query->fetchAll();
+   
+     $stmt = $pdo->prepare($sql);
+     $stmt->bindParam(':name', $name);
+     $stmt->execute();
+     $rows = $stmt->fetchAll();
      $rowCount = count($rows);
-    
+     
         
     if ($rowCount == 1) {
          $message = "Game already exists \n 
@@ -74,12 +73,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $smarty->display('add_game.tpl');
          exit();
     }else {
-          $sql = "INSERT INTO game
-                            (`Name`, `Description`, Age, Player_Count, `Type`, Deck)
+        
+        $sql = "INSERT INTO manufacturer
+        (`Name`)
+          VALUES
+        (:name)";
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->execute();
+
+        $sql = "SELECT Manufacturer_ID FROM manufacturer where Name = :name";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->execute();
+         
+         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+         $id = $row[Manufacturer_ID];   
+         
+         $sql = "INSERT INTO game
+                            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID)
                   VALUES
-                            (:name, :description, :age, :count, :type, :deck)";
+                            (:name, :description, :age, :count, :type, :deck, $id)";
+
     }
-    
+
     function clean_input($data) {
       $data = trim($data);
       $data = htmlspecialchars($data);
@@ -94,6 +112,5 @@ $stmt->bindParam(':count', $count);
 $stmt->bindParam(':type', $type);
 $stmt->bindParam(':deck', $deck);
 $stmt->execute();
-
 
 header("Location: index.php");
