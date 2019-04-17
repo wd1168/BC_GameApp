@@ -25,72 +25,146 @@
 
         <p><i>Welcome! Please enjoy this repo for all of your favorite board and card game rules.</i></p>
 
-        <h4><strong>Popular Board Games</strong></h4>
+                <h4><strong>Popular Board Games</strong></h4>
+        
         <div class="row">
-            <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\battleship-logo.jpg">
-                    <img src="images\battleship-logo.jpg" class="img-fluid img-thumbnail mx-auto" alt="Battleship"
-                         width="100" height="100">
+            
+        <div class="container">
+	<div class="row">
+		<div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+            <div class="MultiCarousel-inner">
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="images\battleship-logo.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="images\game-of-life.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="images\battleship-logo.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="images\game-of-life.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="images\battleship-logo.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
 
-                    <h5><a href="./game.php?link=battleship"> Battleship </a></h5>
-
-                </picture>
+                
             </div>
-            <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\othello.jpg">
-                    <img src="images\othello.jpg" class="img-fluid img-thumbnail mx-auto" alt="Othello" width="100"
-                         height="100">
-                    <h5><a href="./game.php?link=Othello"> Othello </a></h5>
+            <button class="btn btn-primary leftLst"><</button>
+            <button class="btn btn-primary rightLst">></button>
+        </div>
+	</div>
+	
+</div>
+            
+        </div>
+        
+        
+        <div class="row">
+            
 
-                </picture>
-            </div>
-            <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\monopoly.jpg">
-                    <img src="images\monopoly.jpg" class="img-fluid img-thumbnail mx-auto" alt="Monopoly" width="100"
-                         height="100">
-                    <h5><a href="./game.php?link=Monopoly"> Monopoly </a></h5>
-
-                </picture>
-            </div>
         </div>
         <br>
         <h4><strong>Popular Card Games</strong></h4>
-        <div class="row">
-            <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\def-card.jpg">
-                    <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Go Fish" width="100"
-                         height="100">
-                    <h5><a href="./game.php?link=Go Fish">Go Fish</a></h5>
-                </picture>
+        <div class="row"> 
+        
+        <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+        <div class="MultiCarousel-inner">
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="https://prodimage.images-bn.com/pimages/0689196801211_p0_v3_s600x595.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="https://www.mobygames.com/images/covers/l/397255-solitaire-playstation-4-front-cover.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="https://lh6.ggpht.com/lGMkLqc51PsnTon7HDkCm92Cw96n4-UYthj3nzp30PoWj8jiO8C-a93_h7nLLHyJkpg=h300" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="https://prodimage.images-bn.com/pimages/0689196801211_p0_v3_s600x595.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="https://www.mobygames.com/images/covers/l/397255-solitaire-playstation-4-front-cover.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="https://lh6.ggpht.com/lGMkLqc51PsnTon7HDkCm92Cw96n4-UYthj3nzp30PoWj8jiO8C-a93_h7nLLHyJkpg=h300" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <div class="row">
+                        <img src="https://prodimage.images-bn.com/pimages/0689196801211_p0_v3_s600x595.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\def-card.jpg">
-                    <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="Solitaire" width="100"
-                         height="100">
-                    <h5><a href="./game.php?link=Solitaire">Solitaire</a></h5>
-
-                </picture>
-            </div>
-            <div class="col-xxs-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <picture>
-                    <source srcset="images\def-card.jpg">
-                    <img src="images\def-card.jpg" class="img-fluid img-thumbnail mx-auto" alt="War" width="100"
-                         height="100">
-
-                    <h5><a href="./game.php?link=War">War</a></h5>
-                </picture>
-            </div>
+            <button class="btn btn-primary leftLst"><</button>
+            <button class="btn btn-primary rightLst">></button>
         </div>
-        <br>
-
-        <!--<h2>Random Games</h2>-->
-
-        <!--<p>This sample text serves in place of suggested games as we currently have no rulesets to offer.</p>-->
+	
+        
+        
+ 
+   
+        </div>
 
         <br>
 
