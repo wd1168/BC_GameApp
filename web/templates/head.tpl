@@ -52,6 +52,31 @@
         margin: 0;
         padding-left: .25em;
     }
+    /*Search Bar CSS*/
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+
+    #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+    }
+
+
+
 </style>
 <link rel="shortcut icon" href="images/GrLogo_Black.png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
