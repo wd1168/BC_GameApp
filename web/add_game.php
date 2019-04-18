@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES
            (:name)";        
             $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':name', $namef);
             $stmt->execute();
 
             $sql = "SELECT Manufacturer_ID FROM manufacturer where Name = :namef";
