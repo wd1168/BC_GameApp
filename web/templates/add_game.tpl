@@ -117,8 +117,12 @@
                         <input type="radio" name="deck" value= "N/A">  N/A 
                 </fieldset>
             <br>
+             <br>
+                 <label for="Player Count"> Manufacturer: </label><br>
+                 <input type="text" name="namef" value="{$namef}" > (optional)
             <br>
-                Select image to upload:<br>
+            <br>
+                 <label> Select image to upload:  </label><br>
                 <input type="file" name="fileToUpload" id="fileToUpload">
             <br>
             <br>
