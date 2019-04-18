@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $type = clean_input($_POST["type"]);
   $deck = clean_input($_POST["deck"]);
   $namef = clean_input($_POST["namef"]);
-  
+
   if ($namef == "")
         $namef = "N/A";
   
@@ -91,16 +91,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
 
              $sql = "INSERT INTO manufacturer
-              (`Name`)
+              (`Name`, Game_Name)
             VALUES
-           (:name)";        
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':name', $namef);
-            $stmt->execute();
-
-            $sql = "SELECT Manufacturer_ID FROM manufacturer where Name = :namef";
+           (:namef, :name)";        
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':namef', $namef);
+            $stmt->bindParam(':name', $name);
+            $stmt->execute();
+
+            $sql = "SELECT Manufacturer_ID FROM manufacturer where Game_Name = :name";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':name', $name);
             $stmt->execute();         
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $m_id = $row[Manufacturer_ID];  
