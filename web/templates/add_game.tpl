@@ -84,7 +84,7 @@
     <div class="content">
 
 
-        <form action="add_game.php" method="post">
+        <form action="add_game.php" method="post" enctype="multipart/form-data">
             <h2 align="center"> Add New Game </h2>
                 <h3 style="color:#FF0000;text-align:center;font-size:17px;">{$msg}</h3>
                 <label for="Game Name" >Game Name: </label><br>
@@ -116,6 +116,10 @@
                         <input type="radio" name="deck" value= "Custom"> Custom<br>
                         <input type="radio" name="deck" value= "N/A">  N/A 
                 </fieldset>
+            <br>
+            <br>
+                Select image to upload:<br>
+                <input type="file" name="fileToUpload" id="fileToUpload">
             <br>
             <br>
             <input type="submit" value="Submit">
