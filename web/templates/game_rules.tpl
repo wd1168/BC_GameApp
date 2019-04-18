@@ -16,7 +16,15 @@
 
     <div class="container">
     <div class="content">
-      <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
+      <div class="jumbotron col-md-12 col-lg-12">
+          <center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center>
+      </div>
+        <div class="input-group" style="width: 40em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
+            <input type="text" class="form-control" placeholder="Search for a Rule" aria-label="Rule Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div>
+        </div>
       <div class="row">
           <div class="col-md-4 col-lg-3">
             <div class="sidebar"
