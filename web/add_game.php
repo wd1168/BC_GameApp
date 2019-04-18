@@ -34,6 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
         $err = $messages['err'];
         $msg = $messages['msg'];
+        $img_name = $messages['img_name'];
+
         if ($name == "" || $description == "" || $age == "" || $count == "" || $type == "" || $deck == ""){
             $msg = "Please make sure you provide all required information";
             $err = 1;
@@ -112,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();         
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $img_id = $row[G_Image_ID];
-         
+                   
             $sql = "INSERT INTO game
                             (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID)
                   VALUES
