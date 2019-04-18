@@ -29,7 +29,7 @@
               {if (sizeof($rules)!=0)}
                 {for $x = 0 to sizeof($rules)}
                   {if $category[$x] != $category[$x-1]}
-                    <h3><strong>{$category[$x]}</strong></h3>
+                    <h3 style="color: rgb(91, 136, 216)"><strong>{$category[$x]}</strong></h3>
                   {/if}
                   {if !is_null($subcategory[$x]) And $subcategory[$x] != $subcategory[$x-1]}
                     <h4>{$subcategory[$x]}</h4>
