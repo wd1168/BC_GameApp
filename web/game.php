@@ -4,6 +4,8 @@ require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 
 session_start();
+include "search_page.php";
+
 if (isset($_SESSION['User'])) {
     $query = "SELECT First_Name, Last_Name FROM user
           WHERE User_ID = :id";
