@@ -1,6 +1,7 @@
 <html>
 <head>
 {include "head.tpl"}
+<style>
 .sidebar {
   border-radius: 25px;
   border: 2px solid rgb(91, 136, 216);
@@ -8,6 +9,7 @@
   padding: 30px;
   margin: 20px;
 }
+</style>
 </head>
 <body>
 
