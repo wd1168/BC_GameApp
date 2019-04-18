@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          exit();
     }else {
       
-        instert the image name into the database game_image table
+       // instert the image name into the database game_image table
            $sql = "INSERT INTO game_image
            (`Name`)
              VALUES
