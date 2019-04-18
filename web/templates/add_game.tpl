@@ -122,7 +122,7 @@
                 <input type="file" name="fileToUpload" id="fileToUpload">
             <br>
             <br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class=" col-2 btn btn-outline-primary">
             <br>
        
         </form>
