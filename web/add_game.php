@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         
         if (!$err){
-        //$messages = upload_image();     
+        $messages = upload_image();     
         $err = $messages['err'];
         $msg = $messages['msg'];
         $img_name = $messages['img_name'];
@@ -119,12 +119,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              VALUES
              (:name, :description, :age, :count, :type, :deck, :m_id, :img_id);";
 
-
-
-                            $msg = $name.$description.$age.$count.$type.$deck.$m_id.$img_id;
-$smarty->assign('msg', $msg);
-$smarty->display('add_game.tpl');
-exit();    
 }
     
 
