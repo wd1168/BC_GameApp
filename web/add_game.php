@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $err = 1;
         }
         
-        $msg .= " " . $messages['err'];
+      
         $smarty->assign('msg', $msg);
         $smarty->assign('name', $name);
         $smarty->assign('description', $description);
@@ -54,10 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $smarty->assign('type', $type);
         $smarty->assign('deck', $deck);
        
-        //if ($err){
+        if ($err){
         $smarty->display('add_game.tpl');
         exit();
-   // }
+        }
 } 
  
   $sql = "SELECT *FROM game 
@@ -79,44 +79,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          exit();
     }else {
       
-        //instert the image name into the database game_image table
-        //    $sql = "INSERT INTO game_image
-        //    (`Name`)
-        //      VALUES
-        //    (:name)";
-        //     $stmt = $pdo->prepare($sql);
-        //     $stmt->bindParam(':name', $messages['img_name']);
-        //     $stmt->execute();
+        instert the image name into the database game_image table
+           $sql = "INSERT INTO game_image
+           (`Name`)
+             VALUES
+           (:name)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':name', $messages['img_name']);
+            $stmt->execute();
 
-        // $sql = "INSERT INTO manufacturer
-        // (`Name`)
-        //   VALUES
-        // (:name)";
+        $sql = "INSERT INTO manufacturer
+        (`Name`)
+          VALUES
+        (:name)";
         
-        // $stmt = $pdo->prepare($sql);
-        // $stmt->bindParam(':name', $name);
-        // $stmt->execute();
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->execute();
 
-        // $sql = "SELECT Manufacturer_ID FROM manufacturer where Name = :name";
-        // $stmt = $pdo->prepare($sql);
-        // $stmt->bindParam(':name', $name);
-        // $stmt->execute();         
-        //  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        //  $m_id = $row[Manufacturer_ID];  
+        $sql = "SELECT Manufacturer_ID FROM manufacturer where Name = :name";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->execute();         
+         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+         $m_id = $row[Manufacturer_ID];  
 
         
 
-        // $sql = "SELECT G_Image_ID FROM game_image where Name = :name";
-        // $stmt = $pdo->prepare($sql);
-        // $stmt->bindParam(':name', $img_name);
-        // $stmt->execute();         
-        //  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        //  $img_id = $row[G_Image_ID];
+        $sql = "SELECT G_Image_ID FROM game_image where Name = :name";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':name', $img_name);
+        $stmt->execute();         
+         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+         $img_id = $row[G_Image_ID];
          
-        //  $sql = "INSERT INTO game
-        //                     (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID)
-        //           VALUES
-        //                     (:name, :description, :age, :count, :type, :deck, :m_id, :img_id)";
+         $sql = "INSERT INTO game
+                            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID)
+                  VALUES
+                            (:name, :description, :age, :count, :type, :deck, :m_id, :img_id)";
     }
 
     
