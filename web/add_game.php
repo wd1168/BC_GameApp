@@ -24,11 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $type = clean_input($_POST["type"]);
   $deck = clean_input($_POST["deck"]);
   
-  
-    $msg = upload_image($img_name);
+    $err = 0; 
+    $msg = upload_image($img_name, $err);
  
      
-        $err = 0;
         if ($name == "" || $description == "" || $age == "" || $count == "" || $type == "" || $deck == ""){
             $msg = "Please make sure you provide all required information";
             $err = 1;
@@ -125,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Function to upload game image and validate input 
     // Modified from W3c school website. 
 
-    function upload_image(&$image_name){
+    function upload_image(&$image_name, &$err){
        
         $target_dir = "images/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -180,6 +179,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                
          }
          
+        $err = $uploadOk;
         $img_name = basename( $_FILES["fileToUpload"]["name"]);
         return $message;
     }
