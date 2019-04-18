@@ -29,14 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $namef = "N/A";
   
      
-    $messages = upload_image();
- 
-     
-        $err = $messages['err'];
-        $msg = $messages['msg'];
-        $img_name = $messages['img_name'];
-
-        if ($name == "" || $description == "" || $age == "" || $count == "" || $type == "" || $deck == ""){
+           if ($name == "" || $description == "" || $age == "" || $count == "" || $type == "" || $deck == ""){
             $msg = "Please make sure you provide all required information";
             $err = 1;
         }
@@ -49,7 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $err = 1;
         }
         
-      
+        if (!$err){
+        //$messages = upload_image();     
+        $err = $messages['err'];
+        $msg = $messages['msg'];
+        $img_name = $messages['img_name'];
+       }
+
         $smarty->assign('msg', $msg);
         $smarty->assign('name', $name);
         $smarty->assign('description', $description);
@@ -58,9 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $smarty->assign('type', $type);
         $smarty->assign('deck', $deck);
        
-        if ($err){
-        $smarty->display('add_game.tpl');
-        exit();
+       if ($err){
+       $smarty->display('add_game.tpl');
+       exit();
         }
 } 
  
@@ -83,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          exit();
     }else {
       
-       // instert the image name into the database game_image table
+       //instert the image name into the database game_image table
            $sql = "INSERT INTO game_image
            (`Name`)
              VALUES
@@ -114,13 +113,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();         
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $img_id = $row[G_Image_ID];
-                   
+            
             $sql = "INSERT INTO game
-                            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID)
-                  VALUES
-                            (:name, :description, :age, :count, :type, :deck, :m_id, :img_id)";
-    }
+             (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID)
+             VALUES
+             (:name, :description, :age, :count, :type, :deck, :m_id, :img_id);";
+
+
+
+                            $msg = $name.$description.$age.$count.$type.$deck.$m_id.$img_id;
+$smarty->assign('msg', $msg);
+$smarty->display('add_game.tpl');
+exit();    
+}
     
+
     function clean_input($data) {
       $data = trim($data);
       $data = htmlspecialchars($data);
@@ -191,7 +198,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':description', $description);
     $stmt->bindParam(':age', $age);
     $stmt->bindParam(':count', $count);
-    $stmt->bindParam(':namef', $namef);
     $stmt->bindParam(':type', $type);
     $stmt->bindParam(':deck', $deck);
     $stmt->bindParam(':m_id', $m_id);
