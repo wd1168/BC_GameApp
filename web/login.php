@@ -7,6 +7,8 @@
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 session_start();
+include "search_page.php";
+
 if (isset($_SESSION['User'])){
     header("Location: index.php");
     exit();
