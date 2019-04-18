@@ -8,8 +8,6 @@
 require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 session_start();
-include "search_page.php";
-
 if (isset ($_SESSION['User'])){
     header("Location: index.php");
 }
@@ -17,7 +15,7 @@ if(!isset($_POST['name'])) {
     $smarty->display('add_game.tpl');
     exit();
 }
-$msg = $name = $description = $age = $count = $type = $deck = "";
+$img_name = $msg = $name = $description = $age = $count = $type = $deck = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = clean_input($_POST["name"]);
   $description = clean_input($_POST["description"]);
@@ -25,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $count = clean_input($_POST["count"]);
   $type = clean_input($_POST["type"]);
   $deck = clean_input($_POST["deck"]);
-   
   
-  $msg = upload_image();
+  
+    $msg = upload_image($img_name);
  
      
         $err = 0;
@@ -51,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $smarty->assign('count', $count);
         $smarty->assign('type', $type);
         $smarty->assign('deck', $deck);
+       
         if ($err){
         $smarty->display('add_game.tpl');
         exit();
@@ -75,7 +74,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $smarty->display('add_game.tpl');
          exit();
     }else {
-        
+      
+        //instert the image name into the database game_image table
+           $sql = "INSERT INTO game_image
+           (`Name`)
+             VALUES
+           (:name)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':name', $img_name);
+            $stmt->execute();
+
         $sql = "INSERT INTO manufacturer
         (`Name`)
           VALUES
@@ -90,7 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':name', $name);
         $stmt->execute();         
          $row = $stmt->fetch(PDO::FETCH_ASSOC);
-         $m_id = $row[Manufacturer_ID];   
+         $m_id = $row[Manufacturer_ID];  
+
+        
 
         $sql = "SELECT G_Image_ID FROM game_image where Name = :name";
         $stmt = $pdo->prepare($sql);
@@ -115,22 +125,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Function to upload game image and validate input 
     // Modified from W3c school website. 
 
-    function upload_image(){
-
+    function upload_image(&$image_name){
+       
         $target_dir = "images/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-        
+       
         // Check if image file is a actual image or fake image
         if(isset($_POST["submit"])) {
             
             $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
             if($check !== false) {
-                 $message = "File is an image - " . $check["mime"] . ".";
+                 $message .= "File is an image - " . $check["mime"] . ".";
                  $uploadOk = 1;
              } else {
-                    $message = "File is not an image.";
+                    $message .= "File is not an image.";
                     $uploadOk = 0;
                 }
             }
@@ -141,42 +151,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                  $uploadOk = 0;
                 }
     
-            // Check file size
+           //  Check file size
               if ($_FILES["fileToUpload"]["size"] > 1000000) {
                 $message = "Sorry, your image size is too large.";
                  $uploadOk = 0;
             }
 
-            // Allow certain file formats
+           //  Allow certain file formats
              if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                 && $imageFileType != "gif" ) {
                     $message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
              $uploadOk = 0;
             }
-
-            // Check if $uploadOk is set to 0 by an error
+          
+          //   Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
-            $message = "Sorry, your image was not uploaded.";
+            $message .= "<br> Your image was not uploaded.";
+        
 
-            // if everything is ok, try to upload file
+        //    if everything is ok, try to upload file
         } else {
              if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 $message = "The image ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
             } else {
-                $message = "Sorry, there was an error uploading your image.";
+                $message .= "<br> There was an error uploading your image.";
+            
             }
-        }
-
-         // instert the image name into the database game_image table
-         $sql = "INSERT INTO game_image
-         (`Name`)
-           VALUES
-         (:name)";
-          $stmt = $pdo->prepare($sql);
-          $img_name = basename( $_FILES["fileToUpload"]["name"]);
-          $stmt->bindParam(':name', $img_name);
-          $stmt->execute();
-        
+               
+         }
+         
+        $img_name = basename( $_FILES["fileToUpload"]["name"]);
         return $message;
     }
 
