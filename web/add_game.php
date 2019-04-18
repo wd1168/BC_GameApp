@@ -23,15 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $count = clean_input($_POST["count"]);
   $type = clean_input($_POST["type"]);
   $deck = clean_input($_POST["deck"]);
+  $namef = clean_input($_POST["namef"]);
   
-
+  if ($namef == "")
+        $namef = "N/A";
+  
      
     $messages = upload_image();
  
      
         $err = $messages['err'];
         $msg = $messages['msg'];
-
         if ($name == "" || $description == "" || $age == "" || $count == "" || $type == "" || $deck == ""){
             $msg = "Please make sure you provide all required information";
             $err = 1;
@@ -88,47 +90,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindParam(':name', $messages['img_name']);
             $stmt->execute();
 
-        $sql = "INSERT INTO manufacturer
-        (`Name`)
-          VALUES
-        (:name)";
+             $sql = "INSERT INTO manufacturer
+              (`Name`)
+            VALUES
+           (:name)";        
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':name', $name);
+            $stmt->execute();
+
+            $sql = "SELECT Manufacturer_ID FROM manufacturer where Name = :namef";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':namef', $namef);
+            $stmt->execute();         
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $m_id = $row[Manufacturer_ID];  
         
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':name', $name);
-        $stmt->execute();
-
-        $sql = "SELECT Manufacturer_ID FROM manufacturer where Name = :name";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':name', $name);
-        $stmt->execute();         
-         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-         $m_id = $row[Manufacturer_ID];  
-
-        
-
-        $sql = "SELECT G_Image_ID FROM game_image where Name = :name";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':name', $img_name);
-        $stmt->execute();         
-         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-         $img_id = $row[G_Image_ID];
+            $sql = "SELECT G_Image_ID FROM game_image where Name = :name";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':name', $img_name);
+            $stmt->execute();         
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $img_id = $row[G_Image_ID];
          
-         $sql = "INSERT INTO game
-                            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID)
+            $sql = "INSERT INTO game
+                            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID)
                   VALUES
                             (:name, :description, :age, :count, :type, :deck, :m_id, :img_id)";
     }
-
     
     function clean_input($data) {
       $data = trim($data);
       $data = htmlspecialchars($data);
       return $data;
     }
-
     // Function to upload game image and validate input 
     // Modified from W3c school website. 
-
     function upload_image(){
        
         $target_dir = "images/";
@@ -160,7 +156,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $message = "Sorry, your image size is too large.";
                  $uploadOk = 0;
             }
-
            //  Allow certain file formats
              if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                 && $imageFileType != "gif" ) {
@@ -172,7 +167,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($uploadOk == 0) {
             $message .= "<br> Your image was not uploaded.";
         
-
         //    if everything is ok, try to upload file
         } else {
              if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -188,16 +182,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $messages['msg'] = $message;
         return $messages;
     }
+    
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':description', $description);
+    $stmt->bindParam(':age', $age);
+    $stmt->bindParam(':count', $count);
+    $stmt->bindParam(':namef', $namef);
+    $stmt->bindParam(':type', $type);
+    $stmt->bindParam(':deck', $deck);
+    $stmt->bindParam(':m_id', $m_id);
+    $stmt->bindParam(':img_id', $img_id);
+    $stmt->execute();
 
-
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':name', $name);
-$stmt->bindParam(':description', $description);
-$stmt->bindParam(':age', $age);
-$stmt->bindParam(':count', $count);
-$stmt->bindParam(':type', $type);
-$stmt->bindParam(':deck', $deck);
-$stmt->bindParam(':m_id', $m_id);
-$stmt->bindParam(':img_id', $img_id);
-$stmt->execute();
 header("Location: index.php");
