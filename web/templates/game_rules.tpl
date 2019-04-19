@@ -19,12 +19,42 @@
       <div class="jumbotron col-md-12 col-lg-12">
           <center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center>
       </div>
-        <div class="input-group" style="width: 40em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
-            <input type="text" class="form-control" placeholder="Search for a Rule" aria-label="Rule Search" aria-describedby="basic-addon2">
+        <div class="input-group"  style="width: 40em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
+            <input id="myInput" type="text" class="form-control" placeholder="Search for a Rule" aria-label="Rule Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button">Button</button>
             </div>
         </div>
+<ul id="myUL">
+    {for $x = 0 to sizeof($search_results)}
+        <li><a href="./game_rules.php?link={$search_results[$x]}">{$search_results[$x]}</a></li>
+    {/for}
+</ul>
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function isEmpty() {
+        if (document.getElementById("myInput").value == "") {
+            document.getElementById("myUL").style.display = "none";
+        } else {
+            document.getElementById("myUL").style.display = "block";
+        }
+    }
+</script>
       <div class="row">
           <div class="col-md-4 col-lg-3">
             <div class="sidebar"
