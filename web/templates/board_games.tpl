@@ -20,7 +20,7 @@
 
         <div><a href="./add_game.php"> 
 
-<button type="button" class="btn btn-default btn-lg">
+<button type="button" class="btn btn-primary btn-lg">
   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a new game
 </button>
 
