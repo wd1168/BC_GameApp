@@ -12,12 +12,12 @@
   <br>
   <h3> Our Team</h3>
   <br>
-  <ul>
-    <li> Wyatt Derk, Team Lead, Back-End Engineer</li>
-    <li>Eliezer Mwankenja, Back-End Engineer</li>
-    <li>Ibinabo Braide, Front-End Engineer</li>
-    <li>Ben Underwood, Front-End Engineer</li>
-    <li>Joshua Simmons, Front-End Engineer</li>
+  <ul style="list-style:none">
+    <li><strong>Wyatt Derk</strong>, Team Lead, Back-End Engineer</li>
+    <li><strong>Eliezer Mwankenja</strong>, Back-End Engineer</li>
+    <li><strong>Ibinabo Braide</strong>, Front-End Engineer</li>
+    <li><strong>Benjamin Underwood</strong>, Front-End Engineer</li>
+    <li><strong>Joshua Simmons</strong>, Front-End Engineer</li>
   </ul>
   </br>
   </br>
