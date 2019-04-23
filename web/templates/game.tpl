@@ -12,7 +12,11 @@
     border-radius: 0.25rem;
     object-fit: scale-down;
   }
+
+
   </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   </head>
   <body>
   {include "nav_bar.tpl"}
@@ -35,22 +39,53 @@
         <h4>Description</h4><p>{$game['Description']}</p>
         <div class="text-center">
           <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
-          <a href="./add_rules.php"><button class="btn btn-outline-primary btn-lg">Add Rules</button></a>
+            <a href="./add_rules.php"><button class="btn btn-outline-primary btn-lg">Add Rules</button></a>
         </div>
       </div>
 
         <div class="content">
-            <form>
-                Enter your Question: <input type="text" name ="questionbox">
-                <br><br>
-
-                <input type="submit" value="Reply" name= "replybtn">
+          <h3><strong>Questions</strong></h3>
+          <div class="ask_q">
+            {if isset($first_name)}
+            <form class="form-inline" action="game.php?link={$game.Name}" method="post">
+                Enter your Question: <input type="text" class="form-control" value="" name ="game_question" required="">
+                <input class="btn btn-outline-primary btn-md" type="submit" value="Submit"
+                       name= "submitbtn" style="margin-top: 1em;">
             </form>
+            {/if}
+          </div>
+        <div class="response">
+          {if $question_results == 'TRUE'}
+            {foreach $question_list as $question_array}
+              <h4>{$question_array.User_Name}:</h4>
+              <p>{$question_array.Question}</p>
+              {*Response Form*}
+              {if isset($first_name)}
+                <button id="button{$question_array.Question_ID}" class ="btn btn-outline-primary btn-sm make_reply" onclick="showResponseForm({$question_array.Question_ID})" type="button">Respond</button>
+                <form id="form_button{$question_array.Question_ID}" class="form-inline response_form" action="game.php?link={$game.Name}" method="post">
+                  Enter your Response: <input type="text" class="form-control"
+                                              name="question_response">
+                  <input type="text" value="{$question_array.Question_ID}" name="question_id" style="display: none">
+                  <input class="btn btn-outline-primary btn-md" type="submit" value="Respond"
+                         name= "submitbtn" style="margin-top: 1em;">
 
-            <h4>Sample Reply</h4>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan nisi nec massa scelerisque suscipit. Suspendisse leo libero, malesuada ut massa eget, condimentum tempus sapien. Aliquam a mi urna. Duis iaculis commodo eros ut malesuada. Vestibulum auctor ante elementum enim aliquet, porta condimentum nulla eleifend. Sed id imperdiet nisl, eget commodo justo. In nec tempor sem. Morbi eu orci eu tellus luctus egestas.</p>
+                </form>
+              {/if}
+              {if $reply_results == 'TRUE'}
+                {foreach $reply_list as $reply_array}
+                  {if ($question_array.Question_ID == $reply_array.Question_ID)}
+                      <h5>{$reply_array.Full_Name} Responds:</h5>
+                      <p>{$reply_array.Answer}</p>
+                  {/if}
+                {/foreach}
+              {/if}
 
-            <h5 align="right">Sample UserName</h5>
+
+            {/foreach}
+          {else}
+            <h2 class="text-center">No Questions. </h2>
+          {/if}
+        </div>
 
         </div>
 
@@ -73,8 +108,24 @@
           <div>
         {/if}
     </main>
+<script>
+  // function showResponseForm(formid) {
+  //   document.getElementById('formid').style.display="block";
+  // }
+</script>
+  <script>
+    $(document).ready(function(){
+      $(".response_form").hide();
+      $(".make_reply").on('click', function(){
+       var id = $(this).attr('id');
+       var form_name = 'form_' + id;
 
-    <script src="./scripts/jquery-3.3.1.min.js"></script>
+       $('#' + form_name).toggle();
+      })
+    });
+  </script>
+
+  <script src="./scripts/jquery-3.3.1.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
 
   </body>
