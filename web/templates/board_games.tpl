@@ -18,7 +18,7 @@
 <div class="container">
     <div class="content">
 
-        <div><a href="./add_game.php"> 
+        <div  style="position: absolute; right: 0; bottom: 0;"><a href="./add_game.php"> 
 
 <button type="button" class="btn btn-primary btn-lg">
   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a new game
