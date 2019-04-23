@@ -9,6 +9,7 @@
         padding: 20px 15px 0;
     }
     .content {
+        position: relative;
         border-radius: 25px;
         border: 2px solid white;
         background-color: white;
