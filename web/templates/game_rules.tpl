@@ -37,7 +37,7 @@
           <center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center>
       </div>
         <div class="input-group"  style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
-            <input type="text" id="myInput" class="form-control" onkeyup="myFunction(); isEmpty()" placeholder="Search Games" aria-label="Search Games" aria-describedby="basic-addon2" style="padding-top: .275em;">
+            <input type="text" id="myInput" class="form-control" onkeyup="myFunction(); isEmpty()" placeholder="Search the rules of this game" aria-label="Search Games" aria-describedby="basic-addon2" style="padding-top: .275em;">
 
 </div>
 
