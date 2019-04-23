@@ -11,8 +11,31 @@
     border: 1px solid #dee2e6;
     border-radius: 0.25rem;
     object-fit: scale-down;
+
+  }
+  .make_reply, .question_text {
+    display: inline-block;
   }
 
+    h5.replies {
+      /*text-indent: .8em;*/
+      color: rgb(91, 136, 216);
+
+    }
+    .question_submitter {
+      color: rgb(91, 136, 216);
+    }
+    .question_bubble, .reply_bubble {
+      border-radius: 25px;
+      border: 2px solid rgb(91, 136, 216);
+      background-color: white;
+      padding: 1em;
+      margin: .5em;
+    }
+
+    .response_form, .cancel_reply {
+      display: none;
+    }
 
   </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -50,32 +73,42 @@
             <form class="form-inline" action="game.php?link={$game.Name}" method="post">
                 Enter your Question: <input type="text" class="form-control" value="" name ="game_question" required="">
                 <input class="btn btn-outline-primary btn-md" type="submit" value="Submit"
-                       name= "submitbtn" style="margin-top: 1em;">
+                       name= "submitbtn">
             </form>
             {/if}
           </div>
-        <div class="response">
+            <div class="row">
+        <div class="col-md-12 response">
           {if $question_results == 'TRUE'}
             {foreach $question_list as $question_array}
-              <h4>{$question_array.User_Name}:</h4>
-              <p>{$question_array.Question}</p>
+              <div class="question_bubble">
+              <h5 class="question_submitter">{$question_array.User_Name}:</h5>
+                <p class="question_text">{$question_array.Question}</p>
+
               {*Response Form*}
               {if isset($first_name)}
-                <button id="button{$question_array.Question_ID}" class ="btn btn-outline-primary btn-sm make_reply" onclick="showResponseForm({$question_array.Question_ID})" type="button">Respond</button>
+                <button id="button{$question_array.Question_ID}" class ="btn btn-outline-primary btn-sm make_reply"  type="button">Respond</button>
+                <button id="cancel_button{$question_array.Question_ID}" class ="btn btn-outline-primary btn-sm cancel_reply"  type="button">Cancel</button>
+
                 <form id="form_button{$question_array.Question_ID}" class="form-inline response_form" action="game.php?link={$game.Name}" method="post">
                   Enter your Response: <input type="text" class="form-control"
                                               name="question_response">
                   <input type="text" value="{$question_array.Question_ID}" name="question_id" style="display: none">
                   <input class="btn btn-outline-primary btn-md" type="submit" value="Respond"
-                         name= "submitbtn" style="margin-top: 1em;">
+                         name= "submitbtn">
 
                 </form>
+                </div>
               {/if}
               {if $reply_results == 'TRUE'}
                 {foreach $reply_list as $reply_array}
                   {if ($question_array.Question_ID == $reply_array.Question_ID)}
-                      <h5>{$reply_array.Full_Name} Responds:</h5>
-                      <p>{$reply_array.Answer}</p>
+                      <div class="row justify-content-around">
+                    <div class="col-md-10 reply_bubble">
+                      <h5 class="replies">{$reply_array.Full_Name}:</h5>
+                      <p class="replies">{$reply_array.Answer}</p>
+                    </div>
+                      </div>
                   {/if}
                 {/foreach}
               {/if}
@@ -87,11 +120,12 @@
           {/if}
         </div>
 
+            </div>
         </div>
 
         {if $exp_results == 'TRUE'}
           <div class="content">
-            <h5>Expansions</h5>
+            <h3><strong>Expansions</strong></h3>
             <div class="row">
             {foreach $exp_list as $exp}
               <div class="col-md-4 col-lg-4">
@@ -108,20 +142,31 @@
           <div>
         {/if}
     </main>
-<script>
-  // function showResponseForm(formid) {
-  //   document.getElementById('formid').style.display="block";
-  // }
-</script>
   <script>
     $(document).ready(function(){
-      $(".response_form").hide();
+      // $(".response_form").hide();
+      // $(".cancel_reply").hide();
       $(".make_reply").on('click', function(){
        var id = $(this).attr('id');
        var form_name = 'form_' + id;
-
+       var cancel_button = 'cancel_' + id;
+       $('#' + id).hide();
+       $('#' + cancel_button).show();
        $('#' + form_name).toggle();
+
+        $(".cancel_reply").on('click', function(){
+          var c_id = $(this).attr('id');
+          $(".cancel_reply").hide();
+          $('#' + id).show();
+          var form_name = 'form_' + id;
+          $('#' + form_name).hide();
+        })
+
+
       })
+
+
+
     });
   </script>
 
