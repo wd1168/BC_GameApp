@@ -21,6 +21,7 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: none;
           }
 
         #myUL li a {
@@ -47,13 +48,13 @@
 
 <h2>Game Search</h2>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a name">
+{*<input type="text" id="myInput" name="search" onkeyup="myFunction();isEmpty()" placeholder="Search for games.." title="Type in a name">*}
 
-<ul id="myUL">
-         {for $x = 0 to sizeof($games)}
-            <li><a href="./game_rules.php?link={$games[$x]}">{$games[$x]}</a></li>
-         {/for}
-</ul>
+{*<ul id="myUL">*}
+         {*{for $x = 0 to sizeof($search_results)}*}
+            {*<li><a href="./game_rules.php?link={$search_results[$x]}">{$search_results[$x]}</a></li>*}
+         {*{/for}*}
+{*</ul>*}
 
 <script>
 function myFunction() {
@@ -71,6 +72,14 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
+}
+function isEmpty() {
+  if (document.getElementById("myInput").value == "") {
+    document.getElementById("myUL").style.display = "none";
+  } else {
+    document.getElementById("myUL").style.display = "block";
+
+  }
 }
 </script>
 

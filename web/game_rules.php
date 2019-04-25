@@ -5,6 +5,8 @@ require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 
 session_start();
+include "search_page.php";
+
 if (isset($_SESSION['User'])){
     $query = "SELECT First_Name, Last_Name FROM user
           WHERE User_ID = :id";
@@ -22,6 +24,18 @@ if (isset($_SESSION['User'])){
 }
 
 $game_name = $_GET['link'];
+
+// Query for game image
+$image_query = "Select i.Name AS 'Image_Name' FROM game g left join game_image i ON g.Image_ID = i.G_Image_ID WHERE g.Name = :g";
+$image_stmt = $pdo->prepare($image_query);
+$image_stmt->bindParam(':g', $game_name);
+$image_stmt->execute();
+
+$image_result = $image_stmt->fetch(PDO::FETCH_ASSOC);
+$image_name = $image_result['Image_Name'];
+
+$smarty ->  assign('image_name', $image_name);
+
 
 $rule_query = "SELECT Rule, `Name`, `Type`, Age, Player_Count, Category, Subcategory FROM game_rule
 INNER JOIN game ON game_rule.Game_ID=game.Game_ID where game.Name = :game_name;";

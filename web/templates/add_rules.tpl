@@ -17,7 +17,7 @@
                 <br>
                 <bold>Game Rules</bold>
                 <br>
-                <input type ="submit" value ="Submit Rule">
+                <input type ="submit" value ="Submit Rule" class=" col-2 btn btn-outline-primary">
             </form>
             <textarea rows = "4" cols = "50" name ="NewRules"> Enter Rules here...</textarea>
           </div>
