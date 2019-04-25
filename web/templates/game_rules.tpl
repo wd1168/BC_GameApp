@@ -9,6 +9,36 @@
       padding: 30px;
       margin: 20px;
     }
+    .jumbotron {
+      position:relative;
+      overflow:hidden;
+      background: none;
+      z-index: 0;
+    }
+
+    .jumbotron .blah {
+      z-index: 1;
+      position: relative;
+    }
+
+    .jumbotron .bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-image: url(./images/monopoly.jpg);
+    background-position: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+     -o-filter: blur(5px);
+     -ms-filter: blur(5px);
+     filter: blur(5px) brightness(.3);
+     z-index: -1;
+}
+
     </style>
   </head>
   <body>
@@ -16,7 +46,12 @@
 
     <div class="container">
     <div class="content">
-      <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
+      <div class="jumbotron col-md-12 col-lg-12">
+        <div class="bg"></div>
+        <center class="blah text-white"><p><b>How to play: </b></p>
+          <h1> {$info[0]} </h1>
+        </center>
+      </div>
       <div class="row">
           <div class="col-md-4 col-lg-3">
             <div class="sidebar"
