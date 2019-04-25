@@ -33,6 +33,7 @@
 
 <div class="container">
     <div class="content">
+        <img class="thumbnail mx-auto" src='./images/{$image_name}' height="150" width="150">
       <div class="jumbotron col-md-12 col-lg-12">
           <center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center>
       </div>
