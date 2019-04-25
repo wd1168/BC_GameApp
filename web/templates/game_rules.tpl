@@ -1,6 +1,8 @@
 <html>
   <head>
     {include "head.tpl"}
+
+   
     <style>
     .sidebar {
       border-radius: 25px;
@@ -12,11 +14,70 @@
     </style>
   </head>
   <body>
-    {include "nav_bar.tpl"}
+    {* {include "nav_bar.tpl"} *}
+{* could not get the serch rules bar to work so put the foollowing back will be removed later *}
+    <div class="nav">
 
-    <div class="container">
+    <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+    <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+    <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+    <div><a href="./about.php"><strong>About Us</strong></a></div>
+      {if isset($first_name)}
+        <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
+    {else}
+        <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+    {/if}
+
+</div>
+{* could not get the serch rules bar to work so put the above back will be removed later *}
+
+<div class="container">
     <div class="content">
-      <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
+        <img class="thumbnail mx-auto" src='./images/{$image_name}' height="150" width="150">
+      <div class="jumbotron col-md-12 col-lg-12">
+          <center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center>
+      </div>
+        <div class="input-group"  style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
+            <input type="text" id="myInput" class="form-control" onkeyup="myFunction(); isEmpty()" placeholder="Search the rules of this game" aria-label="Search Games" aria-describedby="basic-addon2" style="padding-top: .275em;">
+
+</div>
+
+
+    <ul id="myUL">
+    {for $x = 0 to sizeof($r_results)}
+        <li><a href="./game_rules.php?link={$r_results[$x]}">{$r_results[$x]}</a></li>
+    {/for}
+</ul>
+
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function isEmpty() {
+        if (document.getElementById("myInput").value == "") {
+            document.getElementById("myUL").style.display = "none";
+        } else {
+            document.getElementById("myUL").style.display = "block";
+
+        }
+    }
+</script>
+
+   
+
       <div class="row">
           <div class="col-md-4 col-lg-3">
             <div class="sidebar"
