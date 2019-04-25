@@ -1,6 +1,6 @@
 <div class="nav">
 
-    <div><a href="./index.php"><img src="./images/GrLogo.png" alt="" style="margin-top: .25em" width="30" height="30"></a></div>
+    <div><a href="./index.php"><img src="./images/GrLogo_Black.svg" alt="" style="margin-top: .25em;filter: invert(100%);" width="30" height="30"></a></div>
     <div style="padding-top: .45em"><a href="./board_games.php"><strong>Board</strong></a></div>
     <div style="padding-top: .45em"><a href="./card_games.php"><strong>Card</strong></a></div>
     <div style="padding-top: .45em;"><a href="./about.php"><strong>About</strong></a></div>
