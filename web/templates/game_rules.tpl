@@ -64,8 +64,11 @@
 <div class="container">
     <div class="content">
         <div class="jumbotron col-md-12 col-lg-12">
-          <div class="bg"></div>
+          {if isset($image_name)}<div class="bg"></div>
           <center class="blah text-white"><p><b>How to play: </b></p>
+            <h1> {$info[0]} </h1>
+          {else}
+          <center><p><b>How to play: </b></p>
             <h1> {$info[0]} </h1>
           </center>
         </div>
