@@ -59,6 +59,9 @@
         padding: 0;
         margin: 0;
         display: none;
+        position: absolute;
+        z-index: 2;
+        left: 18em;
     }
 
     #myUL li a {
