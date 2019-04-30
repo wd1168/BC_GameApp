@@ -22,18 +22,17 @@
     <div class="content">
 
         <div style="position: relative">
-        
 
         <h1>
-  <img src="images/GrLogo_Black.svg" style="width: 1.75em">
+  <img src="./images/GrLogo_Black.png" style="width: 1.75em">
   <strong style="position: absolute; left: 2.025em; top: -0.05em">GameRepo</strong>
 
 </h1>
 
   <div style="position: absolute; left: 5.15em; bottom: -.75em">
-    <p>board and card game rule lookup</p>
+    <p>Board and card game rule lookup</p>
   </div>
-        
+
 </div>
 
 	<h4><strong>Popular Board Games</strong></h4>
