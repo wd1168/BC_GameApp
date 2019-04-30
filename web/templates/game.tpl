@@ -50,7 +50,7 @@
 
         <div class="row">
           <div class="col-lg-2">
-            <img class="thumbnail mx-auto" src='./images/{$game['Image']}' height="150" width="150">
+            <img class="thumbnail mx-auto" src='images/{$game['Image']}' height="150" width="150">
           </div>
           <div class="col-lg-4">
           </br>

@@ -27,7 +27,7 @@
     bottom: 0;
     top: 0;
     left: 0;
-    background-image: url(./images/{$image_name});
+    background-image: url(images/{$image_name});
     background-position: 0%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,10 +43,10 @@
   </head>
   <body>
     {* {include "nav_bar.tpl"} *}
-{* could not get the serch rules bar to work so put the foollowing back will be removed later *}
+    {* could not get the serch rules bar to work so put the foollowing back will be removed later *}
     <div class="nav">
 
-    <div><a href="./index.php"><img src="./images/GrLogo.png" width="30" height="30" alt=""></a></div>
+    <div><a href="./index.php"><img src="images/GrLogo.png" width="30" height="30" alt=""></a></div>
     <div><a href="./board_games.php"><strong>Boards</strong></a></div>
     <div><a href="./card_games.php"><strong>Cards</strong></a></div>
     <div><a href="./about.php"><strong>About Us</strong></a></div>
@@ -62,14 +62,15 @@
 <div class="container">
     <div class="content">
         <div class="jumbotron col-md-12 col-lg-12">
-          {if isset($image_name)}<div class="bg"></div>
+          {if isset($image_name)}
+          <div class="bg"></div>
           <center class="blah text-white"><p><b>How to play: </b></p>
             <h1> {$info[0]} </h1>
           {else}
-          <center><p><b>How to play: </b></p>
+          <center class="blah text-black"><p><b>How to play: </b></p>
             <h1> {$info[0]} </h1>
-          </center>
           {/if}
+        </center>
         </div>
         <div  class="text-center" style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
           <a href="./game.php?link={$info[0]}"><button class="btn btn-outline-primary btn-lg">Back to Overview</button></a>
