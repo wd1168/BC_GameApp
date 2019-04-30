@@ -24,7 +24,7 @@
         <div style="position: relative">
 
         <h1>
-  <img src="./images/GrLogo_Black.png" style="width: 1.75em">
+  <img src="./images/GrLogo_Black.svg" style="width: 1.75em">
   <strong style="position: absolute; left: 2.025em; top: -0.05em">GameRepo</strong>
 
 </h1>
