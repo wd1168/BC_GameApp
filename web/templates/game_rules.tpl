@@ -1,8 +1,6 @@
 <html>
   <head>
     {include "head.tpl"}
-
-   
     <style>
     .sidebar {
       border-radius: 25px;
@@ -11,6 +9,36 @@
       padding: 30px;
       margin: 20px;
     }
+    .jumbotron {
+      position:relative;
+      overflow:hidden;
+      background: none;
+      z-index: 0;
+    }
+
+    .jumbotron .blah {
+      z-index: 1;
+      position: relative;
+    }
+
+    .jumbotron .bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-image: url(./images/{$image_name});
+    background-position: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+     -o-filter: blur(5px);
+     -ms-filter: blur(5px);
+     filter: blur(5px) brightness(.3);
+     z-index: -1;
+}
+
     </style>
   </head>
   <body>
@@ -33,50 +61,54 @@
 
 <div class="container">
     <div class="content">
-        <img class="thumbnail mx-auto" src='./images/{$image_name}' height="150" width="150">
-      <div class="jumbotron col-md-12 col-lg-12">
-          <center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center>
-      </div>
+        <div class="jumbotron col-md-12 col-lg-12">
+          {if isset($image_name)}<div class="bg"></div>
+          <center class="blah text-white"><p><b>How to play: </b></p>
+            <h1> {$info[0]} </h1>
+          {else}
+          <center><p><b>How to play: </b></p>
+            <h1> {$info[0]} </h1>
+          </center>
+          {/if}
+        </div>
+        <div  class="text-center" style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
+          <a href="./game.php?link={$info[0]}"><button class="btn btn-outline-primary btn-lg">Back to Overview</button></a>
+        </div>
         <div class="input-group"  style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
             <input type="text" id="myInput" class="form-control" onkeyup="myFunction(); isEmpty()" placeholder="Search the rules of this game" aria-label="Search Games" aria-describedby="basic-addon2" style="padding-top: .275em;">
+        </div>
 
-</div>
+        <ul id="myUL">
+          {for $x = 0 to sizeof($r_results)}
+            <li><a href="./game_rules.php?link={$r_results[$x]}">{$r_results[$x]}</a></li>
+          {/for}
+        </ul>
 
-
-    <ul id="myUL">
-    {for $x = 0 to sizeof($r_results)}
-        <li><a href="./game_rules.php?link={$r_results[$x]}">{$r_results[$x]}</a></li>
-    {/for}
-</ul>
-
-<script>
-    function myFunction() {
-        var input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("myUL");
-        li = ul.getElementsByTagName("li");
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        <script>
+        function myFunction() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = "";
-            } else {
+              } else {
                 li[i].style.display = "none";
-            }
+              }
+          }
         }
-    }
-    function isEmpty() {
-        if (document.getElementById("myInput").value == "") {
+        function isEmpty() {
+          if (document.getElementById("myInput").value == "") {
             document.getElementById("myUL").style.display = "none";
-        } else {
+          } else {
             document.getElementById("myUL").style.display = "block";
-
+          }
         }
-    }
-</script>
-
-   
+        </script>
 
       <div class="row">
           <div class="col-md-4 col-lg-3">

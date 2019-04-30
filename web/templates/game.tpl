@@ -62,7 +62,6 @@
         <h4>Description</h4><p>{$game['Description']}</p>
         <div class="text-center">
           <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
-            <a href="./add_rules.php"><button class="btn btn-outline-primary btn-lg">Add Rules</button></a>
         </div>
       </div>
 
