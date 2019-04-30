@@ -124,7 +124,7 @@
         <div class="MultiCarousel-inner">
                 <div class="item">
                     <div class="pad15">
-		    <a href="game_rules.php?link=Go%20Fish>
+		    <a href="game_rules.php?link=Go%20Fish">
                         <div class="row">
                         <img src="https://prodimage.images-bn.com/pimages/0689196801211_p0_v3_s600x595.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
@@ -133,7 +133,7 @@
                 </div>
                 <div class="item">
                     <div class="pad15">
-		    <a href="game_rules.php?link=Solitaire>
+		    <a href="game_rules.php?link=Solitaire">
                         <div class="row">
                         <img src="https://www.mobygames.com/images/covers/l/397255-solitaire-playstation-4-front-cover.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
@@ -142,7 +142,7 @@
                 </div>
                 <div class="item">
                     <div class="pad15">
-		    <a href="game_rules.php?link=War>
+		    <a href="game_rules.php?link=War">
                         <div class="row">
                         <img src="https://lh6.ggpht.com/lGMkLqc51PsnTon7HDkCm92Cw96n4-UYthj3nzp30PoWj8jiO8C-a93_h7nLLHyJkpg=h300" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
