@@ -49,7 +49,7 @@
                 <div class="item">
                     <div class="pad15">
                         <div class="row">
-                        <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <a href="game_rules.php?link=Battleship"> <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle"> </a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                 <div class="item">
                     <div class="pad15">
                         <div class="row">
-                        <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <a href="game_rules.php?link=Monopoly"> <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle"> </a>
                         </div>
                     </div>
                 </div>
