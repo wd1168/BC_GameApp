@@ -12,6 +12,8 @@
     .MultiCarousel .rightLst { right:0; }
     .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
 
+    .pad15 .row img { max-width: 140px; max-height: 140px; }
+
     </style>
 
 </head>
@@ -47,7 +49,7 @@
                 <div class="item">
                     <div class="pad15">
                         <div class="row">
-                        <img src="images\battleship-logo.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
                     </div>
                 </div>
@@ -68,7 +70,7 @@
                 <div class="item">
                     <div class="pad15">
                         <div class="row">
-                        <img src="images\battleship-logo.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,7 @@
                 <div class="item">
                     <div class="pad15">
                         <div class="row">
-                        <img src="images\battleship-logo.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
                     </div>
                 </div>
