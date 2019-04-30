@@ -48,9 +48,11 @@
             <div class="MultiCarousel-inner">
                 <div class="item">
                     <div class="pad15">
+		    <a href="game_rules.php?link=Battleship">
                         <div class="row">
-                        <a href="game_rules.php?link=Battleship"> <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle"> </a>
+                         <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle"> 
                         </div>
+		    </a>
                     </div>
                 </div>
                 <div class="item">
@@ -62,9 +64,11 @@
                 </div>
                 <div class="item">
                     <div class="pad15">
+		    <a href="game_rules.php?link=Monopoly">
                         <div class="row">
-                        <a href="game_rules.php?link=Monopoly"> <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle"> </a>
+                         <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle"> 
                         </div>
+		    </a>
                     </div>
                 </div>
                 <div class="item">
