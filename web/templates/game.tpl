@@ -151,7 +151,7 @@
     </div>
 
     {if $exp_results == 'TRUE'}
-    <div class="content">
+    <div class="content" id="expansion_section">
         <h3><strong>Expansions</strong></h3>
         <div class="row">
             {foreach $exp_list as $exp}
