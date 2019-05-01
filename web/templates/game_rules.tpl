@@ -12,7 +12,6 @@
     .jumbotron {
       position:relative;
       overflow:hidden;
-      background: none;
       z-index: 0;
     }
 
@@ -62,18 +61,18 @@
 <div class="container">
     <div class="content">
         <div class="jumbotron col-md-12 col-lg-12">
-          {if isset($image_name)}
+          {if sizeof($rules)!=0}
           <div class="bg"></div>
           <center class="blah text-white"><p><b>How to play: </b></p>
             <h1> {$info[0]} </h1>
           {else}
-          <center class="blah text-black"><p><b>How to play: </b></p>
-            <h1> {$info[0]} </h1>
+          <center class="text-black"><p><b>How to play: </b></p>
+            <h1> {$smarty.get.link} </h1>
           {/if}
         </center>
         </div>
         <div  class="text-center" style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
-          <a href="./game.php?link={$info[0]}"><button class="btn btn-outline-primary btn-lg">Back to Overview</button></a>
+          <a href="./game.php?link={$smarty.get.link}"><button class="btn btn-outline-primary btn-lg">Back to Overview</button></a>
         </div>
         <div class="input-group"  style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
             <input type="text" id="myInput" class="form-control" onkeyup="myFunction(); isEmpty()" placeholder="Search the rules of this game" aria-label="Search Games" aria-describedby="basic-addon2" style="padding-top: .275em;">
