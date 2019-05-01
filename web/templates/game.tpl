@@ -36,7 +36,14 @@
     .response_form, .cancel_reply {
       display: none;
     }
-
+    div.quick_links {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-radius: 25px;
+      border: 2px solid rgb(91, 136, 216);
+  }
   </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -60,11 +67,12 @@
           </div>
         </div></br>
         <h4>Description</h4><p>{$game['Description']}</p>
-        <div class="text-center">
-          <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
-        </div>
       </div>
-
+    <div class="content text-center quick_links">
+      <a href="#top"><button class="btn btn-outline-primary btn-lg">Top of the Page</button></a>
+      <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
+      <a href="#expansion_section"><button class="btn btn-outline-primary btn-lg">Expansion Packs</button></a>
+    </div>
         <div class="content">
           <h3><strong>Questions</strong></h3>
           <div class="ask_q">
