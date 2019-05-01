@@ -31,8 +31,13 @@
 
 </h1>
 
-  <div style="position: absolute; left: 5.15em; bottom: -.75em">
-    <p>Board and card game rule lookup</p>
+  <div >
+    <p>Welcome to the GameRepo!</p>
+    <p>You can look for games using by going through our lists of board and card games.
+    To find the games rules, click on the game rules button on the game overview page, or search for the game above to
+    be taken directly to its rules.</p>
+    <p>Sign up and Login to be able to ask and respond to questions as well as add more games to our database. </p>
+
   </div>
 
 </div>
