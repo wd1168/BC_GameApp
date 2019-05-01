@@ -71,7 +71,9 @@
     <div class="content text-center quick_links">
       <a href="#top"><button class="btn btn-outline-primary btn-lg">Top of the Page</button></a>
       <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
+      {if $exp_results == 'TRUE'}
       <a href="#expansion_section"><button class="btn btn-outline-primary btn-lg">Expansion Packs</button></a>
+      {/if}
     </div>
         <div class="content">
           <h3><strong>Questions</strong></h3>
