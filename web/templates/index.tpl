@@ -24,18 +24,17 @@
     <div class="content">
 
         <div style="position: relative">
-        
 
         <h1>
-  <img src="images/GrLogo_Black.svg" style="width: 1.75em">
+  <img src="./images/GrLogo_Black.svg" style="width: 1.75em">
   <strong style="position: absolute; left: 2.025em; top: -0.05em">GameRepo</strong>
 
 </h1>
 
   <div style="position: absolute; left: 5.15em; bottom: -.75em">
-    <p>board and card game rule lookup</p>
+    <p>Board and card game rule lookup</p>
   </div>
-        
+
 </div>
 
 	<h4><strong>Popular Board Games</strong></h4>
@@ -50,7 +49,7 @@
                     <div class="pad15">
 		    <a href="game_rules.php?link=Battleship">
                         <div class="row">
-                         <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle"> 
+                         <img src="images\battleship-logo.png" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
 		    </a>
                     </div>
@@ -66,7 +65,7 @@
                     <div class="pad15">
 		    <a href="game_rules.php?link=Monopoly">
                         <div class="row">
-                         <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle"> 
+                         <img src="images\monopoly.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
 		    </a>
                     </div>
