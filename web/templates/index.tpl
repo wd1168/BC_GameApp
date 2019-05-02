@@ -62,7 +62,7 @@
                     <div class="pad15">
 		    <a href="game_rules.php?link=Othello">
                         <div class="row">
-                        <img src="images\othello.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\othello.png" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
 		    </a>
                     </div>
@@ -87,7 +87,7 @@
                     <div class="pad15">
 		    <a href="game_rules.php?link=Othello">
                         <div class="row">
-                        <img src="images\othello.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\othello.png" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
 		    </a>
                     </div>
