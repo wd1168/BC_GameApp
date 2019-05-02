@@ -28,15 +28,17 @@
         <h1>
   <img src="./images/GrLogo_Black.svg" style="width: 1.75em">
   <strong style="position: absolute; left: 2.025em; top: -0.05em">GameRepo</strong>
-
+  
 </h1>
 
-  <div >
-    <p>Welcome to the GameRepo!</p>
-    <p>You can look for games using by going through our lists of board and card games.
-    <br>To find the games rules, click on the game rules button on the game overview page, <br>or search for the game above to
-        be taken directly to its rules.</p>
-    <p>Sign up and Login to be able to ask and respond to questions as well as add more games to our database. </p>
+  <div style="position: absolute; left: 5.15em; bottom: 5.25em">
+    <p>board and card game rule lookup</p>
+  </div>
+  
+  <div>
+    
+    <p>Welcome! Look for games using by using our <strong><a href="board_games.php">Board</a></strong> and <strong><a href="card_games.php">Card</a></strong> game lists. To find the rules for a game, click on the <strong>Rules</strong> button on the game overview page, or 🔍 <strong>Search</strong> for the game above to be taken directly to its rules.</p>
+    <p><i class="fas fa-sign-in-alt"></i> Sign up/Login to ask and respond to questions as well as add more games to our database. </p>
 
   </div>
 
