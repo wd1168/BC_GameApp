@@ -10,6 +10,7 @@
             <button class="btn fas fa-search fa-md" type="button" style="color: #ffffff"></button>
         </div>-->
     </div>
+    <!--Logout Button--><div style="padding-top: .45em"><a href ="../logout.php"><strong>Logout</strong></a></div>
     {if isset($first_name)}
         <div style="padding-top: .45em;"><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
     {else}
