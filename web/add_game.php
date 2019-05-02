@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Example Application
@@ -15,7 +16,8 @@ if(!isset($_POST['name'])) {
     $smarty->display('add_game.tpl');
     exit();
 }
-$img_name = $msg = $name = $description = $age = $count = $type = $deck = "";
+
+$img_name = $msg = $name = $description = $age = $count = $type = $deck = $image = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = clean_input($_POST["name"]);
   $description = clean_input($_POST["description"]);
@@ -24,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $type = clean_input($_POST["type"]);
   $deck = clean_input($_POST["deck"]);
   $namef = clean_input($_POST["namef"]);
-
   if ($namef == "")
         $namef = "N/A";
   
@@ -47,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $err = $messages['err'];
         $msg = $messages['msg'];
         $img_name = $messages['img_name'];
+        $image = $messages['image'];
        }
-
         $smarty->assign('msg', $msg);
         $smarty->assign('name', $name);
         $smarty->assign('description', $description);
@@ -73,23 +74,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $rows = $stmt->fetchAll();
      $rowCount = count($rows);
      
-        
-    if ($rowCount == 1) {
+     $sql = "SELECT *FROM game_image 
+     WHERE `name` = :name;";
+
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':name', basename( $_FILES["fileToUpload"]["name"]));
+    $stmt->execute();
+    $rows = $stmt->fetchAll();
+    $I_rowCount = count($rows);
+
+    if ($rowCount >= 1) {
          $message = "Game already exists \n 
                       Please add a different game";
          $smarty->assign('msg', $message);
          $smarty->display('add_game.tpl');
          exit();
+    }else if ($I_rowCount >= 1){
+        $message = "Image name already exists \n 
+        Please use a different image name";
+        $smarty->assign('msg', $message);
+        $smarty->display('add_game.tpl');
+        exit();
     }else {
       
-       //instert the image name into the database game_image table
-           $sql = "INSERT INTO game_image
-           (`Name`)
-             VALUES
-           (:name)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':name', $messages['img_name']);
-            $stmt->execute();
+     // instert the image name into the database game_image table
+       $sql = "INSERT INTO game_image
+       (`Name`, `Image`)
+         VALUES
+       (:name, :data);";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':name', $messages['img_name']);
+        $stmt->bindParam(':data', $image, PDO::PARAM_LOB);
+        $stmt->execute();
 
              $sql = "INSERT INTO manufacturer
               (`Name`, Game_Name)
@@ -113,15 +130,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();         
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $img_id = $row[G_Image_ID];
+
             
             $sql = "INSERT INTO game
-             (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID)
-             VALUES
-             (:name, :description, :age, :count, :type, :deck, :m_id, :img_id);";
+            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID)
+            VALUES
+            (:name, :description, :age, :count, :type, :deck, :m_id, :img_id);";
+
 
 }
     
-
     function clean_input($data) {
       $data = trim($data);
       $data = htmlspecialchars($data);
@@ -149,11 +167,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
     
-            // Check if file already exists
-                 if (file_exists($target_file)) {
-                    $message = "Sorry, image already exists.";
+             //Check name length
+              if (strlen(basename( $_FILES["fileToUpload"]["name"])) > 50) {
+                $message = "Sorry, your image's name is too long, max 50 characters.";
                  $uploadOk = 0;
-                }
+            }
     
            //  Check file size
               if ($_FILES["fileToUpload"]["size"] > 1000000) {
@@ -173,7 +191,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         //    if everything is ok, try to upload file
         } else {
-             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            
+             if ($image = file_get_contents($_FILES["fileToUpload"]["tmp_name"])) {
                 $message = "The image ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
             } else {
                 $message .= "<br> There was an error uploading your image.";
@@ -183,6 +202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          }
         $messages['err'] = !$uploadOk;
         $messages['img_name'] = basename( $_FILES["fileToUpload"]["name"]);
+        $messages['image'] = $image;
         $messages['msg'] = $message;
         return $messages;
     }
@@ -197,5 +217,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':m_id', $m_id);
     $stmt->bindParam(':img_id', $img_id);
     $stmt->execute();
-
 header("Location: index.php");
