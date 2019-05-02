@@ -18,13 +18,7 @@
 <div class="container">
     <div class="content">
 
-                <div style="position: absolute; right: 1em; bottom: 1em;"><a href="./add_game.php"> 
-
-<button type="button" class="btn btn-primary btn-lg">
-  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a new game
-</button>
-
-</a></div>
+                <div><a href="./add_game.php"> Add new game </a></div>
 
         <div class="jumbotron col-md-12 col-lg-12">
             <center><h2>Card Games</h2></center>
@@ -34,9 +28,8 @@
                 {foreach $game_list as $game}
                     <div class="col-md-4 col-lg-4">
                         <picture>
-                            <source srcset="images\{$game.Image}">
-                            <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}"
-                                                                        class="thumbnail mx-auto"
+                            <source srcset="{$game.Image}">
+                            <a href="./game.php?link={$game.Name}"><img src="{$game['Image']}"                                                                        class="thumbnail mx-auto"
                                                                         alt="{$game.Name}" width="100" height="100"></a>
                             <h3><a href="./game.php?link={$game.Name}">{$game.Name}</a></h3>
                         </picture>
