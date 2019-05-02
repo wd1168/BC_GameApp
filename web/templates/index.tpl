@@ -2,7 +2,6 @@
 <head>
     {include "head.tpl"}
     <style>
-
     .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
     .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
     .MultiCarousel .MultiCarousel-inner .item { float: left;}
@@ -11,9 +10,7 @@
     .MultiCarousel .leftLst { left:0; }
     .MultiCarousel .rightLst { right:0; }
     .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-
     .pad15 .row img { max-width: 140px; max-height: 140px; }
-
     </style>
 
 </head>
@@ -63,11 +60,9 @@
                 </div>
                 <div class="item">
                     <div class="pad15">
-		    <a href="game_rules.php?link=Scrabble">
                         <div class="row">
-                        <img src="images\scrabble.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\game-of-life.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
-		    </a>
                     </div>
                 </div>
                 <div class="item">
@@ -88,11 +83,9 @@
                 </div>
                 <div class="item">
                     <div class="pad15">
-		    <a href="game_rules.php?link=Scrabble">
                         <div class="row">
-                        <img src="images\scrabble.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\game-of-life.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
-		    </a>
                     </div>
                 </div>
                 <div class="item">
@@ -202,14 +195,12 @@
         <br>
 
         <!--<h4><strong>Developers</strong></h4>
-
         <ul style="list-style: none; ">
             <li><strong>Wyatt Derk</strong>, Project Lead</li>
             <li><strong>Eliezer Mwankenja</strong>, Database</li>
             <li><strong>Benjamin Underwood</strong>, Design</li>
             <li><strong>Ibinabo Braide</strong>, Design</li>
             <li><strong>Joshua Simmons</strong>, Design</li>
-
         </ul>-->
     </div>
 </main>
