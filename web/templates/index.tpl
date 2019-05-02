@@ -63,9 +63,11 @@
                 </div>
                 <div class="item">
                     <div class="pad15">
+		    <a href="game_rules.php?link=Scrabble">
                         <div class="row">
-                        <img src="images\game-of-life.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\scrabble.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
+		    </a>
                     </div>
                 </div>
                 <div class="item">
@@ -86,9 +88,11 @@
                 </div>
                 <div class="item">
                     <div class="pad15">
+		    <a href="game_rules.php?link=Scrabble">
                         <div class="row">
-                        <img src="images\game-of-life.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
+                        <img src="images\scrabble.jpg" height="" width="" style="display: block; margin: auto; vertical-align: middle">
                         </div>
+		    </a>
                     </div>
                 </div>
                 <div class="item">
