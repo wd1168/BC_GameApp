@@ -23,7 +23,7 @@ if (isset($_SESSION['User'])){
 }
 
 $g_query =
-    "SELECT g.Game_ID, g.Name, i.Name AS 'Image'
+    "SELECT g.Game_ID, g.Name, i.Image AS 'Image'
         FROM game g LEFT JOIN game_image i ON g.Image_ID = i.G_Image_ID WHERE g.Type = 'board'";
 $g_statement = $pdo->prepare($g_query);
 $g_statement ->execute();
@@ -42,7 +42,7 @@ while($row = $g_statement->fetch(PDO::FETCH_ASSOC)){
         $game = array (
         "Game_ID" => $row['Game_ID'],
         "Name" => $row['Name'],
-        "Image" => $row['Image']
+        "Image" => 'data:image/jpeg;base64,' . base64_encode($row['Image'])
         );
 
         $old_game = $row['Game_ID'];
