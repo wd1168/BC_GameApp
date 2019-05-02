@@ -1,15 +1,15 @@
 <html>
 <head>
     {include "head.tpl"}
-  <style>
-  .thumbnail {
-    padding: 0.25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    object-fit: scale-down;
-  }
-  </style>
+    <style>
+        .thumbnail {
+            padding: 0.25rem;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            object-fit: scale-down;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,7 +18,13 @@
 <div class="container">
     <div class="content">
 
-        <div><a href="./add_game.php"> Add new game </a></div>
+        <div style="position: absolute; right: 1em; bottom: 1em;"><a href="./add_game.php">
+                {if isset($first_name)}
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a new game
+                    </button>
+                {/if}
+            </a></div>
 
         <div class="jumbotron col-md-12 col-lg-12">
             <center><h2>Board Games</h2></center>
@@ -29,8 +35,9 @@
                     <div class="col-md-4 col-lg-4">
                         <picture>
                             <source srcset="images\{$game.Image}">
-                            <a href="./game.php?link={$game.Name}"><img src="images\{$game.Image}" class="thumbnail mx-auto" alt="{$game.Name}"
-                                    width="100" height="100"></a>
+                            <a href="./game.php?link={$game.Name}"><img src="{$game['Image']}" class="thumbnail mx-auto"
+                                                                        alt="{$game.Name}"
+                                                                        width="100" height="100"></a>
                             <h3><a href="./game.php?link={$game.Name}">{$game.Name}</a></h3>
                         </picture>
                     </div>
@@ -39,9 +46,9 @@
         {else}
             <h2 class="text-center">No games. D:</h2>
         {/if}
-
-
-        <script src="./script/jquery-3.3.1.min.js"></script>
-        <script src="./scripts/bootstrap.min.js"></script>
+    </div>
+</div>
+<script src="./script/jquery-3.3.1.min.js"></script>
+<script src="./scripts/bootstrap.min.js"></script>
 </body>
 </html>

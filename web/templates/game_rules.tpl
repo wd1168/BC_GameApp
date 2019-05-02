@@ -9,22 +9,107 @@
       padding: 30px;
       margin: 20px;
     }
+    .jumbotron {
+      position:relative;
+      overflow:hidden;
+      z-index: 0;
+    }
+
+    .jumbotron .blah {
+      z-index: 1;
+      position: relative;
+    }
+
+    .jumbotron .bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-image: url(images/{$image_name});
+    background-position: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+     -o-filter: blur(5px);
+     -ms-filter: blur(5px);
+     filter: blur(5px) brightness(.3);
+     z-index: -1;
+}
+
     </style>
   </head>
   <body>
-    {include "nav_bar.tpl"}
+    {* {include "nav_bar.tpl"} *}
+    {* could not get the serch rules bar to work so put the foollowing back will be removed later *}
+    <div class="nav">
 
-    <div class="container">
+    <div><a href="./index.php"><img src="images/GrLogo.png" width="30" height="30" alt=""></a></div>
+    <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+    <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+    <div><a href="./about.php"><strong>About Us</strong></a></div>
+      {if isset($first_name)}
+        <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
+    {else}
+        <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+    {/if}
+
+</div>
+{* could not get the serch rules bar to work so put the above back will be removed later *}
+
+<div class="container">
     <div class="content">
-      <div class="jumbotron col-md-12 col-lg-12">
-          <center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center>
-      </div>
-        <div class="input-group" style="width: 40em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
-            <input type="text" class="form-control" placeholder="Search for a Rule" aria-label="Rule Search" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
-            </div>
+        <div class="jumbotron col-md-12 col-lg-12">
+          {if sizeof($rules)!=0}
+          <div class="bg"></div>
+          <center class="blah text-white"><p><b>How to play: </b></p>
+            <h1> {$info[0]} </h1>
+          {else}
+          <center class="text-black"><p><b>How to play: </b></p>
+            <h1> {$smarty.get.link} </h1>
+          {/if}
+        </center>
         </div>
+        <div  class="text-center" style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
+          <a href="./game.php?link={$smarty.get.link}"><button class="btn btn-outline-primary btn-lg">Back to Overview</button></a>
+        </div>
+        <div class="input-group"  style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
+            <input type="text" id="myInput" class="form-control" onkeyup="myFunction(); isEmpty()" placeholder="Search the rules of this game" aria-label="Search Games" aria-describedby="basic-addon2" style="padding-top: .275em;">
+        </div>
+
+        <ul id="myUL">
+          {for $x = 0 to sizeof($r_results)}
+            <li><a href="./game_rules.php?link={$r_results[$x]}">{$r_results[$x]}</a></li>
+          {/for}
+        </ul>
+
+        <script>
+        function myFunction() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+              } else {
+                li[i].style.display = "none";
+              }
+          }
+        }
+        function isEmpty() {
+          if (document.getElementById("myInput").value == "") {
+            document.getElementById("myUL").style.display = "none";
+          } else {
+            document.getElementById("myUL").style.display = "block";
+          }
+        }
+        </script>
+
       <div class="row">
           <div class="col-md-4 col-lg-3">
             <div class="sidebar"

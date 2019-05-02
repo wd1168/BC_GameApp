@@ -1,6 +1,7 @@
 <title> GameRepo &ndash; know the rules</title>
 <link rel="stylesheet" href="Styles/bootstrap.min.css"/>
 <meta name="viewport" content="width=device-width">
+<meta charset='utf-8'>
 <style>
     body {
         background-color: rgb(91, 136, 216);
@@ -9,6 +10,7 @@
         padding: 20px 15px 0;
     }
     .content {
+        position: relative;
         border-radius: 25px;
         border: 2px solid white;
         background-color: white;
@@ -58,6 +60,9 @@
         padding: 0;
         margin: 0;
         display: none;
+        position: absolute;
+        z-index: 2;
+        left: 18em;
     }
 
     #myUL li a {
@@ -78,6 +83,6 @@
 
 
 </style>
-<link rel="shortcut icon" href="images/GrLogo_Black.png">
+<link rel="shortcut icon" href="./images/GrLogo_Black.svg">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
