@@ -32,6 +32,14 @@
     .response_form, .cancel_reply {
       display: none;
     }
+    div.quick_links {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-radius: 25px;
+      border: 2px solid rgb(91, 136, 216);
+    }
   </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -54,13 +62,22 @@
             <h5>Manufacturer: &nbsp;<text class="small">{$game['Manufacturer']}</text></h5>
           </div>
         </div></br>
-        <h4>Description</h4><p>{$game['Description']}</p>
-        <div class="text-center">
-          <a href="./game_rules.php?link={$game.Name}"><button class="btn btn-outline-primary btn-lg">Rules</button></a>
-            <a href="./add_rules.php"><button class="btn btn-outline-primary btn-lg">Add Rules</button></a>
-        </div>
+        <h4>Description</h4>
+        <p>{$game['Description']}</p>
       </div>
-
+    <div class="content text-center quick_links">
+      <a href="#top">
+        <button class="btn btn-outline-primary btn-lg">Top of the Page</button>
+      </a>
+      <a href="./game_rules.php?link={$game.Name}">
+        <button class="btn btn-outline-primary btn-lg">Rules</button>
+      </a>
+      {if $exp_results == 'TRUE'}
+        <a href="#expansion_section">
+          <button class="btn btn-outline-primary btn-lg">Expansion Packs</button>
+        </a>
+      {/if}
+    </div>
         <div class="content">
           <h3><strong>Questions</strong></h3>
           <div class="ask_q">
@@ -93,8 +110,8 @@
                          name= "submitbtn">
 
                 </form>
-                </div>
               {/if}
+              </div>
               {if $reply_results == 'TRUE'}
                 {foreach $reply_list as $reply_array}
                   {if ($question_array.Question_ID == $reply_array.Question_ID)}
@@ -119,7 +136,7 @@
         </div>
 
         {if $exp_results == 'TRUE'}
-          <div class="content">
+          <div class="content" id="expansion_section">
             <h3><strong>Expansions</strong></h3>
             <div class="row">
             {foreach $exp_list as $exp}
@@ -127,7 +144,7 @@
                 <picture>
                   <source srcset="images\{$exp.Image}">
                     <a href="./expansion_rules.php?link={$exp.Name}">
-                      <img src="images\{$exp.Image}" class="img-fluid img-thumbnail mx-auto"
+                      <img src="{$exp.Image}" class="img-fluid img-thumbnail mx-auto"
                       alt="{$exp.Name}" width="100" height="100">
                     </a><h3><a href="./expansion_rules.php?link={$exp.Name}">{$exp.Name}</a></h3>
                 </picture>
