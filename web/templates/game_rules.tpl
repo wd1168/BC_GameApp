@@ -44,17 +44,16 @@
     {* {include "nav_bar.tpl"} *}
     {* could not get the serch rules bar to work so put the foollowing back will be removed later *}
     <div class="nav">
-        <div><a href="./index.php"><img src="./images/GrLogo.svg" alt="" style="margin-top: .25em;" width="30" height="30"></a></div>
-        <div style="padding-top: .45em"><a href="./board_games.php"><strong>Board</strong></a></div>
-        <div style="padding-top: .45em"><a href="./card_games.php"><strong>Card</strong></a></div>
-        <div style="padding-top: .45em;"><a href="./about.php"><strong>About</strong></a></div>
-        {if isset($first_name)}
-            <div style="padding-top: .45em;"><strong> Hello {$first_name} {$last_name}!</strong></div>
-            <!--Logout Button--><div style="padding-top: .45em"><a href ="./logout.php"><strong>Logout</strong></a></div>
 
-        {else}
-            <div style="padding-top: .45em;"><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-        {/if}
+    <div><a href="./index.php"><img src="images/GrLogo.png" width="30" height="30" alt=""></a></div>
+    <div><a href="./board_games.php"><strong>Boards</strong></a></div>
+    <div><a href="./card_games.php"><strong>Cards</strong></a></div>
+    <div><a href="./about.php"><strong>About Us</strong></a></div>
+      {if isset($first_name)}
+        <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
+    {else}
+        <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+    {/if}
 
 </div>
 {* could not get the serch rules bar to work so put the above back will be removed later *}
@@ -81,9 +80,9 @@
 
         <ul id="myUL">
           {for $x = 0 to sizeof($r_results)}
-            <li ><a style="color:blue;" href="./game_rules.php?link={$category[$x]}"> <b> Category: </b>{$category[$x]}</a>
-                <a  style="color:blue;" href="./game_rules.php?link={$subcategory[$x]}"><b> Sub Category: </b>{$subcategory[$x]}</a>
-                <a  style="color:blue;" href="./game_rules.php?link={$rules[$x]}"><b> Rule: </b>{$rules[$x]}</a></li>
+            <li ><a style="color:blue;" > <b> Category: </b>{$category[$x]}</a>
+                <a  style="color:blue;" ><b> Sub Category: </b>{$subcategory[$x]}</a>
+                <a  style="color:blue;" ><b> Rule: </b>{$rules[$x]}</a></li>
           {/for}
         </ul>
 
