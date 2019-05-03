@@ -50,10 +50,12 @@
     <div><a href="./card_games.php"><strong>Cards</strong></a></div>
     <div><a href="./about.php"><strong>About Us</strong></a></div>
       {if isset($first_name)}
-        <div><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
-    {else}
-        <div><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
-    {/if}
+    <div style="padding-top: .45em;"><strong> Hello {$first_name} {$last_name}!</strong></div>
+    <!--Logout Button--><div style="padding-top: .45em"><a href ="./logout.php"><strong>Logout</strong></a></div>
+
+{else}
+    <div style="padding-top: .45em;"><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
+{/if}
 
 </div>
 {* could not get the serch rules bar to work so put the above back will be removed later *}
