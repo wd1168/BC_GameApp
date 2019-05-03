@@ -31,6 +31,9 @@
 <div class="container">
     <div class="content">
         <div class="jumbotron col-md-12 col-lg-12"><center><p><b>How to play: </b></p><h1> {$info[0]} </h1></center></div>
+        <div  class="text-center" style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
+            <a href="./game.php?link={$info[1]}"><button class="btn btn-outline-primary btn-lg">Back to Overview</button></a>
+        </div>
         <div class="input-group"  style="width: 30em ;margin-left: auto; margin-right: auto; margin-bottom: 2em;">
             <input type="text" id="myInput" class="form-control" onkeyup="myFunction(); isEmpty()" placeholder="Search the rules of this game" aria-label="Search Games" aria-describedby="basic-addon2" style="padding-top: .275em;">
         </div>
