@@ -81,9 +81,9 @@
 
         <ul id="myUL">
           {for $x = 0 to sizeof($r_results)}
-            <li ><a style="color:blue;" href="./game_rules.php?link={$category[$x]}"> <b> Category: </b>{$category[$x]}</a>
-                <a  style="color:blue;" href="./game_rules.php?link={$subcategory[$x]}"><b> Sub Category: </b>{$subcategory[$x]}</a>
-                <a  style="color:blue;" href="./game_rules.php?link={$rules[$x]}"><b> Rule: </b>{$rules[$x]}</a></li>
+            <li ><a style="color:blue;"> <b> Category: </b>{$category[$x]}</a>
+                <a style="color:blue;"><b> Sub Category: </b>{$subcategory[$x]}</a>
+                <a style="color:blue;"><b> Rule: </b>{$rules[$x]}</a></li>
           {/for}
         </ul>
 
