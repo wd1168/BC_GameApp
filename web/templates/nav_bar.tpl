@@ -10,9 +10,10 @@
             <button class="btn fas fa-search fa-md" type="button" style="color: #ffffff"></button>
         </div>-->
     </div>
-    <!--Logout Button--><div style="padding-top: .45em"><a href ="../logout.php"><strong>Logout</strong></a></div>
     {if isset($first_name)}
-        <div style="padding-top: .45em;"><a href="./logout.php"><strong>{$first_name} {$last_name}</strong></a></div>
+        <div style="padding-top: .45em;"><strong> Hello {$first_name} {$last_name}!</strong></div>
+        <!--Logout Button--><div style="padding-top: .45em"><a href ="./logout.php"><strong>Logout</strong></a></div>
+
     {else}
         <div style="padding-top: .45em;"><a href="./login.php"><i class="fas fa-sign-in-alt" style="padding-top: .275em;"></i></a></div>
     {/if}
