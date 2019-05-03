@@ -80,21 +80,29 @@
 
         <ul id="myUL">
           {for $x = 0 to sizeof($r_results)}
-            <li><a href="./game_rules.php?link={$r_results[$x]}">{$r_results[$x]}</a></li>
+            <li ><a style="color:blue;" href="./game_rules.php?link={$category[$x]}"> <b> Category: </b>{$category[$x]}</a>
+                <a  style="color:blue;" href="./game_rules.php?link={$subcategory[$x]}"><b> Sub Category: </b>{$subcategory[$x]}</a>
+                <a  style="color:blue;" href="./game_rules.php?link={$rules[$x]}"><b> Rule: </b>{$rules[$x]}</a></li>
           {/for}
         </ul>
 
         <script>
         function myFunction() {
-          var input, filter, ul, li, a, i, txtValue;
+          var input, filter, ul, li, a,a1,a2, i, txtValue, txtValue1, txtValue2;
           input = document.getElementById("myInput");
           filter = input.value.toUpperCase();
           ul = document.getElementById("myUL");
           li = ul.getElementsByTagName("li");
           for (i = 0; i < li.length; i++) {
               a = li[i].getElementsByTagName("a")[0];
+              a1 = li[i].getElementsByTagName("a")[1];
+              a2 = li[i].getElementsByTagName("a")[2];
               txtValue = a.textContent || a.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              txtValue1 = a1.textContent || a1.innerText;
+              txtValue2 = a2.textContent || a2.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1 ||
+                  txtValue1.toUpperCase().indexOf(filter) > -1 ||
+                  txtValue2.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = "";
               } else {
                 li[i].style.display = "none";
