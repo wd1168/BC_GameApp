@@ -10,7 +10,14 @@ require_once "../configuration/config.php";
 require_once "../configuration/dbconfig.php";
 session_start();
 if (isset ($_SESSION['User'])){
-    header("Location: index.php");
+    $user_id = $_SESSION['User'];
+} else {
+    $message = "Please sign up to add a new game or \n
+                log in if you already have an account";
+
+                $smarty->assign('msg', $message);
+                $smarty->display('signup.tpl');
+                exit();
 }
 if(!isset($_POST['name'])) {
     $smarty->display('add_game.tpl');
@@ -133,9 +140,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             
             $sql = "INSERT INTO game
-            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID)
+            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID, User_ID)
             VALUES
-            (:name, :description, :age, :count, :type, :deck, :m_id, :img_id);";
+            (:name, :description, :age, :count, :type, :deck, :m_id, :img_id, $user_id);";
 
 
 }
