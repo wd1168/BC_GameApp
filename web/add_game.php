@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO game
             (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID, User_ID)
             VALUES
-            (:name, :description, :age, :count, :type, :deck, :m_id, :img_id, $user_id);";
+            (:name, :description, :age, :count, :type, :deck, :m_id, :img_id, :user_id);";
 
 
 }
@@ -223,5 +223,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':deck', $deck);
     $stmt->bindParam(':m_id', $m_id);
     $stmt->bindParam(':img_id', $img_id);
+    $stmt->bindParam(':user_id', $user_id);
     $stmt->execute();
 header("Location: index.php");
