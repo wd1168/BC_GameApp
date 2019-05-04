@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             
             $sql = "INSERT INTO game
-            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID, User_ID)
+            (`Name`, `Description`, Age, Player_Count, `Type`, Deck, Manufacturer_ID, Image_ID, User_ID_FK)
             VALUES
             (:name, :description, :age, :count, :type, :deck, :m_id, :img_id, :user_id);";
 
