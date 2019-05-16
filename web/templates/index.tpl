@@ -29,7 +29,7 @@
 </h1>
 
   <div style="position: absolute; left: 5.15em; bottom: 5.25em">
-    <p>board and card game rule lookup</p>
+    <p>board and card game rules lookup</p>
   </div>
   
   <div>
